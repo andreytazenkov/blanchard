@@ -1,4 +1,4 @@
-    $('.catalog-accordion__item').click(function() {
+    $('.catalog-accordion-list__item').click(function() {
         let dataName = $(this).attr('data-name');
         $('.catalog-artists__box').each(function() {
             $(this).css('display', 'none');
@@ -18,8 +18,8 @@
         }
     });
 
-    $('.catalog-accordion__item_href').click(function() {
-        $('.catalog-accordion__item_href').each(function() {
+    $('.catalog-accordion-list__item-href').click(function() {
+        $('.catalog-accordion-list__item-href').each(function() {
             $(this).removeClass('active');
         });
         $(this).addClass('active');

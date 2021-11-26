@@ -47,14 +47,3 @@ $(function() {
         collapsible: true
     });
 });
-
-// accordion link
-// $(document).ready(function() {
-//     const catalogAccordionItem;
-//     const catalogArtistsHeader;
-//     $('.catalog-accordion__item').each(function() {});
-//     $('.catalog-artists__header').each(function() {});
-//     if (catalogAccordionItem === catalogArtistsHeader) {
-//         console.log('yes');
-//     }
-// });

@@ -1,5 +1,5 @@
 /*hero__swiper*/
-const swiper = new Swiper('.hero__swiper', {
+const swiper = new Swiper('.hero-swiper', {
     autoplay: {
         delay: 3000
     },
@@ -30,12 +30,12 @@ const gallarySwiper = new Swiper('.swiper-gallery', {
         crossFade: true
     },
     pagination: {
-        el: '.swiper-gallery__pagination',
+        el: '.swiper-gallery-pagination',
         type: 'fraction'
     },
     navigation: {
-        nextEl: '.swiper-gallery__button-next',
-        prevEl: '.swiper-gallery__button-prev',
+        nextEl: '.swiper-gallery-button-next',
+        prevEl: '.swiper-gallery-button-prev',
     },
 });
 
@@ -57,7 +57,7 @@ const eventsSwiper = new Swiper('.swiper-events', {
 });
 
 /*publication-book__swiper*/
-const bookSwiper = new Swiper('.publication-book__swiper', {
+const bookSwiper = new Swiper('.publication-book-swiper', {
     // autoplay: {
     //    delay: 3000
     // // },
@@ -71,13 +71,13 @@ const bookSwiper = new Swiper('.publication-book__swiper', {
     // slidesPerView: 'auto',
     // slidesPerColumn: 2,
     navigation: {
-        nextEl: '.publication-book__swiper-button-next',
-        prevEl: '.publication-book__swiper-button-prev',
+        nextEl: '.publication-book-swiper-button-next',
+        prevEl: '.publication-book-swiper-button-prev',
     },
 });
 
 /* project-partners__swiper*/
-const projectSwiper = new Swiper('.project-partners__swiper', {
+const projectSwiper = new Swiper('.project-partners-swiper', {
     autoplay: {
         delay: 3000
     },
@@ -89,10 +89,10 @@ const projectSwiper = new Swiper('.project-partners__swiper', {
 });
 
 
-$('#project-partners__swiper-prev').click(function(e) {
+$('#project-partners-swiper-prev').click(function(e) {
     projectSwiper.slidePrev();
 });
 
-$('#project-partners__swiper-next').click(function(e) {
+$('#project-partners-swiper-next').click(function(e) {
     projectSwiper.slideNext();
 });
