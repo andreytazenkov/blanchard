@@ -21,14 +21,10 @@ const swiper = new Swiper('.hero-swiper', {
 
 /*swiper-gallery*/
 const gallarySwiper = new Swiper('.swiper-gallery', {
-    // autoplay: {
-    //     delay: 3000
-    // },
-    speed: 1800,
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
+    autoplay: {
+        delay: 3000
     },
+    speed: 2200,
     pagination: {
         el: '.swiper-gallery-pagination',
         type: 'fraction'
@@ -41,9 +37,6 @@ const gallarySwiper = new Swiper('.swiper-gallery', {
 
 /*swiper-events*/
 const eventsSwiper = new Swiper('.swiper-events', {
-    // autoplay: {
-    //    delay: 3000
-    // },
     speed: 1800,
     loop: true,
     effect: 'fade',
@@ -58,18 +51,18 @@ const eventsSwiper = new Swiper('.swiper-events', {
 
 /*publication-book__swiper*/
 const bookSwiper = new Swiper('.publication-book-swiper', {
-    // autoplay: {
-    //    delay: 3000
-    // // },
+    autoplay: {
+        delay: 3000
+    },
     slidesPerView: 2,
-    speed: 1800,
-    //loop: true,
-    //effect: 'fade',
-    //fadeEffect: {
-    //   crossFade: true
-    //},
-    // slidesPerView: 'auto',
-    // slidesPerColumn: 2,
+    speed: 2200,
+    loop: true,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    slidesPerView: 'auto',
+    slidesPerColumn: 2,
     navigation: {
         nextEl: '.publication-book-swiper-button-next',
         prevEl: '.publication-book-swiper-button-prev',
@@ -81,11 +74,8 @@ const projectSwiper = new Swiper('.project-partners-swiper', {
     autoplay: {
         delay: 3000
     },
-    speed: 1800,
+    speed: 2200,
     loop: true,
-    fadeEffect: {
-        crossFade: true
-    },
 });
 
 
