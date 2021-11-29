@@ -1,9 +1,21 @@
-$('#tultip__span-1').click(function(e) {
-    $('#tultip__small-1').toggleClass('project-content__tultip-small-active');
+tippy('#project-content__tultip-1', {
+    content: "Пример современных тенденций - современная методология разработки",
+    trigger: 'click',
+    arrow: true,
+    theme: 'grey',
+    placement: 'top',
 });
-$('#tultip__span-2').click(function(e) {
-    $('#tultip__small-2').toggleClass('project-content__tultip-small-active');
+
+tippy('#project-content__tultip-2', {
+    content: "Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции",
+    trigger: 'click',
+    arrow: true,
+    theme: 'grey',
 });
-$('#tultip__span-3').click(function(e) {
-    $('#tultip__small-3').toggleClass('project-content__tultip-small-active');
+
+tippy('#project-content__tultip-3', {
+    content: "В стремлении повысить качество",
+    trigger: 'click',
+    arrow: true,
+    theme: 'grey',
 });

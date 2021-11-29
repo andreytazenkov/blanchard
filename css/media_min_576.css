@@ -1,0 +1,53 @@
+@media (min-width: 576px) {
+    /* header */
+    .burger {
+        width: 36px;
+        height: 28px;
+    }
+    .burger__span {
+        top: 13px;
+        width: 30px;
+        height: 3px;
+    }
+    .burger::before {
+        width: 36px;
+        height: 3px;
+    }
+    .burger::after {
+        bottom: -1px;
+        width: 24px;
+        height: 3px;
+    }
+    .logo {
+        width: 188px;
+        height: 42px;
+    }
+    .nav__search_button {
+        width: 23px;
+        height: 23px;
+        transform: translate(-15px, 2px);
+    }
+    .nav__search.search-active .nav__search_input {
+        width: 75vw;
+    }
+    .nav__search_close {
+        top: 4.43vw;
+        right: 0;
+        width: 25px;
+        height: 25px;
+    }
+    /* hero */
+    .hero-content__text {
+        font-size: 2.34vw;
+        line-height: 3.9vw;
+    }
+    /* about_us */
+    .section-header {
+        font-size: 6.25vw;
+        line-height: 8.46vw;
+    }
+    .about-us__text {
+        font-size: 16px;
+        line-height: 32px;
+    }
+}

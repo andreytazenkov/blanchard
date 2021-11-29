@@ -4,11 +4,11 @@ $(function() {
         collapsible: true,
         heightStyle: "content",
         icons: true,
-        collapsible: true,
         animate: {
             duration: 600,
             easing: 'linear',
-        }
+        },
+        clearStyle: true
     });
 });
 
@@ -18,7 +18,6 @@ $(function() {
         collapsible: true,
         heightStyle: "content",
         icons: true,
-        collapsible: true,
         animate: {
             duration: 600,
             easing: 'linear',
@@ -32,7 +31,6 @@ $(function() {
         collapsible: true,
         heightStyle: "content",
         icons: true,
-        collapsible: true,
         animate: {
             duration: 600,
             easing: 'linear',
@@ -46,7 +44,6 @@ $(function() {
         collapsible: true,
         heightStyle: "content",
         icons: true,
-        collapsible: true,
         animate: {
             duration: 600,
             easing: 'linear',
@@ -60,7 +57,6 @@ $(function() {
         collapsible: true,
         heightStyle: "content",
         icons: true,
-        collapsible: true,
         animate: {
             duration: 600,
             easing: 'linear',

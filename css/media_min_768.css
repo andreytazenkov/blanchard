@@ -1,0 +1,36 @@
+        @media (min-width: 768px) {
+            .section-header {
+                font-size: 48px;
+                line-height: 65px;
+            }
+            /* hero */
+            /* gallery */
+            .gallery-slide:active {
+                filter: hue-rotate(255deg) brightness(80%);
+            }
+            .gallery-slide::before {
+                content: '';
+                position: absolute;
+                width: 82.75%;
+                height: 86.37%;
+                background-color: rgba(0, 0, 0, 0.5);
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
+            }
+            .gallery-slide::after {
+                content: '';
+                position: absolute;
+                width: 81px;
+                height: 79px;
+                background-image: url(../img/320/gallery/gallery-modal.svg);
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
+            }
+            .gallery-slide:hover::before,
+            .gallery-slide:hover::after {
+                visibility: visible;
+                opacity: 1;
+            }
+        }

@@ -20,13 +20,14 @@ const swiper = new Swiper('.hero-swiper', {
 });
 
 /*swiper-gallery*/
+let galleryPagination = document.querySelector('.swiper-gallery-pagination')
 const gallarySwiper = new Swiper('.swiper-gallery', {
     autoplay: {
         delay: 3000
     },
     speed: 2200,
     pagination: {
-        el: '.swiper-gallery-pagination',
+        el: galleryPagination,
         type: 'fraction'
     },
     navigation: {
@@ -34,6 +35,14 @@ const gallarySwiper = new Swiper('.swiper-gallery', {
         prevEl: '.swiper-gallery-button-prev',
     },
 });
+
+$('.swiper-gallery-button-prev').click(function(e) {
+    gallarySwiper.slidePrev();
+});
+
+$('.swiper-gallery-button-next').click(function(e) {
+    gallarySwiper.slideNext();
+})
 
 /*swiper-events*/
 const eventsSwiper = new Swiper('.swiper-events', {
@@ -76,6 +85,12 @@ const projectSwiper = new Swiper('.project-partners-swiper', {
     },
     speed: 2200,
     loop: true,
+    breakpoints: {
+        578: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+    },
 });
 
 

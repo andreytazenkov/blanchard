@@ -25,6 +25,14 @@ $(document).ready(function() {
             $(this)
                 .siblings('.publications-select__span-close')
                 .removeClass('is-active');
+            if (!($('.publications-select__header')).hasClass('is-active')) {
+                $('.publications-select__list-collapsed input:checkbox:not(:checked)')
+                    .parent('.publications-select__item')
+                    .animate({
+                        height: 'hide',
+                        opacity: 'hide',
+                    });
+            }
         }
     });
 
@@ -34,7 +42,6 @@ $(document).ready(function() {
             .removeAttr("checked");
         $(this).toggleClass('is-active');
         if (!($('.publications-select__header')).hasClass('is-active')) {
-            console.log('yes');
             $('.publications-select__list-collapsed input:checkbox:not(:checked)')
                 .parent('.publications-select__item')
                 .animate({
