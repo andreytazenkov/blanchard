@@ -48,35 +48,44 @@ $('.swiper-gallery-button-next').click(function(e) {
 const eventsSwiper = new Swiper('.swiper-events', {
     speed: 1800,
     loop: true,
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
-    }
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+
+        },
+    },
 });
 
 /*publication-book__swiper*/
-const bookSwiper = new Swiper('.publication-book-swiper', {
-    autoplay: {
-        delay: 3000
-    },
-    slidesPerView: 2,
-    speed: 2200,
-    loop: true,
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
-    slidesPerView: 'auto',
-    slidesPerColumn: 2,
-    navigation: {
-        nextEl: '.publication-book-swiper-button-next',
-        prevEl: '.publication-book-swiper-button-prev',
-    },
-});
+(function() {
+    let publicationBookSwiperButtonPrev = document.querySelector('.publication-book-swiper-button-prev');
+    let publicationBookSwiperButtonNext = document.querySelector('.publication-book-swiper-button-next');
+    let publicationBookSwiperPagination = document.querySelector('.publication-book-swiper-pagination');
+    if (screen.width >= 576) {
+        const bookSwiper = new Swiper('.publication-book-swiper', {
+            autoplay: {
+                delay: 3000
+            },
+            speed: 2200,
+            loop: true,
+            slidesPerView: 'auto',
+            navigation: {
+                nextEl: publicationBookSwiperButtonNext,
+                prevEl: publicationBookSwiperButtonPrev,
+            },
+            pagination: {
+                el: publicationBookSwiperPagination,
+                type: 'fraction',
+            },
+        });
+    }
+}());
+
 
 /* project-partners__swiper*/
 const projectSwiper = new Swiper('.project-partners-swiper', {
@@ -86,7 +95,7 @@ const projectSwiper = new Swiper('.project-partners-swiper', {
     speed: 2200,
     loop: true,
     breakpoints: {
-        578: {
+        768: {
             slidesPerView: 2,
             spaceBetween: 10,
         },

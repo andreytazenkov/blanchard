@@ -1,9 +1,26 @@
+$('.catalog-tabs__href').click(function() {
+    $('.catalog-artists').each(function() {
+        $(this).hide(600);
+    });
+    let catalogTabsContentCountry = $(this).attr('href');
+    $('.catalog-artists').each(function() {
+        let catalogArtistsCountry = "#" + $(this).attr('data-country');
+        if (catalogTabsContentCountry === catalogArtistsCountry) {
+            $(this).fadeIn(600);
+            // $(this).css('display', 'block');
+            $(this).children().first().fadeIn(600).css('display', 'flex');
+            $('#noname').hide(600);
+        }
+    });
+});
+
 $('.catalog-accordion-list__item').click(function() {
     let dataName = $(this).attr('data-name');
-    $('.catalog-artists__box').each(function() {
-        $(this).css('display', 'none');
+    $('.catalog-artists-box').each(function() {
+        $(this).hide(600);
+        // $(this).css('display', 'none');
     });
-    $('.catalog-artists__box').each(function() {
+    $('.catalog-artists-box').each(function() {
         let idArts = $(this).attr('id');
         if (dataName === idArts) {
             $(this).fadeIn(600, function() {
@@ -20,7 +37,7 @@ $('.catalog-accordion-list__item').click(function() {
     $("html, body").animate({
         scrollTop: $($(catalogAccordionListItemHref).attr("href")).offset().top + 'px'
     }, {
-        duration: 500,
+        duration: 800,
         easing: "swing"
     });
 });
