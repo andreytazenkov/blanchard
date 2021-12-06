@@ -100,7 +100,7 @@
      display: flex;
      align-items: center;
      width: 100%;
-     height: 14.06vw;
+     min-height: 14.06vw;
      background-color: var(--color-black);
  }
 
@@ -178,7 +178,7 @@
      margin: 0 0 0 -15px;
      padding: 4.06vw 20vw 6.44vw 4.68vw;
      width: calc(100% + 30px);
-     height: 110.8vw;
+     min-height: 110.8vw;
      background: rgba(0, 0, 0, 0.9);
      transition: left 0.4s ease;
      overflow: auto;
@@ -474,11 +474,15 @@
 
  .hero {
      width: 100%;
+     min-height: 96.87vw;
  }
 
  .hero-swiper {
+     position: absolute;
+     top: 0;
+     left: 0;
      width: 100%;
-     height: 96.87vw;
+     height: 100%;
  }
 
  .hero-swiper-slide {
@@ -522,13 +526,11 @@
  }
 
  .hero-content {
-     position: absolute;
-     top: 0;
-     left: 0;
+     position: relative;
      display: flex;
      flex-direction: column;
      align-items: center;
-     padding: 10vw 0 0 0;
+     padding: 10vw 0 14.06vw 0;
      z-index: 5;
  }
 
@@ -718,7 +720,7 @@
      visibility: hidden;
      opacity: 0;
      transition: opacity 0.2s ease-in, height 0.2s ease-in, visibility 0.2s ease-in;
-     z-index: 10;
+     z-index: 20;
  }
 
  .choices__list--dropdown.is-active {
@@ -867,18 +869,28 @@
      margin: 0 0 11px 0;
  }
 
+ .ui-widget.ui-widget-content {
+     border: none;
+ }
+
  .catalog-tabs {
      margin: 0 0 51px 0;
      padding: 0;
      width: 100%;
-     border: none !important;
+ }
+
+ .ui-tabs .ui-tabs-nav {
+     margin: 0 0 21px 0;
+     padding: 0;
+ }
+
+ .catalog-tabs__text {
+     display: none;
  }
 
  .catalog-tabs__list {
      display: flex;
      justify-content: space-between;
-     margin: 0 0 21px 0 !important;
-     padding: 0 !important;
      border: none;
      background: transparent;
  }
@@ -888,15 +900,18 @@
      display: none;
  }
 
+ .ui-tabs .ui-tabs-nav li {
+     margin: 0;
+     padding: 0;
+     border: none;
+     background: transparent;
+ }
+
  .catalog-tabs__item {
      display: flex;
      flex-shrink: 0;
-     margin: 0 !important;
-     padding: 0 !important;
      width: 32px;
      height: 32px;
-     border: none !important;
-     background: transparent !important;
      border-radius: 50%;
      transition: box-shadow 0.2s ease-in, border 0.2s ease-in;
  }
@@ -1017,6 +1032,11 @@
      background-color: var(--color-violet) !important;
  }
 
+ .ui-icon,
+ .ui-widget-content .ui-icon {
+     background-image: none;
+ }
+
  .catalog-tabs-accordion__header span {
      position: relative;
      display: flex;
@@ -1024,8 +1044,7 @@
      align-items: center;
      width: 30px;
      height: 30px;
-     border-radius: 50px;
-     background-image: none !important;
+     border-radius: 50%;
      background-color: #ECECEC;
      transform: translateY(6px);
      transition: background-color 0.2s ease-in, border 0.2s ease-in;
@@ -1063,11 +1082,14 @@
      border: none;
  }
 
+ .ui-widget-content {
+     font-family: 'Open Sans', Arial, sans-serif;
+     font-size: 16px;
+     color: var(--color-body);
+ }
+
  .catalog-accordion-list__item {
-     font-family: 'Open Sans', Arial, sans-serif !important;
-     font-size: 16px !important;
      line-height: 32px;
-     color: var(--color-body) !important;
      cursor: pointer;
  }
 
@@ -1319,7 +1341,11 @@
      height: 100%;
  }
 
- .events-slide__content {}
+ .events-slide__content {
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+ }
 
  .events-slide__img {
      width: 100%;
@@ -2082,7 +2108,7 @@
      align-items: center;
      margin: 0 0 23px 0;
      width: 128px;
-     height: 40px;
+     min-height: 40px;
      color: var(--color-violet);
      font-weight: 700;
      font-size: 12px;
@@ -2097,8 +2123,8 @@
      position: absolute;
      top: -4px;
      left: -5px;
-     width: 132px;
-     height: 42px;
+     width: 133px;
+     height: 44px;
      border: 1px solid var(--color-violet-href);
      border-radius: 100px;
      visibility: hidden;
@@ -2249,6 +2275,8 @@
      position: absolute;
      width: 100%;
      height: 100%;
+     background-repeat: no-repeat;
+     background-size: cover;
      visibility: hidden;
      opacity: 0;
      transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
@@ -2294,7 +2322,7 @@
  .footer-logo {
      flex-shrink: 0;
      width: 97px;
-     height: 22px;
+     min-height: 22px;
  }
 
  .footer-logo__href {
@@ -2303,7 +2331,12 @@
      cursor: pointer;
  }
 
- .footer-logo__img {
+ .footer-logo-wrapper {
+     width: 100%;
+     height: 100%;
+ }
+
+ .footer-logo-wrapper__img {
      width: 100%;
      height: 100%;
  }

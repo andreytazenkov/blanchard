@@ -48,3 +48,22 @@ $('.catalog-accordion-list__item-href').click(function() {
     });
     $(this).addClass('active');
 });
+
+function movingCategoryTabs() {
+    if (screen.width >= 768) {
+        $('.catalog-tabs__list').before($('.catalog-header'));
+    } else { $('.catalog-content').before($('.catalog-header')); };
+};
+
+$(window).resize(function() {
+    movingCategoryTabs();
+});
+
+movingCategoryTabs()
+
+$('.catalog-tabs-accordion__header').click(function() {
+    $('.catalog-tabs-accordion__header-text').each(function() {
+        $(this).removeClass('is-active');
+    });
+    $(this).children().addClass('is-active');
+});

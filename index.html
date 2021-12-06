@@ -17,6 +17,7 @@
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/media_min_576.css" rel="stylesheet">
     <link href="./css/media_min_768.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/media_min_992.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=4f3f09c6-34ea-483f-abe4-f80917799db8&lang=ru_RU"></script>
 </head>
 
@@ -415,6 +416,8 @@
                                 <a class="catalog-tabs__href catalog-tabs__href-belgium" href="#belgium"></a>
                             </li>
                         </ul>
+                        <p class="catalog-tabs__text">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины,
+                            стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. </p>
                         <div class="catalog-tabs-content" id="france">
                             <div class="catalog-tabs-accordion" id="accordion-france">
                                 <div class="catalog-tabs-accordion__header">
@@ -1508,7 +1511,7 @@
         <div class="container-events container">
             <div class="events row">
                 <h2 class="events-header section-header">События</h2>
-                <div class="swiper-container swiper-events">
+                <div class="swiper-container swiper-events" id="swiper-events">
                     <div class="swiper-wrapper swiper-wrapper-events">
                         <div class="swiper-slide events-slide">
                             <article class="events-slide__wrapper">
@@ -1955,8 +1958,12 @@
                 </li>
             </ul>
             <div class="footer-logo">
-                <a class="footer-logo__href" href="#">
-                    <img class="footer-logo__img" src="./img/320/footer/logo-footer.png" alt="Логотип Branchart-художественная галлерея">
+                <a class="footer-logo-href" href="#">
+                    <picture class="footer-logo-wrapper">
+                        <source class="footer-logo-wrapper__img" media="(min-width: 576px)" srcset="../img/768/footer/footer-logo_768.png">
+                        <source class="footer-logo-wrapper__img" media="(min-width: 320px)" srcset="../img/320/footer/footer-logo_320.png">
+                        <img class="footer-logo-wrapper__img" src="../img/320/footer/footer-logo_320.png" alt="Логотип Branchart-художественная галлерея">
+                    </picture>
                 </a>
             </div>
         </div>
@@ -1974,6 +1981,7 @@
     <script src="./js/accordion.js"></script>
     <script src="./js/catalog.js"></script>
     <script src="./js/gallery.js"></script>
+    <script src="./js/events.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/tippy-bundle.umd.min.js"></script>
     <script src="./js/tultip.js"></script>
@@ -1981,6 +1989,7 @@
     <script src="./js/inputmask.min.js"></script>
     <script src="./js/just-validate.min.js"></script>
     <script src="./js/inputmask.js"></script>
+    <script src="./js/contacts.js"></script>
     <script src="./js/form-validate.js"></script>
     <script src="./js/scroll.js"></script>
 </body>

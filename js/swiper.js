@@ -26,6 +26,7 @@ const gallarySwiper = new Swiper('.swiper-gallery', {
         delay: 3000
     },
     speed: 2200,
+    loop: true,
     pagination: {
         el: galleryPagination,
         type: 'fraction'
@@ -34,6 +35,16 @@ const gallarySwiper = new Swiper('.swiper-gallery', {
         nextEl: '.swiper-gallery-button-next',
         prevEl: '.swiper-gallery-button-prev',
     },
+    breakpoints: {
+        768: {
+            speed: 1500,
+            slidesPerGroup: 2,
+            slidesPerView: 2,
+            slidesPerColumn: 2,
+            autoHeight: false,
+            spaceBetween: 34,
+        }
+    }
 });
 
 $('.swiper-gallery-button-prev').click(function(e) {
@@ -42,24 +53,21 @@ $('.swiper-gallery-button-prev').click(function(e) {
 
 $('.swiper-gallery-button-next').click(function(e) {
     gallarySwiper.slideNext();
-})
+});
 
 /*swiper-events*/
-const eventsSwiper = new Swiper('.swiper-events', {
-    speed: 1800,
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-
-        },
-    },
-});
+(function() {
+    if (screen.width < 576) {
+        const eventsSwiper = new Swiper('.swiper-events', {
+            speed: 1800,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    };
+}());
 
 /*publication-book__swiper*/
 (function() {
@@ -83,7 +91,7 @@ const eventsSwiper = new Swiper('.swiper-events', {
                 type: 'fraction',
             },
         });
-    }
+    };
 }());
 
 

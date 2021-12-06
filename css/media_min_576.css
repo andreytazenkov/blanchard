@@ -18,9 +18,40 @@
                         width: 24px;
                         height: 3px;
                     }
-                    .logo {
-                        width: 188px;
-                        height: 42px;
+                    .navbar {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+                    .navbar-close {
+                        width: 37px;
+                        height: 37px;
+                    }
+                    .navbar-close::before {
+                        height: 3px;
+                    }
+                    .navbar-close::after {
+                        width: 3px;
+                    }
+                    .nav-list {
+                        margin: 0;
+                    }
+                    .hav-items-href {
+                        font-size: 24px;
+                        line-height: 64px;
+                    }
+                    .login {
+                        margin: 0 0 0 2px;
+                        padding: 3px 0 0 15px;
+                        width: 257px;
+                        height: 60px;
+                        font-size: 18px;
+                        line-height: 25px;
+                    }
+                    .login::before {
+                        left: 87px;
+                        width: 13px;
+                        height: 13px;
                     }
                     .nav__search_button {
                         width: 23px;
@@ -37,6 +68,9 @@
                         height: 25px;
                     }
                     /* hero */
+                    .hero {
+                        min-height: 96.87vw;
+                    }
                     .hero-content__text {
                         font-size: 2.34vw;
                         line-height: 3.9vw;
@@ -103,6 +137,7 @@
                     }
                     .publications-select__header {
                         border: none;
+                        pointer-events: none;
                         cursor: auto;
                     }
                     .publications-select__header::before {
@@ -197,13 +232,15 @@
                     }
                     .contacts-map__content {
                         display: flex;
+                        margin: 0 0 36px 0;
                         height: auto
                     }
                     .contacts-map {
-                        flex: 0 0 43.61vw;
+                        width: 44.01vw;
                     }
                     .contacts-map__navigation {
-                        height: 91.14vw;
+                        margin: 0;
+                        min-height: 91.14vw;
                     }
                     .ymaps-2-1-79-map {
                         width: 100%;
@@ -214,7 +251,25 @@
                         height: 100%;
                     }
                     .contacts-form {
+                        width: 43.62vw;
                         margin: 0 45px 0 50px;
-                        flex: 0 0 55.98vw;
+                        padding: 54px 0 0 0;
+                    }
+                    /* footer */
+                    .container-footer {
+                        flex-direction: row-reverse;
+                        justify-content: space-between;
+                        padding: 40px 50px;
+                    }
+                    .footer-logo {
+                        width: 173px;
+                        height: 40px;
+                    }
+                    .footer-social-list {
+                        margin: 0;
+                    }
+                    .footer-social-item {
+                        width: 60px;
+                        height: 60px;
                     }
                 }
