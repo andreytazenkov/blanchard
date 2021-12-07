@@ -105,7 +105,7 @@ const projectSwiper = new Swiper('.project-partners-swiper', {
     breakpoints: {
         768: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 34,
         },
     },
 });
