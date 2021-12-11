@@ -56,30 +56,54 @@ $('.swiper-gallery-button-next').click(function(e) {
 });
 
 /*swiper-events*/
-(function() {
-    if (screen.width < 576) {
-        const eventsSwiper = new Swiper('.swiper-events', {
+let eventsSwiper = undefined;
+
+function initEventsSwiper() {
+    if ((screen.width < 576) && (eventsSwiper == undefined)) {
+        eventsSwiper = new Swiper('.swiper-events', {
+            autoplay: {
+                delay: 3000
+            },
             speed: 1800,
             loop: true,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
             },
+            breakpoints: {
+                576: {
+                    pagination: false,
+                }
+            }
         });
-    };
-}());
+    } else if ((screen.width >= 576) && (eventsSwiper != undefined)) {
+        eventsSwiper.destroy();
+        eventsSwiper = undefined;
+        $('.swiper-wrapper-events').removeAttr('style');
+        $('.events-slide').removeAttr('style');
+    }
+}
+
+initEventsSwiper();
+
+$(window).resize(function() {
+    initEventsSwiper();
+});
+
 
 /*publication-book__swiper*/
-(function() {
-    let publicationBookSwiperButtonPrev = document.querySelector('.publication-book-swiper-button-prev');
-    let publicationBookSwiperButtonNext = document.querySelector('.publication-book-swiper-button-next');
-    let publicationBookSwiperPagination = document.querySelector('.publication-book-swiper-pagination');
-    if (screen.width >= 576) {
-        const bookSwiper = new Swiper('.publication-book-swiper', {
+let bookSwiper = undefined;
+
+function initBookSwiper() {
+    const publicationBookSwiperButtonPrev = document.querySelector('.publication-book-swiper-button-prev');
+    const publicationBookSwiperButtonNext = document.querySelector('.publication-book-swiper-button-next');
+    const publicationBookSwiperPagination = document.querySelector('.publication-book-swiper-pagination');
+    if ((screen.width >= 576) && (bookSwiper == undefined)) {
+        bookSwiper = new Swiper('.publication-book-swiper', {
             autoplay: {
-                delay: 3000
+                delay: 2000
             },
-            speed: 2200,
+            speed: 1800,
             loop: true,
             slidesPerView: 'auto',
             navigation: {
@@ -91,9 +115,17 @@ $('.swiper-gallery-button-next').click(function(e) {
                 type: 'fraction',
             },
         });
-    };
-}());
-
+    } else if ((screen.width < 576) && (bookSwiper != undefined)) {
+        bookSwiper.destroy();
+        bookSwiper = undefined;
+        $('.publication-book-swiper-wrapper').removeAttr('style');
+        $('.publication-book-slide').removeAttr('style');
+    }
+};
+initBookSwiper();
+$(window).resize(function() {
+    initBookSwiper();
+});
 
 /* project-partners__swiper*/
 const projectSwiper = new Swiper('.project-partners-swiper', {
