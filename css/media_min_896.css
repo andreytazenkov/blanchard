@@ -1,0 +1,163 @@
+@media (min-width: 896px) {
+
+  /* header */
+  .burger {
+    margin: 0;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .navbar {
+    height: 795px;
+  }
+
+  .nav-search.search-active {
+    right: 46px;
+    width: 25.48vw;
+  }
+
+  .nav-search.search-active .nav-search__button {
+    flex-shrink: 0;
+  }
+
+  .nav-search.search-active .nav-search__input {
+    flex-shrink: 0;
+    margin: 20px 0 0 0;
+    width: 83.52%;
+  }
+
+  .header.search-active .nav-search-close {
+    display: none;
+  }
+
+  /* hero */
+  .hero-content {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 110px 50px 115px 50px;
+  }
+
+  .hero-content {
+    width: 790px;
+  }
+
+  .hero-content__heading {
+    width: 85%;
+    line-height: 98px;
+  }
+
+  /* gallary */
+  .gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .gallery-header {
+    margin: 0 11vw 15px 0;
+    width: max-content;
+  }
+
+  .filter-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 4.88vw 0 0;
+    flex: 0 0 27.34vw;
+  }
+
+  .choices {
+    width: 100%;
+  }
+
+  .gallery-swiper-navigation {
+    margin: 0;
+    width: 130px;
+  }
+
+  .swiper-container-box {
+    flex-direction: row;
+  }
+
+  .swiper-gallery {
+    flex: 0 0 54.8vw;
+    height: 54.8vw;
+  }
+
+  .gallery-slide {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+    height: calc((100% - 10px)/2);
+  }
+
+  /* catalog */
+  .ui-widget.ui-widget-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .catalog-artists-wrapper {
+    flex: 0 0 40.67vw;
+    margin: 0 4.88vw 0 0;
+  }
+
+  .catalog-tabs-content-wrapper {
+    flex: 0 0 40.67vw;
+  }
+
+  .catalog-accordion-list {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+
+  .accordion-unknown {
+    width: auto;
+  }
+
+  /* publocation */
+  .publications {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .publications-header {
+    flex: 1 0 100%;
+  }
+
+  .publication-wrapper {
+    flex: 0 0 auto;
+  }
+
+  .publication-book-swiper-box {
+    flex: 0 0 61.42vw;
+  }
+
+  .publication-book-swiper-navigation {
+    width: max-content;
+  }
+
+  .publication-book-swiper {
+    max-width: 100%;
+    width: 61.42vw;
+  }
+
+  .publication-book-slide {
+    width: 28.32vw;
+  }
+
+  .publication-book-slide-content__price {
+    top: 32.51vw;
+  }
+
+  /* contacts */
+  .contacts-form {
+    width: 47.55vw;
+  }
+
+  .contacts-map {
+    width: 52.44vw;
+  }
+}

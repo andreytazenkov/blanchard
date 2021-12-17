@@ -17,7 +17,8 @@
   <link href="./css/style.css" rel="stylesheet">
   <link href="./css/media_min_576.css" rel="stylesheet">
   <link href="./css/media_min_768.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/media_min_992.css">
+  <link href="./css/media_min_896.css" rel="stylesheet">
+  <link href="./css/media_min_1024.css" rel="stylesheet">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=4f3f09c6-34ea-483f-abe4-f80917799db8&lang=ru_RU"></script>
 </head>
 
@@ -121,11 +122,13 @@
             </li>
           </ul>
         </div>
-        <form class="nav-search" name="nav-search" action="#">
-          <label class="nav-search__label" for="search"></label>
-          <button class="nav-search__button" type="submit"></button>
-          <input class="nav-search__input" id="search" aria-label="Поиск по сайту" type="search" placeholder="Поиск по сайту">
-        </form>
+        <div class="nav-search-wrapper">
+          <form class="nav-search" name="nav-search" action="#">
+            <label class="nav-search__label" for="search"></label>
+            <button class="nav-search__button" type="submit"></button>
+            <input class="nav-search__input" id="search" aria-label="Поиск по сайту" type="search" placeholder="Поиск по сайту">
+          </form>
+        </div>
         <button class="nav-search-close">
           <span class="nav-search-close__span"></span>
         </button>
@@ -172,12 +175,14 @@
       <div class="gallery row">
         <h2 class="gallery-header section-header">Галерея</h2>
         <div class="filter-gallery">
-          <label class="gallary-label" for="filter-gallery">Фильтр:</label>
-          <select class="filter-gallery__select" id="filter-gallery" name="filter-gallery">
-            <option class="filter-gallery__option" value="Автор" label="Автор"></option>
-            <option class="filter-gallery__option" value="Направление" label="Направление"></option>
-            <option class="filter-gallery__option" value="Техника" label="Техника"></option>
-          </select>
+          <div class="fillter-gallery-wrapper">
+            <label class="gallary-label" for="filter-gallery">Фильтр:</label>
+            <select class="filter-gallery__select" id="filter-gallery" name="filter-gallery">
+              <option class="filter-gallery__option" value="Автор" label="Автор"></option>
+              <option class="filter-gallery__option" value="Направление" label="Направление"></option>
+              <option class="filter-gallery__option" value="Техника" label="Техника"></option>
+            </select>
+          </div>
         </div>
         <div class="swiper-container-box">
           <div class="swiper-container swiper-gallery">
@@ -418,961 +423,846 @@
             </ul>
             <p class="catalog-tabs__text">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины,
               стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. </p>
-            <div class="catalog-tabs-content" id="france">
-              <div class="catalog-tabs-accordion" id="accordion-france">
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1400 по 1499 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item" data-name="angerran-sharanton">
-                      <a class="catalog-accordion-list__item-href" href="#angerran-sharanton">Ангерран
-                        Шаронтон</a>
-                    </li>
-                    <li class="catalog-accordion-list__item" data-name="jean-fouquet">
-                      <a class="catalog-accordion-list__item-href" href="#jean-fouquet">Жан
-                        Фуке</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1500 по 1599 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+            <div class="catalog-tabs-content-wrapper">
+              <div class="catalog-tabs-content" id="france">
+                <div class="catalog-tabs-accordion" id="accordion-france">
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1400 по 1499 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item" data-name="jean-fouquet">
+                        <a class="catalog-accordion-list__item-href" href="#jean-fouquet">Жан Фуке</a>
+                      </li>
+                      <li class="catalog-accordion-list__item" data-name="angerran-sharanton">
+                        <a class="catalog-accordion-list__item-href" href="#angerran-sharanton">Ангерран Шаронтон</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1500 по 1599 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1600 по 1699 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1600 по 1699 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1700 по 1799 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1700 по 1799 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1800 по 1899 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1800 по 1899 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1900 по 1999 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1900 по 1999 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="catalog-tabs-content" id="germany">
-              <div class="catalog-tabs-accordion" id="accordion-germany">
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1400 по 1499 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item" data-name="gans-burgmay">
-                      <a class="catalog-accordion-list__item-href" href="#gans-burgmay">Ханс
-                        Бургкмайр</a>
-                    </li>
-                    <li class="catalog-accordion-list__item" data-name="mishael-volgemut">
-                      <a class="catalog-accordion-list__item-href" href="#mishael-volgemut">Михаэль
-                        Вольгемут</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1500 по 1599 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+              <div class="catalog-tabs-content" id="germany">
+                <div class="catalog-tabs-accordion" id="accordion-germany">
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1400 по 1499 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item" data-name="gans-burgmay">
+                        <a class="catalog-accordion-list__item-href" href="#gans-burgmay">Ханс Бургкмайр</a>
+                      </li>
+                      <li class="catalog-accordion-list__item" data-name="mishael-volgemut">
+                        <a class="catalog-accordion-list__item-href" href="#mishael-volgemut">Михаэль Вольгемут</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1500 по 1599 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1600 по 1699 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1600 по 1699 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1700 по 1799 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1700 по 1799 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1800 по 1899 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1800 по 1899 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1900 по 1999 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1900 по 1999 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="catalog-tabs-content" id="italy">
-              <div class="catalog-tabs-accordion" id="accordion-italy">
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1400 по 1499 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item" data-name="beneditto-di-bindo">
-                      <a class="catalog-accordion-list__item-href" href="#beneditto-di-bindo">Бенедетто
-                        ди Биндо</a>
-                    </li>
-                    <li class="catalog-accordion-list__item" data-name="amborjo-bergognone">
-                      <a class="catalog-accordion-list__item-href" href="#amborjo-bergognone">Бергоньоне,
-                        Амброджо</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Биссоло,
-                        Франческо</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Больтраффио,
-                        Джованни</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Бонсиньори,
-                        Франческо</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Боттичини,
-                        Рафаэлло</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Брамантино</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Бреа,
-                        Людовико</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Бьяджо
-                        д’Антонио Туччи</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Веккьетта</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Андреа
-                        Верроккьо</a>
-                    </li>
-                    <li class="catalog-accordion-list__item" data-name="domeniko">
-                      <a class="catalog-accordion-list__item-href
-                          active" href="#domeniko">Доменико
-                        Гирландайо</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Беноццо
-                        Гоццоли</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Граначчи,
-                        Франческо</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Грегорио
-                        ди Чекко</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Джованни
-                        да Удине</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Джованни
-                        ди Паоло</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Джорджоне</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Парентино,
-                        Бернардо</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Пезеллино</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Пьетро
-                        Перуджино</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Перуцци,
-                        Бальдассаре</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Пизанелло</a>
-                    </li>
-                    <li class="catalog-accordion-list__item">
-                      <a class="catalog-accordion-list__item-href" href="#noname">Пинтуриккьо</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1500 по 1599 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+              <div class="catalog-tabs-content" id="italy">
+                <div class="catalog-tabs-accordion" id="accordion-italy">
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1400 по 1499 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item" data-name="beneditto-di-bindo">
+                        <a class="catalog-accordion-list__item-href" href="#beneditto-di-bindo">Бенедетто ди Биндо</a>
+                      </li>
+                      <li class="catalog-accordion-list__item" data-name="amborjo-bergognone">
+                        <a class="catalog-accordion-list__item-href" href="#amborjo-bergognone">Бергоньоне, Амброджо</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Биссоло, Франческо</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Больтраффио, Джованни</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Бонсиньори, Франческо</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Боттичини, Рафаэлло</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Брамантино</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Бреа, Людовико</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Бьяджо д’Антонио Туччи</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Веккьетта</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Андреа Верроккьо</a>
+                      </li>
+                      <li class="catalog-accordion-list__item" data-name="domeniko">
+                        <a class="catalog-accordion-list__item-href active" href="#domeniko">Доменико Гирландайо</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Беноццо Гоццоли</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Граначчи, Франческо</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Грегорио ди Чекко</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Джованни да Удине</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Джованни ди Паоло</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Джорджоне</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Парентино, Бернардо</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Пезеллино</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Пьетро Перуджино</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Перуцци, Бальдассаре</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Пизанелло</a>
+                      </li>
+                      <li class="catalog-accordion-list__item">
+                        <a class="catalog-accordion-list__item-href" href="#noname">Пинтуриккьо</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1500 по 1599 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1600 по 1699 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1600 по 1699 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1700 по 1799 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1700 по 1799 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1800 по 1899 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1800 по 1899 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1900 по 1999 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1900 по 1999 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="catalog-tabs-content" id="russia">
-              <div class="catalog-tabs-accordion" id="accordion-russia">
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1400 по 1499 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item" data-name="andrey-rublev">
-                      <a class="catalog-accordion-list__item-href" href="#andrey-rublev">Андре́й
-                        Рублёв</a>
-                    </li>
-                    <li class="catalog-accordion-list__item" data-name="dionisiy">
-                      <a class="catalog-accordion-list__item-href" href="#dionisiy">Диони́сий
-                        (иконописец)</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1500 по 1599 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+              <div class="catalog-tabs-content" id="russia">
+                <div class="catalog-tabs-accordion" id="accordion-russia">
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1400 по 1499 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item" data-name="andrey-rublev">
+                        <a class="catalog-accordion-list__item-href" href="#andrey-rublev">Андре́й Рублёв</a>
+                      </li>
+                      <li class="catalog-accordion-list__item" data-name="dionisiy">
+                        <a class="catalog-accordion-list__item-href" href="#dionisiy">Диони́сий (иконописец)</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1500 по 1599 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1600 по 1699 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1600 по 1699 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1700 по 1799 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1700 по 1799 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1800 по 1899 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете на_йти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1800 по 1899 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете на_йти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1900 по 1999 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1900 по 1999 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="catalog-tabs-content" id="belgium">
-              <div class="catalog-tabs-accordion" id="accordion-belgium">
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1400 по 1499 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item" data-name="piter-breigel">
-                      <a class="catalog-accordion-list__item-href" href="#piter-breigel">Пи́тер
-                        Бре́йгель
-                        Ста́рший</a>
-                    </li>
-                    <li class="catalog-accordion-list__item" data-name="yan-van-eik">
-                      <a class="catalog-accordion-list__item-href" href="#yan-van-eik">Ян ван
-                        Эйк</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1500 по 1599 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+              <div class="catalog-tabs-content" id="belgium">
+                <div class="catalog-tabs-accordion" id="accordion-belgium">
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1400 по 1499 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item" data-name="piter-breigel">
+                        <a class="catalog-accordion-list__item-href" href="#piter-breigel">Пи́тер Бре́йгель Ста́рший</a>
+                      </li>
+                      <li class="catalog-accordion-list__item" data-name="yan-van-eik">
+                        <a class="catalog-accordion-list__item-href" href="#yan-van-eik">Ян ван Эйк</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1500 по 1599 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1600 по 1699 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1600 по 1699 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1700 по 1799 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1700 по 1799 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1800 по 1899 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1800 по 1899 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">
-                    C 1900 по 1999 гг.
-                  </p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 1900 по 1999 гг.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
-                </div>
-                <div class="catalog-tabs-accordion__header">
-                  <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
-                </div>
-                <div class="catalog-accordion-content">
-                  <ul class="catalog-accordion-list">
-                    <li class="catalog-accordion-list__item">
-                      <article>
-                        <div class="accordion-unknown">
-                          <div class="accordion-unknown-right"></div>
-                          <div class="accordion-unknown-left">
-                            <h3 class="accordion-unknown-left__header">
-                              Здесь пока пусто
-                            </h3>
-                            <div class="accordion-unknown-left__text">
-                              А в галерее вы всегда можете найти что-то интересное для себя
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="catalog-tabs-accordion__header">
+                    <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
+                  </div>
+                  <div class="catalog-accordion-content">
+                    <ul class="catalog-accordion-list">
+                      <li class="catalog-accordion-list__item">
+                        <article>
+                          <div class="accordion-unknown">
+                            <div class="accordion-unknown-right"></div>
+                            <div class="accordion-unknown-left">
+                              <h3 class="accordion-unknown-left__header">
+                                Здесь пока пусто
+                              </h3>
+                              <div class="accordion-unknown-left__text">
+                                А в галерее вы всегда можете найти что-то интересное для себя
+                              </div>
+                              <a class="accordion-unknown-left__href" href="#gallery">В галерею</a>
                             </div>
-                            <a class="accordion-unknown-left__href" href="#gallery">В
-                              галерею</a>
                           </div>
-                        </div>
-                      </article>
-                    </li>
-                  </ul>
+                        </article>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1637,215 +1527,219 @@
     <div class="container-publications container">
       <div class="publications">
         <h2 class="publications-header section-header">Издания</h2>
-        <div class="publications-select">
-          <h3 class="publications-select__header" data-checked="false">
-            Категории
-          </h3>
-          <ul class="publications-select__list-collapsed">
-            <li class="publications-select__item">
-              <input class="publications-select__input" id="bestsellers" type="checkbox">
-              <label class="publications-select__label" data-checked="false" for="bestsellers">
-                <span class="publications-select__span-box"></span>Бестселлеры</label>
-              <span class="publications-select__span-close"></span>
-            </li>
-            <li class="publications-select__item">
-              <input class="publications-select__input" id="art" type="checkbox"><label class="publications-select__label" data-checked="false" for="art">
-                <span class="publications-select__span-box"></span>Искусство</label>
-              <span class="publications-select__span-close"></span>
-            </li>
-            <li class="publications-select__item">
-              <input class="publications-select__input" id="architecture" type="checkbox"><label class="publications-select__label" data-checked="false" for="architecture">
-                <span class="publications-select__span-box"></span>Архитектура</label>
-              <span class="publications-select__span-close"></span>
-            </li>
-            <li class="publications-select__item">
-              <input class="publications-select__input" id="design" type="checkbox">
-              <label class="publications-select__label" data-checked="false" for="design">
-                <span class="publications-select__span-box"></span>Дизайн
-              </label>
-              <span class="publications-select__span-close"></span>
-            </li>
-            <li class="publications-select__item">
-              <input class="publications-select__input" id="fashion" type="checkbox">
-              <label class="publications-select__label" data-checked="false" for="fashion">
-                <span class="publications-select__span-box"></span>Мода
-              </label>
-              <span class="publications-select__span-close"></span>
-            </li>
-            <li class="publications-select__item">
-              <input class="publications-select__input" id="for-children" type="checkbox">
-              <label class="publications-select__label" data-checked="false" for="for-children">
-                <span class="publications-select__span-box"></span>Детям
-              </label>
-              <span class="publications-select__span-close"></span>
-            </li>
-            <li class="publications-select__item">
-              <input class="publications-select__input" id="fiction" type="checkbox">
-              <label class="publications-select__label" data-checked="false" for="fiction">
-                <span class="publications-select__span-box"></span>Художественная
-                литература
-              </label>
-              <span class="publications-select__span-close"></span>
-            </li>
-            <li class="publications-select__item">
-              <input class="publications-select__input" id="journalism" type="checkbox"><label class="publications-select__label" data-checked="false" for="journalism">
-                <span class="publications-select__span-box"></span>Публицистика
-              </label>
-              <span class="publications-select__span-close"></span>
-            </li>
-            <li class="publications-select__item">
-              <input class="publications-select__input" id="travel-guides" type="checkbox">
-              <label class="publications-select__label" data-checked="false" for="travel-guides">
-                <span class="publications-select__span-box"></span>Путеводители
-              </label>
-              <span class="publications-select__span-close"></span>
-            </li>
-            <li class="publications-select__item">
-              <input class="publications-select__input" id="philosophy" type="checkbox">
-              <label class="publications-select__label" data-checked="false" for="philosophy">
-                <span class="publications-select__span-box"></span>Философия
-              </label>
-              <span class="publications-select__span-close"></span>
-            </li>
-            <li class="publications-select__item">
-              <input class="publications-select__input" id="educational-literature" type="checkbox">
-              <label class="publications-select__label" data-checked="false" for="educational-literature">
-                <span class="publications-select__span-box"></span>Учебная
-                литература</label>
-              <span class="publications-select__span-close"></span>
-            </li>
-            <li class="publications-select__item">
-              <input class="publications-select__input" id="newspapers" type="checkbox">
-              <label class="publications-select__label" data-checked="false" for="newspapers">
-                <span class="publications-select__span-box"></span>Журналы и газеты</label>
-              <span class="publications-select__span-close"></span>
-            </li>
-          </ul>
-        </div>
-        <div class="publication-price">
-          <h3 class="publications-price-header">Цена</h3>
-          <form class="publication-price__form" action="#">
-            <label class="publication-price__label" for="min-price">
-              <small class="publication-price__small
+        <div class="publication-wrapper">
+          <div class="publications-select">
+            <h3 class="publications-select__header" data-checked="false">
+              Категории
+            </h3>
+            <ul class="publications-select__list-collapsed">
+              <li class="publications-select__item">
+                <input class="publications-select__input" id="bestsellers" type="checkbox">
+                <label class="publications-select__label" data-checked="false" for="bestsellers">
+                  <span class="publications-select__span-box"></span>Бестселлеры</label>
+                <span class="publications-select__span-close"></span>
+              </li>
+              <li class="publications-select__item">
+                <input class="publications-select__input" id="art" type="checkbox"><label class="publications-select__label" data-checked="false" for="art">
+                  <span class="publications-select__span-box"></span>Искусство</label>
+                <span class="publications-select__span-close"></span>
+              </li>
+              <li class="publications-select__item">
+                <input class="publications-select__input" id="architecture" type="checkbox"><label class="publications-select__label" data-checked="false" for="architecture">
+                  <span class="publications-select__span-box"></span>Архитектура</label>
+                <span class="publications-select__span-close"></span>
+              </li>
+              <li class="publications-select__item">
+                <input class="publications-select__input" id="design" type="checkbox">
+                <label class="publications-select__label" data-checked="false" for="design">
+                  <span class="publications-select__span-box"></span>Дизайн
+                </label>
+                <span class="publications-select__span-close"></span>
+              </li>
+              <li class="publications-select__item">
+                <input class="publications-select__input" id="fashion" type="checkbox">
+                <label class="publications-select__label" data-checked="false" for="fashion">
+                  <span class="publications-select__span-box"></span>Мода
+                </label>
+                <span class="publications-select__span-close"></span>
+              </li>
+              <li class="publications-select__item">
+                <input class="publications-select__input" id="for-children" type="checkbox">
+                <label class="publications-select__label" data-checked="false" for="for-children">
+                  <span class="publications-select__span-box"></span>Детям
+                </label>
+                <span class="publications-select__span-close"></span>
+              </li>
+              <li class="publications-select__item">
+                <input class="publications-select__input" id="fiction" type="checkbox">
+                <label class="publications-select__label" data-checked="false" for="fiction">
+                  <span class="publications-select__span-box"></span>Художественная
+                  литература
+                </label>
+                <span class="publications-select__span-close"></span>
+              </li>
+              <li class="publications-select__item">
+                <input class="publications-select__input" id="journalism" type="checkbox"><label class="publications-select__label" data-checked="false" for="journalism">
+                  <span class="publications-select__span-box"></span>Публицистика
+                </label>
+                <span class="publications-select__span-close"></span>
+              </li>
+              <li class="publications-select__item">
+                <input class="publications-select__input" id="travel-guides" type="checkbox">
+                <label class="publications-select__label" data-checked="false" for="travel-guides">
+                  <span class="publications-select__span-box"></span>Путеводители
+                </label>
+                <span class="publications-select__span-close"></span>
+              </li>
+              <li class="publications-select__item">
+                <input class="publications-select__input" id="philosophy" type="checkbox">
+                <label class="publications-select__label" data-checked="false" for="philosophy">
+                  <span class="publications-select__span-box"></span>Философия
+                </label>
+                <span class="publications-select__span-close"></span>
+              </li>
+              <li class="publications-select__item">
+                <input class="publications-select__input" id="educational-literature" type="checkbox">
+                <label class="publications-select__label" data-checked="false" for="educational-literature">
+                  <span class="publications-select__span-box"></span>Учебная
+                  литература</label>
+                <span class="publications-select__span-close"></span>
+              </li>
+              <li class="publications-select__item">
+                <input class="publications-select__input" id="newspapers" type="checkbox">
+                <label class="publications-select__label" data-checked="false" for="newspapers">
+                  <span class="publications-select__span-box"></span>Журналы и газеты</label>
+                <span class="publications-select__span-close"></span>
+              </li>
+            </ul>
+          </div>
+          <div class="publication-price">
+            <h3 class="publications-price-header">Цена</h3>
+            <form class="publication-price__form" action="#">
+              <label class="publication-price__label" for="min-price">
+                <small class="publication-price__small
                   publication-price__small_1">От</small>
-              <input class="publication-price__input" id="min-price" type="text" placeholder="50">
-            </label>
-            <label class="publication-price__label" for="max-price">
-              <small class="publication-price__small
+                <input class="publication-price__input" id="min-price" type="text" placeholder="50">
+              </label>
+              <label class="publication-price__label" for="max-price">
+                <small class="publication-price__small
                   publication-price__small_2">до</small>
-              <input class="publication-price__input" id="max-price" type="text" placeholder="25 000">
-              <small class="publication-price__small
+                <input class="publication-price__input" id="max-price" type="text" placeholder="25 000">
+                <small class="publication-price__small
                   publication-price__small_3">руб.</small>
-            </label>
-          </form>
+              </label>
+            </form>
+          </div>
         </div>
-        <div class="publication-book-swiper-navigation">
-          <button class="swiper-button-next publication-book-swiper-button publication-book-swiper-button-prev" type="button"></button>
-          <div class="swiper-pagination publication-book-swiper-pagination"></div>
-          <button class="swiper-button-next publication-book-swiper-button publication-book-swiper-button-next" type="button"></button>
-        </div>
-        <div class="swiper-container publication-book-swiper" id="publication-book__swiper">
-          <div class="swiper-wrapper publication-book-swiper-wrapper">
-            <div class="swiper-slide publication-book-slide">
-              <article class="publication-book-slide-content">
-                <picture class="publication-book-slide-wrapper">
-                  <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-1.png">
-                  <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-1.png">
-                  <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-1.png" alt="Книга Искусство цвета">
-                </picture>
-                <h3 class="publication-book-slide-content__header">Искусство цвета
-                </h3>
-                <p class="publication-book-slide-content__artist">Иттен, Иоханнес
-                </p>
-                <p class="publication-book-slide-content__price">620 руб
-                </p>
-                <button class="publication-book-slide-content__button" type="submit">Заказать</button>
-              </article>
-            </div>
-            <div class="swiper-slide publication-book-slide">
-              <article class="publication-book-slide-content">
-                <picture class="publication-book-slide-wrapper">
-                  <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-2.png">
-                  <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-2.png">
-                  <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-2.png" alt="Книга Типографика">
-                </picture>
-                <h3 class="publication-book-slide-content__header">Типографика</h3>
-                <p class="publication-book-slide-content__artist">Рудер, Эмиль
-                </p>
-                <p class="publication-book-slide-content__price">2450 руб
-                </p>
-                <button class="publication-book-slide-content__button" type="submit">Заказать</button>
-              </article>
-            </div>
-            <div class="swiper-slide publication-book-slide">
-              <article class="publication-book-slide-content">
-                <picture class="publication-book-slide-wrapper">
-                  <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-3.png">
-                  <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-3.png">
-                  <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-3.png" alt="Книга Книга про буквы">
-                </picture>
-                <h3 class="publication-book-slide-content__header">Книга про буквы</h3>
-                <p class="publication-book-slide-content__artist">Гордон, Юрий
-                </p>
-                <p class="publication-book-slide-content__price">2200 руб
-                </p>
-                <button class="publication-book-slide-content__button" type="submit">Заказать</button>
-              </article>
-            </div>
-            <div class="swiper-slide publication-book-slide">
-              <article class="publication-book-slide-content">
-                <picture class="publication-book-slide-wrapper">
-                  <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-4.png">
-                  <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-4.png">
-                  <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-4.png" alt="Книга Николай Ильин">
-                </picture>
-                <h3 class="publication-book-slide-content__header">Николай Ильин</h3>
-                <p class="publication-book-slide-content__artist">Кричевский, Владимир
-                </p>
-                <p class="publication-book-slide-content__price">1100 руб
-                </p>
-                <button class="publication-book-slide-content__button" type="submit">Заказать</button>
-              </article>
-            </div>
-            <div class="swiper-slide publication-book-slide">
-              <article class="publication-book-slide-content">
-                <picture class="publication-book-slide-wrapper">
-                  <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-5.png">
-                  <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-5.png">
-                  <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-5.png" alt="Книга Модульные сетки в графике">
-                </picture>
-                <h3 class="publication-book-slide-content__header">Модульные сетки в графике</h3>
-                <p class="publication-book-slide-content__artist">Мюллер-Брокманн, Йозеф</p>
-                <p class="publication-book-slide-content__price">1450 руб</p>
-                <button class="publication-book-slide-content__button" type="submit">Заказать</button>
-              </article>
-            </div>
-            <div class="swiper-slide publication-book-slide">
-              <article class="publication-book-slide-content">
-                <picture class="publication-book-slide-wrapper">
-                  <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-6.png">
-                  <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-6.png">
-                  <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-6.png" alt="Книга Эволюция графических стилей">
-                </picture>
-                <h3 class="publication-book-slide-content__header">Эволюция графических стилей</h3>
-                <p class="publication-book-slide-content__artist">Хеллер, Чваст</p>
-                <p class="publication-book-slide-content__price">3200 руб</p>
-                <button class="publication-book-slide-content__button" type="submit">Заказать</button>
-              </article>
-            </div>
-            <div class="swiper-slide publication-book-slide">
-              <article class="publication-book-slide-content">
-                <picture class="publication-book-slide-wrapper">
-                  <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-7.png">
-                  <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-7.png">
-                  <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-7.png" alt="Книга Искусство и визуальное восприятие">
-                </picture>
-                <h3 class="publication-book-slide-content__header">Искусство и визуальное восприятие</h3>
-                <p class="publication-book-slide-content__artist">Арнхейм</p>
-                <p class="publication-book-slide-content__price">3200 руб
-                </p>
-                <button class="publication-book-slide-content__button" type="submit">Заказать</button>
-              </article>
+        <div class="publication-book-swiper-box">
+          <div class="publication-book-swiper-navigation">
+            <button class="swiper-button-next publication-book-swiper-button publication-book-swiper-button-prev" type="button"></button>
+            <div class="swiper-pagination publication-book-swiper-pagination"></div>
+            <button class="swiper-button-next publication-book-swiper-button publication-book-swiper-button-next" type="button"></button>
+          </div>
+          <div class="swiper-container publication-book-swiper" id="publication-book__swiper">
+            <div class="swiper-wrapper publication-book-swiper-wrapper">
+              <div class="swiper-slide publication-book-slide">
+                <article class="publication-book-slide-content">
+                  <picture class="publication-book-slide-wrapper">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-1.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-1.png">
+                    <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-1.png" alt="Книга Искусство цвета">
+                  </picture>
+                  <h3 class="publication-book-slide-content__header">Искусство цвета
+                  </h3>
+                  <p class="publication-book-slide-content__artist">Иттен, Иоханнес
+                  </p>
+                  <p class="publication-book-slide-content__price">620 руб
+                  </p>
+                  <button class="publication-book-slide-content__button" type="submit">Заказать</button>
+                </article>
+              </div>
+              <div class="swiper-slide publication-book-slide">
+                <article class="publication-book-slide-content">
+                  <picture class="publication-book-slide-wrapper">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-2.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-2.png">
+                    <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-2.png" alt="Книга Типографика">
+                  </picture>
+                  <h3 class="publication-book-slide-content__header">Типографика</h3>
+                  <p class="publication-book-slide-content__artist">Рудер, Эмиль
+                  </p>
+                  <p class="publication-book-slide-content__price">2450 руб
+                  </p>
+                  <button class="publication-book-slide-content__button" type="submit">Заказать</button>
+                </article>
+              </div>
+              <div class="swiper-slide publication-book-slide">
+                <article class="publication-book-slide-content">
+                  <picture class="publication-book-slide-wrapper">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-3.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-3.png">
+                    <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-3.png" alt="Книга Книга про буквы">
+                  </picture>
+                  <h3 class="publication-book-slide-content__header">Книга про буквы</h3>
+                  <p class="publication-book-slide-content__artist">Гордон, Юрий
+                  </p>
+                  <p class="publication-book-slide-content__price">2200 руб
+                  </p>
+                  <button class="publication-book-slide-content__button" type="submit">Заказать</button>
+                </article>
+              </div>
+              <div class="swiper-slide publication-book-slide">
+                <article class="publication-book-slide-content">
+                  <picture class="publication-book-slide-wrapper">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-4.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-4.png">
+                    <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-4.png" alt="Книга Николай Ильин">
+                  </picture>
+                  <h3 class="publication-book-slide-content__header">Николай Ильин</h3>
+                  <p class="publication-book-slide-content__artist">Кричевский, Владимир
+                  </p>
+                  <p class="publication-book-slide-content__price">1100 руб
+                  </p>
+                  <button class="publication-book-slide-content__button" type="submit">Заказать</button>
+                </article>
+              </div>
+              <div class="swiper-slide publication-book-slide">
+                <article class="publication-book-slide-content">
+                  <picture class="publication-book-slide-wrapper">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-5.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-5.png">
+                    <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-5.png" alt="Книга Модульные сетки в графике">
+                  </picture>
+                  <h3 class="publication-book-slide-content__header">Модульные сетки в графике</h3>
+                  <p class="publication-book-slide-content__artist">Мюллер-Брокманн, Йозеф</p>
+                  <p class="publication-book-slide-content__price">1450 руб</p>
+                  <button class="publication-book-slide-content__button" type="submit">Заказать</button>
+                </article>
+              </div>
+              <div class="swiper-slide publication-book-slide">
+                <article class="publication-book-slide-content">
+                  <picture class="publication-book-slide-wrapper">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-6.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-6.png">
+                    <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-6.png" alt="Книга Эволюция графических стилей">
+                  </picture>
+                  <h3 class="publication-book-slide-content__header">Эволюция графических стилей</h3>
+                  <p class="publication-book-slide-content__artist">Хеллер, Чваст</p>
+                  <p class="publication-book-slide-content__price">3200 руб</p>
+                  <button class="publication-book-slide-content__button" type="submit">Заказать</button>
+                </article>
+              </div>
+              <div class="swiper-slide publication-book-slide">
+                <article class="publication-book-slide-content">
+                  <picture class="publication-book-slide-wrapper">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-7.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-7.png">
+                    <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-7.png" alt="Книга Искусство и визуальное восприятие">
+                  </picture>
+                  <h3 class="publication-book-slide-content__header">Искусство и визуальное восприятие</h3>
+                  <p class="publication-book-slide-content__artist">Арнхейм</p>
+                  <p class="publication-book-slide-content__price">3200 руб
+                  </p>
+                  <button class="publication-book-slide-content__button" type="submit">Заказать</button>
+                </article>
+              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,237 @@
+@media (min-width: 1024px) {
+  .row {
+    width: 90.23%;
+  }
+
+  /* header */
+  .navbar {
+    height: 769px;
+  }
+
+  .logo {
+    margin-left: -5px;
+  }
+
+  .nav-search-wrapper {
+    width: 29px;
+  }
+
+  .nav-search.search-active .nav-search__button {
+    margin: 13px 9px 0 4px;
+  }
+
+  /* hero */
+  .hero-content {
+    padding: 112px 50px 115px 50px;
+  }
+
+  .hero-content__heading {
+    margin: 0 0 14px 0;
+    line-height: 82px;
+  }
+
+  /* gallery */
+  .container-gallery {
+    margin: 0 0 77px 0;
+  }
+
+  .gallery-header {
+    margin: 0 13.9vw 19px 0;
+  }
+
+  .fillter-gallery-wrapper {
+    margin: -4px 0 0 0;
+  }
+
+  .gallery-swiper-navigation {
+    margin: 0 0 29px 0;
+    width: max-content;
+  }
+
+  .swiper-gallery {
+    flex: 0 0 58vw;
+    margin: -60px 0 11px 0;
+    height: max-content;
+  }
+
+  .gallery-swiper-wrapper {
+    height: 58vw;
+  }
+
+  .gallery-slide {
+    margin-top: 0 !important;
+    margin-bottom: 34px !important;
+    height: calc((100% - 34px)/2);
+  }
+
+  /* catalog */
+  .catalog-header {
+    margin: 3px 42px 15px 0;
+  }
+
+  .ui-tabs .ui-tabs-nav li:not(:last-child) {
+    margin: 13px 50px 0 0;
+  }
+
+  .ui-tabs .ui-tabs-nav li:last-child {
+    margin: 13px 0 0 0;
+  }
+
+  .catalog-tabs__text {
+    margin: 0 0 39px 0;
+    font-size: 16.1px;
+  }
+
+  .catalog-artists-wrapper {
+    flex: 0 0 42.67vw;
+  }
+
+  .catalog-artists-box__text {
+    padding: 0;
+  }
+
+  .catalog-tabs-content-wrapper {
+    flex: 0 0 42.67vw;
+    margin: -3px 0 0 0;
+  }
+
+  .catalog-accordion-list {
+    column-count: 2;
+  }
+
+  /* catalog */
+  .container-catalog {
+    margin: 0 0 28px 0;
+  }
+
+  /* events */
+  .swiper-events {
+    margin: 0 0 23px 0;
+  }
+
+  .swiper-wrapper-events {
+    justify-content: flex-start;
+  }
+
+  .events-slide:nth-child(2n+1) {
+    margin: 0 27px 27px 0;
+  }
+
+  .events-slide:nth-child(3n) {
+    margin: 0 0 27px 0;
+  }
+
+  .events-slide {
+    display: flex;
+    margin: 0 27px 27px 0;
+    width: 28.32vw;
+  }
+
+  .events-slide:nth-child(3) {
+    display: flex;
+  }
+
+  .events-slide:nth-child(n+4) {
+    display: none;
+  }
+
+  .events-slide__img {
+    flex: 0 1 auto;
+    height: 19.53vw;
+  }
+
+  .events-slide__img-1 {
+    background-image: url(../img/1024/events/events_1024-1.png);
+  }
+
+  .events-slide__img-2 {
+    background-image: url(../img/1024/events/events_1024-2.png);
+  }
+
+  .events-slide__img-3 {
+    background-image: url(../img/1024/events/events_1024-3.png);
+  }
+
+  .events-slide__img-4 {
+    background-image: url(../img/1024/events/events_1024-4.png);
+  }
+
+  .events-slide__img-5 {
+    background-image: url(../img/1024/events/events_1024-5.png);
+  }
+
+  .events-slide__text {
+    padding: 0 8px 0 0;
+  }
+
+  /* publications */
+  .container-publications {
+    padding: 81px 50px 31px 50px;
+  }
+
+  .publication-wrapper {
+    margin-right: 5px;
+  }
+
+  .publications-select {
+    margin: 0 0 25px 0;
+  }
+
+  .publications-select__header {
+    margin: 0 0 7px 0;
+  }
+
+  .publications-select__list-collapsed {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+
+  .publication-book-swiper-box {
+    margin-top: -45px;
+  }
+
+  .publication-book-slide {
+    margin: 0;
+  }
+
+  .publication-book-slide:nth-child(2n) {
+    margin: 0 49px 0 0;
+  }
+
+  .publication-book-slide:not(:last-child) {
+    margin: 0 49px 0 0;
+  }
+
+  /* project */
+  .project-content {
+    margin: 0 0 19px 0;
+  }
+
+  .project-content__tultip:nth-child(1) {
+    transform: translate(-4px, 2px);
+  }
+
+  .project-content__tultip:nth-child(2) {
+    transform: translate(-2px, 3px);
+  }
+
+  .project-content__tultip:nth-child(3) {
+    transform: translate(-3px, 2px);
+  }
+
+  .project-partners__header {
+    margin: 0 0 23px 0;
+  }
+
+  .project-partners-swiper {
+    flex: 0 1 79.93vw;
+    height: 12.5vw;
+  }
+
+  /* contacts */
+  .contacts-form {
+    padding: 123px 101px 0 50px;
+    width: 47.55vw;
+  }
+}

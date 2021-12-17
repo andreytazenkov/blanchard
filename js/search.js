@@ -1,12 +1,12 @@
-$(document).ready(function() {
-    $('.nav-search').click(function(e) {
-        $('body').addClass('lock');
-        $('.header').addClass('search-active');
-        $('.nav-search').addClass('search-active');
-    });
-    $('.nav-search-close').click(function(e) {
-        $('body').removeClass('lock');
-        $('.header').removeClass('search-active');
-        $('.nav-search').removeClass('search-active');
-    });
+$(document).ready(function () {
+  $('.nav-search__button').click(function () {
+    $('body').toggleClass('lock');
+    $('.header').toggleClass('search-active');
+    $('.nav-search').toggleClass('search-active');
+  });
+  $('.nav-search-close').click(function () {
+    $('body').removeClass('lock');
+    $('.header').removeClass('search-active');
+    $('.nav-search').removeClass('search-active');
+  });
 });
