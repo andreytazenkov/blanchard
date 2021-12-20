@@ -1,0 +1,48 @@
+@media (min-width: 1600px) {
+  .row {
+    width: 83.33%;
+  }
+
+  /* header */
+  .submenu {
+    padding: 25px 8.33vw;
+  }
+
+  /* hero */
+  .hero-swiper-slide-1 {
+    background-image: url(../img/1920/hero/hero__swiper-1_1920.png);
+  }
+
+  .hero-swiper-slide-2 {
+    background-image: url(../img/1920/hero/hero__swiper-2_1920.png);
+  }
+
+  .hero-swiper-slide-3 {
+    background-image: url(../img/1920/hero/hero__swiper-3_1920.png);
+  }
+
+  /* gallery */
+  .filter-gallery {
+    margin: 0 2.6vw 0 0;
+    flex: 0 0 20.83vw;
+  }
+
+  .gallery-swiper-wrapper {
+    height: 39.06vw;
+  }
+
+  /* catalog */
+  .catalog-artists-wrapper {
+    flex: 0 0 39.06vw;
+    margin: 0 2.6vw 0 0;
+  }
+
+  .catalog-tabs-content-wrapper {
+    flex: 0 0 41.66vw;
+  }
+
+  /* events */
+  .events-slide {
+    width: 26.04vw;
+  }
+}

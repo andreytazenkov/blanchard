@@ -67,6 +67,14 @@ const gallarySwiper = new Swiper('.swiper-gallery', {
       slidesPerColumn: 2,
       autoHeight: false,
       spaceBetween: 34,
+    },
+    1600: {
+      speed: 1500,
+      slidesPerGroup: 2,
+      slidesPerView: 3,
+      slidesPerColumn: 3,
+      autoHeight: false,
+      spaceBetween: 34,
     }
   }
 });

@@ -37,7 +37,6 @@
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    padding: 110px 50px 115px 50px;
   }
 
   .hero-content {
@@ -79,10 +78,12 @@
 
   .swiper-container-box {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .swiper-gallery {
     flex: 0 0 54.8vw;
+    width: 54.8vw;
     height: 54.8vw;
   }
 

@@ -7,18 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Художественная галерея</title>
   <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="./css/normalize.css" rel="stylesheet">
+  <link href="../css/normalize.css" rel="stylesheet">
   <link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
   <link href="/resources/demos/style.css" rel="stylesheet">
-  <link href="./css/swiper-bundle.min.css" rel="stylesheet">
-  <link href="./css/choices.min.css" rel="stylesheet">
-  <link href="./css/tab.css" rel="stylesheet">
-  <link href="./css/tippy-scale.css" rel="stylesheet">
-  <link href="./css/style.css" rel="stylesheet">
-  <link href="./css/media_min_576.css" rel="stylesheet">
-  <link href="./css/media_min_768.css" rel="stylesheet">
-  <link href="./css/media_min_896.css" rel="stylesheet">
-  <link href="./css/media_min_1024.css" rel="stylesheet">
+  <link href="../css/simplebar.css" rel="stylesheet">
+  <link href="../css/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../css/choices.min.css" rel="stylesheet">
+  <link href="../css/tippy-scale.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/media_min_576.css" rel="stylesheet">
+  <link href="../css/media_min_768.css" rel="stylesheet">
+  <link href="../css/media_min_896.css" rel="stylesheet">
+  <link href="../css/media_min_1024.css" rel="stylesheet">
+  <link href="../css/media_min_1200.css" rel="stylesheet">
+  <link href="../css/media_min_1600.css" rel="stylesheet">
+  <link href="../css/media_min_1920.css" rel="stylesheet">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=4f3f09c6-34ea-483f-abe4-f80917799db8&lang=ru_RU"></script>
 </head>
 
@@ -56,7 +59,13 @@
               <a class="hav-items-href" href="#">Контакты</a>
             </li>
           </ul>
-          <div class="login-wrapper"><button class="login button" id="login" type="button">Войти</button></div>
+          <div class="login-wrapper">
+            <button class="login button" id="login" type="button">
+              <svg class="login-pict" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" />
+              </svg>
+              Войти</button>
+          </div>
         </nav>
         <div class="logo">
           <a class="logo-href" href="#">
@@ -70,10 +79,12 @@
                 Реализм
               </button>
               <ul class="submenu-dropdown-list submenu-dropdown-list-realism">
-                <li class="submenu-dropdown-items">Тинторетто</li>
-                <li class="submenu-dropdown-items">Фридрих</li>
-                <li class="submenu-dropdown-items">Леонардо</li>
-                <li class="submenu-dropdown-items">Верроккьо</li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-tintoretto" href="#">Тинторетто</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-fridrih" href="#">Фридрих</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-leonardo" href="#">Леонардо</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-verrokko" href="#">Верроккьо</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-verrokko" href="#">Верроккьо</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-verrokko" href="#">Верроккьо</a></li>
               </ul>
             </li>
             <li class="submenu-list-items">
@@ -81,10 +92,10 @@
                 Импрессионизм
               </button>
               <ul class="submenu-dropdown-list submenu-dropdown-list-impressionism">
-                <li class="submenu-dropdown-items">Моне</li>
-                <li class="submenu-dropdown-items">Сислей</li>
-                <li class="submenu-dropdown-items">Мане</li>
-                <li class="submenu-dropdown-items">Ренуар</li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-mone" href="#">Моне</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-sisley" href="#">Сислей</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-mane" href="#">Мане</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-renuar" href="#">Ренуар</a></li>
               </ul>
             </li>
             <li class="submenu-list-items">
@@ -92,10 +103,10 @@
                 Постмодернизм
               </button>
               <ul class="submenu-dropdown-list submenu-dropdown-list-postmodernism">
-                <li class="submenu-dropdown-items">Ван Гог</li>
-                <li class="submenu-dropdown-items">Сезанн"</li>
-                <li class="submenu-dropdown-items">Гоген</li>
-                <li class="submenu-dropdown-items">Сёра</li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-van-gog" href="#">Ван Гог</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-sezann" href="#">Сезанн</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-gogen" href="#">Гоген</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-sera" href="#">Сёра</a></li>
               </ul>
             </li>
             <li class="submenu-list-items">
@@ -103,10 +114,10 @@
                 Авангард
               </button>
               <ul class="submenu-dropdown-list submenu-dropdown-list-avangard">
-                <li class="submenu-dropdown-items">Кандинский</li>
-                <li class="submenu-dropdown-items">Маринетти"</li>
-                <li class="submenu-dropdown-items">Малевич</li>
-                <li class="submenu-dropdown-items">Пикассо</li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-candinskiy" href="#">Кандинский</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-marinetty" href="#">Маринетти</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-malevich" href="#">Малевич</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-picasso" href="#">Пикассо</a></li>
               </ul>
             </li>
             <li class="submenu-list-items">
@@ -114,10 +125,10 @@
                 Футуризм
               </button>
               <ul class="submenu-dropdown-list submenu-dropdown-list-futurism">
-                <li class="submenu-dropdown-items">Карра</li>
-                <li class="submenu-dropdown-items">Прателла"</li>
-                <li class="submenu-dropdown-items">Северини</li>
-                <li class="submenu-dropdown-items">Балла</li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-karra" href="#">Карра</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-pratella" href="#">Прателла</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-severiny" href="#">Северини</a></li>
+                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-balla" href="#">Балла</a></li>
               </ul>
             </li>
           </ul>
@@ -139,18 +150,20 @@
   <section>
     <div class="container-hero container">
       <div class="hero">
-        <div class="hero-swiper swiper-container">
-          <div class="hero-wrapper swiper-wrapper">
-            <div class="hero-swiper-slide swiper-slide hero-swiper-slide-1"></div>
-            <div class="hero-swiper-slide swiper-slide hero-swiper-slide-2"></div>
-            <div class="hero-swiper-slide swiper-slide hero-swiper-slide-3"></div>
+        <div class="hero-row row">
+          <div class="hero-swiper swiper-container">
+            <div class="hero-wrapper swiper-wrapper">
+              <div class="hero-swiper-slide swiper-slide hero-swiper-slide-1"></div>
+              <div class="hero-swiper-slide swiper-slide hero-swiper-slide-2"></div>
+              <div class="hero-swiper-slide swiper-slide hero-swiper-slide-3"></div>
+            </div>
           </div>
-        </div>
-        <div class="hero-content">
-          <h2 class="hero-content__heading">Прикоснитесь к прекрасному
-          </h2>
-          <p class="hero-content__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
-          <button class="hero-content__button button">Подписаться на рассылку</button>
+          <div class="hero-content">
+            <h2 class="hero-content__heading">Прикоснитесь к прекрасному
+            </h2>
+            <p class="hero-content__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+            <button class="hero-content__button button">Подписаться на рассылку</button>
+          </div>
         </div>
       </div>
     </div>
@@ -1767,31 +1780,31 @@
             <button class="project-partners-swiper-button project-partners-swiper-prev" id="project-partners-swiper-prev"></button>
             <div class="swiper-container project-partners-swiper">
               <div class="swiper-wrapper project-partners-swiper-wrapper">
-                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank">
+                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank" rel="noopener">
                   <img class="project-partners-swiper__slide-img" src="./img/320/project/project_320-1.png" alt="freelands foundation">
                 </a>
-                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank">
+                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank" rel="noopener">
                   <img class="project-partners-swiper__slide-img" src="./img/320/project/project_320-2.png" alt="institute for contemporary art">
                 </a>
-                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank">
+                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank" rel="noopener">
                   <img class="project-partners-swiper__slide-img" src="./img/320/project/project_320-3.png" alt="workhouse arts center">
                 </a>
-                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank">
+                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank" rel="noopener">
                   <img class="project-partners-swiper__slide-img" src="./img/320/project/project_320-4.png" alt="1849 wine co">
                 </a>
-                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank">
+                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank" rel="noopener">
                   <img class="project-partners-swiper__slide-img" src="./img/320/project/project_320-5.png" alt="hiscox">
                 </a>
-                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank">
+                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank" rel="noopener">
                   <img class="project-partners-swiper__slide-img" src="./img/320/project/project_320-6.png" alt="camden arts centre">
                 </a>
-                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank">
+                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank" rel="noopener">
                   <img class="project-partners-swiper__slide-img" src="./img/320/project/project_320-7.png" alt="stassen premium belgian cider">
                 </a>
-                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank">
+                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank" rel="noopener">
                   <img class="project-partners-swiper__slide-img" src="./img/320/project/project_320-8.png" alt="watts gallery artists village">
                 </a>
-                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank">
+                <a class="swiper-slide project-partners-swiper__slide" href="#" target="_blank" rel="noopener">
                   <img class="project-partners-swiper__slide-img" src="./img/320/project/project_320-9.png" alt="esad ecole superieure cart et de design de valenciennes">
                 </a>
                 <div class="project-partners-swiper__swiper-button-prev"></div>
@@ -1829,10 +1842,10 @@
           </h3>
           <ul class="contacts-social__list">
             <li class="contacts-social__item">
-              <a class="contacts-social__href contacts-social__href_whatsapp" href="https://www.whatsapp.com/" target="_blank"></a>
+              <a class="contacts-social__href contacts-social__href_whatsapp" href="https://www.whatsapp.com/" target="_blank" rel="noopener"></a>
             </li>
             <li class="contacts-social__item">
-              <a class="contacts-social__href contacts-social__href_telegram" href="https://web.telegram.org/" target="_blank"></a>
+              <a class="contacts-social__href contacts-social__href_telegram" href="https://web.telegram.org/" target="_blank" rel="noopener"></a>
             </li>
           </ul>
         </div>
@@ -1843,13 +1856,13 @@
     <div class="container-footer container">
       <ul class="footer-social-list">
         <li class="footer-social-item">
-          <a class="footer-social-item__href footer-social-item__href_vk" href="https://vk.com/" target="_blank"></a>
+          <a class="footer-social-item__href footer-social-item__href_vk" href="https://vk.com/" target="_blank" rel="noopener"></a>
         </li>
         <li class="footer-social-item">
-          <a class="footer-social-item__href footer-social-item__href_instagram" href="https://www.instagram.com/" target="_blank"></a>
+          <a class="footer-social-item__href footer-social-item__href_instagram" href="https://www.instagram.com/" target="_blank" rel="noopener"></a>
         </li>
         <li class="footer-social-item">
-          <a class="footer-social-item__href footer-social-item__href_facebook" href="https://www.facebook.com/" target="_blank"></a>
+          <a class="footer-social-item__href footer-social-item__href_facebook" href="https://www.facebook.com/" target="_blank" rel="noopener"></a>
         </li>
       </ul>
       <div class="footer-logo">
@@ -1865,8 +1878,11 @@
   </footer>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="./js/header.js"></script>
   <script src="./js/burger.js"></script>
   <script src="./js/search.js"></script>
+  <script src="./js/simplebar.min.js"></script>
+  <script src="./js/submenu.js"></script>
   <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/swiper.js"></script>
   <script src="./js/choices.min.js"></script>

@@ -1,6 +1,9 @@
 $('.catalog-tabs__href').click(function () {
   $('.catalog-artists').each(function () {
-    $(this).fadeOut(100);
+    $(this).fadeOut(100).css('display', 'none');
+    $('.catalog-artists-box').each(function () {
+      $(this).css('display', 'none');
+    });
   });
   let catalogTabsContentCountry = $(this).attr('href');
   $('.catalog-artists').each(function () {
@@ -15,7 +18,7 @@ $('.catalog-tabs__href').click(function () {
 $('.catalog-accordion-list__item').click(function () {
   let dataName = $(this).attr('data-name');
   $('.catalog-artists-box').each(function () {
-    $(this).fadeOut(100);
+    $(this).fadeOut(100).css('display', 'none');
   });
   $('.catalog-artists-box').each(function () {
     let idArts = $(this).attr('id');
