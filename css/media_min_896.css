@@ -34,8 +34,6 @@
 
   /* hero */
   .hero-content {
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
   }
 
@@ -71,9 +69,13 @@
     width: 100%;
   }
 
+  .gallery-swiper-wrapper {
+    height: 55.66vw;
+  }
+
   .gallery-swiper-navigation {
-    margin: 0;
-    width: 130px;
+    margin: 0 0 29px 0;
+    width: max-content;
   }
 
   .swiper-container-box {
@@ -82,9 +84,9 @@
   }
 
   .swiper-gallery {
-    flex: 0 0 54.8vw;
-    width: 54.8vw;
-    height: 54.8vw;
+    flex: 0 0 54vw;
+    width: 54vw;
+    height: auto;
   }
 
   .gallery-slide {
@@ -109,8 +111,6 @@
   }
 
   .catalog-accordion-list {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
     column-count: 1;
   }
 
@@ -142,15 +142,15 @@
 
   .publication-book-swiper {
     max-width: 100%;
-    width: 61.42vw;
+    width: 89vw;
   }
 
   .publication-book-slide {
-    width: 28.32vw;
+    width: 26.9vw;
   }
 
   .publication-book-slide-content__price {
-    top: 32.51vw;
+    top: 31vw;
   }
 
   /* contacts */

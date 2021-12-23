@@ -17,3 +17,13 @@ gallaryMove();
 $(window).resize(function () {
   gallaryMove();
 });
+
+
+$('.gallery-slide').click(function () {
+  let indexSlideClick = $(this).index();
+  $('.gallery-modal').each(function (index) {
+    if (indexSlideClick - 1 == index) {
+      $(this).attr('data-yes', 'yes');
+    }
+  });
+});

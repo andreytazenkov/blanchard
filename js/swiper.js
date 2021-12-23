@@ -75,6 +75,14 @@ const gallarySwiper = new Swiper('.swiper-gallery', {
       slidesPerColumn: 3,
       autoHeight: false,
       spaceBetween: 34,
+    },
+    1600: {
+      speed: 1500,
+      slidesPerGroup: 2,
+      slidesPerView: 3,
+      slidesPerColumn: 3,
+      autoHeight: false,
+      spaceBetween: 50,
     }
   }
 });
@@ -93,9 +101,9 @@ let eventsSwiper = undefined;
 function initEventsSwiper() {
   if ((screen.width < 576) && (eventsSwiper == undefined)) {
     eventsSwiper = new Swiper('.swiper-events', {
-      autoplay: {
-        delay: 3000
-      },
+      // autoplay: {
+      //   delay: 3000
+      // },
       speed: 1800,
       loop: true,
       pagination: {
@@ -145,7 +153,7 @@ function initBookSwiper() {
       pagination: {
         el: publicationBookSwiperPagination,
         type: 'fraction',
-      }
+      },
     });
   } else if ((screen.width < 576) && (bookSwiper != undefined)) {
     bookSwiper.destroy();
@@ -173,6 +181,10 @@ const projectSwiper = new Swiper('.project-partners-swiper', {
     },
     1024: {
       slidesPerView: 2,
+      spaceBetween: 49,
+    },
+    1600: {
+      slidesPerView: 3,
       spaceBetween: 49,
     },
   },

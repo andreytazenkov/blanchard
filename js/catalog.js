@@ -9,8 +9,18 @@ $('.catalog-tabs__href').click(function () {
   $('.catalog-artists').each(function () {
     let catalogArtistsCountry = "#" + $(this).attr('data-country');
     if (catalogTabsContentCountry === catalogArtistsCountry) {
-      $(this).fadeIn(600).children().first().css('display', 'flex');
+      $(this).fadeIn(600)
+        .children()
+        .first()
+        .css('display', 'flex');
       $('#noname').fadeOut(100);
+      let catalogArtistsBox = '#' + $(this).children().attr('id');
+      $('.catalog-accordion-list__item-href').each(function () {
+        let catalogAccordionListItemHref = $(this).attr('href');
+        if (catalogArtistsBox === catalogAccordionListItemHref) {
+          $(this).addClass('active');
+        }
+      });
     }
   });
 });
@@ -18,7 +28,8 @@ $('.catalog-tabs__href').click(function () {
 $('.catalog-accordion-list__item').click(function () {
   let dataName = $(this).attr('data-name');
   $('.catalog-artists-box').each(function () {
-    $(this).fadeOut(100).css('display', 'none');
+    $(this).fadeOut(100)
+      .css('display', 'none');
   });
   $('.catalog-artists-box').each(function () {
     let idArts = $(this).attr('id');
@@ -35,7 +46,8 @@ $('.catalog-accordion-list__item').click(function () {
   };
   let catalogAccordionListItemHref = $(this).children('.catalog-accordion-list__item-href');
   $("html, body").animate({
-    scrollTop: $($(catalogAccordionListItemHref).attr("href")).offset().top + 'px'
+    scrollTop: $($(catalogAccordionListItemHref).attr("href"))
+      .offset().top + 'px'
   }, {
     duration: 800,
     easing: "swing"

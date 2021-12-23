@@ -5,7 +5,7 @@
 
   /* header */
   .submenu {
-    padding: 25px 8.33vw;
+    padding: 20px 8.33vw 18px 8.33vw;
   }
 
   /* hero */
@@ -22,6 +22,10 @@
   }
 
   /* gallery */
+  .container-gallery {
+    background-image: url(../img/1920/gallery/gallery-background_1920.png);
+  }
+
   .filter-gallery {
     margin: 0 2.6vw 0 0;
     flex: 0 0 20.83vw;
@@ -41,8 +45,65 @@
     flex: 0 0 41.66vw;
   }
 
+  .catalog-accordion-list {
+    column-count: 3;
+  }
+
   /* events */
   .events-slide {
     width: 26.04vw;
+  }
+
+  /* publications */
+  .container-publications {
+    padding: 81px 8.33vw 80px 8.33vw;
+  }
+
+  .publications {
+    justify-content: space-between;
+  }
+
+  .publication-wrapper {
+    flex: 0 0 14.42vw;
+    margin: 0;
+  }
+
+  .publication-book-swiper {
+    width: 60.42vw;
+  }
+
+  .publication-book-swiper-box {
+    flex: 0 0 59.89vw;
+  }
+
+  .publication-book-slide {
+    width: 18.22vw;
+  }
+
+  /* project */
+  .project-partners-swiper {
+    flex: 0 1 75.52vw;
+    height: 7.81vw;
+  }
+
+  /* contacts */
+  .contacts-map-form-wrapper {
+    justify-content: flex-end;
+  }
+
+  .contacts-form {
+    flex: 0 0 35.52vw;
+    padding: 123px 6.35vw 0 8.33vw;
+    width: auto;
+  }
+
+  .contacts-map {
+    width: auto;
+    flex: 0 0 64.47vw;
+  }
+
+  /* footer */
+  .container-footer {
+    padding: 50px 8.33vw;
   }
 }
