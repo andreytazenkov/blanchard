@@ -22,9 +22,9 @@ const swiper = new Swiper('.hero-swiper', {
 /*swiper-gallery*/
 let galleryPagination = document.querySelector('.swiper-gallery-pagination')
 const gallarySwiper = new Swiper('.swiper-gallery', {
-  // autoplay: {
-  //     delay: 3000
-  // },
+  autoplay: {
+    delay: 3000
+  },
   speed: 2200,
   loop: true,
   pagination: {
@@ -84,7 +84,11 @@ const gallarySwiper = new Swiper('.swiper-gallery', {
       autoHeight: false,
       spaceBetween: 50,
     }
-  }
+  },
+  a11y: {
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
+  },
 });
 
 $('.swiper-gallery-button-prev').click(function (e) {
@@ -101,9 +105,9 @@ let eventsSwiper = undefined;
 function initEventsSwiper() {
   if ((screen.width < 576) && (eventsSwiper == undefined)) {
     eventsSwiper = new Swiper('.swiper-events', {
-      // autoplay: {
-      //   delay: 3000
-      // },
+      autoplay: {
+        delay: 3000
+      },
       speed: 1800,
       loop: true,
       pagination: {
@@ -114,7 +118,7 @@ function initEventsSwiper() {
         576: {
           pagination: false,
         }
-      }
+      },
     });
   } else if ((screen.width >= 576) && (eventsSwiper != undefined)) {
     eventsSwiper.destroy();
@@ -140,9 +144,9 @@ function initBookSwiper() {
   const publicationBookSwiperPagination = document.querySelector('.publication-book-swiper-pagination');
   if ((screen.width >= 576) && (bookSwiper == undefined)) {
     bookSwiper = new Swiper('.publication-book-swiper', {
-      // autoplay: {
-      //   delay: 2000
-      // },
+      autoplay: {
+        delay: 2000
+      },
       speed: 1800,
       loop: false,
       slidesPerView: 'auto',
@@ -153,6 +157,10 @@ function initBookSwiper() {
       pagination: {
         el: publicationBookSwiperPagination,
         type: 'fraction',
+      },
+      a11y: {
+        prevSlideMessage: 'Предыдущий слайд',
+        nextSlideMessage: 'Следующий слайд',
       },
     });
   } else if ((screen.width < 576) && (bookSwiper != undefined)) {
@@ -169,9 +177,9 @@ $(window).resize(function () {
 
 /* project-partners__swiper*/
 const projectSwiper = new Swiper('.project-partners-swiper', {
-  // autoplay: {
-  //   delay: 3000
-  // },
+  autoplay: {
+    delay: 3000
+  },
   speed: 2200,
   loop: true,
   breakpoints: {
@@ -183,10 +191,14 @@ const projectSwiper = new Swiper('.project-partners-swiper', {
       slidesPerView: 2,
       spaceBetween: 49,
     },
-    1600: {
+    1200: {
       slidesPerView: 3,
       spaceBetween: 49,
     },
+  },
+  a11y: {
+    prevSlideMessage: 'Предыдущий слайд',
+    nextSlideMessage: 'Следующий слайд',
   },
 });
 

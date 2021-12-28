@@ -28,6 +28,8 @@
 
   .filter-gallery {
     margin: 0 2.6vw 0 0;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20.83vw;
     flex: 0 0 20.83vw;
   }
 
@@ -35,17 +37,42 @@
     height: 39.06vw;
   }
 
+  .gallery-modal-wrapper {
+    width: 900px;
+    height: 500px;
+  }
+
+  .gallery-modal-picture {
+    width: 400px;
+  }
+
+  .gallery-modal-content {
+    padding: 121px 46px 122px 49px;
+  }
+
+  .gallery-modal-year-painting {
+    -webkit-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    transform: translateY(-1px);
+  }
+
   /* catalog */
   .catalog-artists-wrapper {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 39.06vw;
     flex: 0 0 39.06vw;
     margin: 0 2.6vw 0 0;
   }
 
   .catalog-tabs-content-wrapper {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 41.66vw;
     flex: 0 0 41.66vw;
   }
 
   .catalog-accordion-list {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
     column-count: 3;
   }
 
@@ -60,10 +87,14 @@
   }
 
   .publications {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
   .publication-wrapper {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 14.42vw;
     flex: 0 0 14.42vw;
     margin: 0;
   }
@@ -73,6 +104,8 @@
   }
 
   .publication-book-swiper-box {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 59.89vw;
     flex: 0 0 59.89vw;
   }
 
@@ -82,16 +115,22 @@
 
   /* project */
   .project-partners-swiper {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 75.52vw;
     flex: 0 1 75.52vw;
     height: 7.81vw;
   }
 
   /* contacts */
   .contacts-map-form-wrapper {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 
   .contacts-form {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 35.52vw;
     flex: 0 0 35.52vw;
     padding: 123px 6.35vw 0 8.33vw;
     width: auto;
@@ -99,6 +138,8 @@
 
   .contacts-map {
     width: auto;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 64.47vw;
     flex: 0 0 64.47vw;
   }
 

@@ -17,3 +17,7 @@ $('.swiper-events-hide__button').click(function () {
     }, 1000);
   };
 });
+
+$('.events-slide').each(function (index) {
+  $(this).attr('aria-label', 'Событие ' + `${index + 1}`)
+});

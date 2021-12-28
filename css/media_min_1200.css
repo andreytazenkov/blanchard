@@ -14,6 +14,8 @@
   }
 
   .logo {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
     margin: 0;
     width: 173px;
@@ -22,11 +24,21 @@
 
   .login-wrapper {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
     order: 3;
     padding: 0;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     border: none;
     border-radius: 0;
@@ -65,6 +77,8 @@
     visibility: hidden;
     opacity: 0;
     z-index: -1;
+    -webkit-transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
+    -o-transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
     transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
   }
 
@@ -89,12 +103,25 @@
 
   .navbar {
     position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
     padding: 0;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     height: 100%;
     overflow: hidden;
@@ -105,14 +132,23 @@
   }
 
   .nav-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     margin: 0;
     padding: 0 5px;
   }
 
   .nav-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
@@ -129,8 +165,14 @@
     position: absolute;
     bottom: -70%;
     left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 19px 4.87vw;
     width: 100vw;
@@ -139,8 +181,14 @@
   }
 
   .sibmenu-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin: 0 16.35vw 0 0;
     width: 100%;
@@ -156,6 +204,8 @@
     font-size: 18px;
     line-height: 25px;
     color: var(--color-white);
+    -webkit-transition: color 0.2s ease-in;
+    -o-transition: color 0.2s ease-in;
     transition: color 0.2s ease-in;
     z-index: 10;
   }
@@ -177,8 +227,14 @@
     height: 6px;
     border-bottom: 2px solid var(--color-white);
     border-right: 2px solid var(--color-white);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+    -webkit-transition: margin 0.2s ease-in, border 0.2s ease-in, -webkit-transform 0.2s ease-in;
+    transition: margin 0.2s ease-in, border 0.2s ease-in, -webkit-transform 0.2s ease-in;
+    -o-transition: margin 0.2s ease-in, transform 0.2s ease-in, border 0.2s ease-in;
     transition: margin 0.2s ease-in, transform 0.2s ease-in, border 0.2s ease-in;
+    transition: margin 0.2s ease-in, transform 0.2s ease-in, border 0.2s ease-in, -webkit-transform 0.2s ease-in;
   }
 
   .submenu-list-items__button:hover::before {
@@ -194,6 +250,8 @@
 
   .submenu-list-items__button.is-active::before {
     margin: 4px 0 0 0;
+    -webkit-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
     transform: rotate(225deg);
   }
 
@@ -207,6 +265,8 @@
     background-color: var(--color-violet-active);
     visibility: hidden;
     opacity: 0;
+    -webkit-transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
+    -o-transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
     transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
     z-index: -1;
   }
@@ -218,15 +278,20 @@
 
   .submenu-dropdown-list {
     position: absolute;
-    top: 179%;
+    top: 158%;
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 2.08vw;
     width: 15.62vw;
     max-height: 300px;
     background: rgba(0, 0, 0, 0.6);
-    overflow-y: auto;
+    overflow: auto;
     z-index: 11;
   }
 
@@ -348,12 +413,17 @@
   }
 
   .nav-search-wrapper {
+    -ms-flex-negative: 0;
     flex-shrink: 0;
     width: 13.07vw;
   }
 
   .nav-search {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 100%;
   }
@@ -369,6 +439,26 @@
     width: 86.5%;
   }
 
+  .nav-search__input::-webkit-input-placeholder {
+    color: var(--color-white);
+    opacity: 0.6;
+  }
+
+  .nav-search__input::-moz-placeholder {
+    color: var(--color-white);
+    opacity: 0.6;
+  }
+
+  .nav-search__input:-ms-input-placeholder {
+    color: var(--color-white);
+    opacity: 0.6;
+  }
+
+  .nav-search__input::-ms-input-placeholder {
+    color: var(--color-white);
+    opacity: 0.6;
+  }
+
   .nav-search__input::placeholder {
     color: var(--color-white);
     opacity: 0.6;
@@ -376,6 +466,8 @@
 
   /* events */
   .swiper-wrapper-events {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
@@ -384,6 +476,8 @@
   }
 
   .events-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0 0 2.63vw 0;
     width: 28.32vw;

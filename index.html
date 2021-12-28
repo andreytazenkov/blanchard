@@ -7,21 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Художественная галерея</title>
   <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="../css/normalize.css" rel="stylesheet">
-  <link href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+  <link href="./css/normalize.css" rel="stylesheet">
+  <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
   <link href="/resources/demos/style.css" rel="stylesheet">
-  <link href="../css/simplebar.css" rel="stylesheet">
-  <link href="../css/swiper-bundle.min.css" rel="stylesheet">
-  <link href="../css/choices.min.css" rel="stylesheet">
-  <link href="../css/tippy-scale.css" rel="stylesheet">
-  <link href="../css/style.css" rel="stylesheet">
-  <link href="../css/media_min_576.css" rel="stylesheet">
-  <link href="../css/media_min_768.css" rel="stylesheet">
-  <link href="../css/media_min_896.css" rel="stylesheet">
-  <link href="../css/media_min_1024.css" rel="stylesheet">
-  <link href="../css/media_min_1200.css" rel="stylesheet">
-  <link href="../css/media_min_1600.css" rel="stylesheet">
-  <link href="../css/media_min_1920.css" rel="stylesheet">
+  <link href="./css/simplebar.min.css" rel="stylesheet">
+  <link href="./css/swiper-bundle.min.css" rel="stylesheet">
+  <link href="./css/choices.min.css" rel="stylesheet">
+  <link href="./css/tippy-scale.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/media_min_576.min.css">
+  <link rel="stylesheet" href="./css/media_min_768.min.css">
+  <link rel="stylesheet" href="./css/media_min_896.min.css">
+  <link rel="stylesheet" href="./css/media_min_1024.min.css">
+  <link rel="stylesheet" href="./css/media_min_1200.min.css">
+  <link rel="stylesheet" href="./css/media_min_1600.min.css">
+  <link rel="stylesheet" href="./css/media_min_1920.min.css">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=4f3f09c6-34ea-483f-abe4-f80917799db8&lang=ru_RU"></script>
 </head>
 
@@ -31,11 +31,11 @@
       <div class="header row">
         <h1 class="header-document">Blanchart - художественная галлерея
         </h1>
-        <button class="burger" type="button">
+        <button class="burger" type="button" aria-label="Открыть меню">
           <span class="burger__span"></span>
         </button>
         <nav class="navbar">
-          <button class="navbar-close" aria-label="Закрыть меню" tabindex="0"></button>
+          <button class="navbar-close" aria-label="Закрыть меню"></button>
           <ul class="nav-list">
             <li class="nav-items">
               <a class="hav-items-href" href="#">О нас</a>
@@ -60,7 +60,7 @@
             </li>
           </ul>
           <div class="login-wrapper">
-            <button class="login button" id="login" type="button">
+            <button class="login button" id="login" type="button" aria-label="Логин">
               <svg class="login-pict" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" />
               </svg>
@@ -136,11 +136,11 @@
         <div class="nav-search-wrapper">
           <form class="nav-search" name="nav-search" action="#">
             <label class="nav-search__label" for="search"></label>
-            <button class="nav-search__button" type="submit"></button>
+            <button class="nav-search__button" type="submit" aria-label="Открыть поиск"></button>
             <input class="nav-search__input" id="search" aria-label="Поиск по сайту" type="search" placeholder="Поиск по сайту">
           </form>
         </div>
-        <button class="nav-search-close">
+        <button class="nav-search-close" aria-label="Закрыть поиск">
           <span class="nav-search-close__span"></span>
         </button>
       </div>
@@ -191,9 +191,9 @@
           <div class="fillter-gallery-wrapper">
             <label class="gallary-label" for="filter-gallery">Фильтр:</label>
             <select class="filter-gallery__select" id="filter-gallery" name="filter-gallery">
-              <option class="filter-gallery__option" value="Автор" label="Автор"></option>
-              <option class="filter-gallery__option" value="Направление" label="Направление"></option>
-              <option class="filter-gallery__option" value="Техника" label="Техника"></option>
+              <option class="filter-gallery__option" value="Автор" label="Автор" tabindex="0"></option>
+              <option class="filter-gallery__option" value="Направление" label="Направление" tabindex="0"></option>
+              <option class="filter-gallery__option" value="Техника" label="Техника" tabindex="0"></option>
             </select>
           </div>
         </div>
@@ -201,220 +201,217 @@
           <div class="swiper-container swiper-gallery">
             <div class="swiper-wrapper gallery-swiper-wrapper">
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-1.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-1.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-1.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-1.png" alt="Картина 1">
+                <picture class="gallery-slide-picture" data-number="1">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-1.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-1.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-1.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-1.jpg" alt="Картина 1" aria-label="Открыть описание картины 1">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-2.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-2.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-2.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-2.png" alt="Картина 2">
+                <picture class="gallery-slide-picture" data-number="2">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-2.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-2.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-2.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-2.jpg" alt="Картина 2" aria-label="Открыть описание картины 2">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-3.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-3.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-3.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-3.png" alt="Картина 3">
+                <picture class="gallery-slide-picture" data-number="3">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-3.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-3.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-3.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-3.jpg" alt="Картина 3" aria-label="Открыть описание картины 3">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-4.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-4.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-4.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-4.png" alt="Картина 4">
+                <picture class="gallery-slide-picture" data-number="4">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-4.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-4.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-4.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-4.jpg" alt="Картина 4" aria-label="Открыть описание картины 4">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-5.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-5.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-5.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-5.png" alt="Картина 5">
+                <picture class="gallery-slide-picture" data-number="5">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-5.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-5.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-5.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-5.jpg" alt="Картина 5" aria-label="Открыть описание картины 5">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-6.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-6.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-6.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-6.png" alt="Картина 6">
+                <picture class="gallery-slide-picture" data-number="6">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-6.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-6.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-6.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-6.jpg" alt="Картина 6" aria-label="Открыть описание картины 6">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-7.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-7.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-7.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-7.png" alt="Картина 7">
+                <picture class="gallery-slide-picture" data-number="7">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-7.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-7.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-7.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-7.jpg" alt="Картина 7" aria-label="Открыть описание картины 7">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-8.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-8.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-8.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-8.png" alt="Картина 8">
+                <picture class="gallery-slide-picture" data-number="8">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-8.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-8.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-8.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-8.jpg" alt="Картина 8" aria-label="Открыть описание картины 8">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-9.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-9.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-9.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-9.png" alt="Картина 9">
+                <picture class="gallery-slide-picture" data-number="9">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-9.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-9.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-9.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-9.jpg" alt="Картина 9" aria-label="Открыть описание картины 9">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-10.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-10.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-10.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-10.png" alt="Картина 10">
+                <picture class=" gallery-slide-picture" data-number="10">
+                  <source class=" gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-10.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-10.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-10.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-10.jpg" alt="Картина 10" aria-label="Открыть описание картины 10">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-11.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-11.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-11.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-11.png" alt="Картина 11">
+                <picture class=" gallery-slide-picture" data-number="11">
+                  <source class=" gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-11.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-11.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-11.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-11.jpg" alt="Картина 11" aria-label="Открыть описание картины 11">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-12.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-12.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-12.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-12.png" alt="Картина 12">
+                <picture class=" gallery-slide-picture" data-number="12">
+                  <source class=" gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-12.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-12.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-12.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-12.jpg" alt="Картина 12" aria-label="Открыть описание картины 12">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-13.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-13.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-13.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-13.png" alt="Картина 13">
+                <picture class=" gallery-slide-picture" data-number="13">
+                  <source class=" gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-13.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-13.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-13.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-13.jpg" alt="Картина 13" aria-label="Открыть описание картины 13">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-14.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-14.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-14.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-14.png" alt="Картина 14">
+                <picture class=" gallery-slide-picture" data-number="14">
+                  <source class=" gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-14.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-14.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-14.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-14.jpg" alt="Картина 14" aria-label="Открыть описание картины 14">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-15.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-15.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-15.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-15.png" alt="Картина 15">
+                <picture class=" gallery-slide-picture" data-number="15">
+                  <source class=" gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-15.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-15.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-15.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-15.jpg" alt="Картина 15" aria-label="Открыть описание картины 15">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-16.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-16.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-16.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-16.png" alt="Картина 16">
+                <picture class=" gallery-slide-picture" data-number="16">
+                  <source class=" gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-16.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-16.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-16.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-16.jpg" alt="Картина 16" aria-label="Открыть описание картины 16">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-17.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-17.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-17.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-17.png" alt="Картина 17">
+                <picture class=" gallery-slide-picture" data-number="17">
+                  <source class=" gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-17.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-17.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-17.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-17.jpg" alt="Картина 17" aria-label="Открыть описание картины 17">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-18.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-18.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-18.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-18.png" alt="Картина 18">
+                <picture class=" gallery-slide-picture" data-number="18">
+                  <source class=" gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-18.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-18.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-18.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-18.jpg" alt="Картина 18" aria-label="Открыть описание картины 18">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-19.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-19.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-19.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-19.png" alt="Картина 19">
+                <picture class=" gallery-slide-picture" data-number="19">
+                  <source class=" gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-19.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-19.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-19.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-19.jpg" alt="Картина 19" aria-label="Открыть описание картины 19">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-20.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-20.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-20.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-20.png" alt="Картина 20">
+                <picture class=" gallery-slide-picture" data-number="20">
+                  <source class=" gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-20.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-20.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-20.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-20.jpg" alt="Картина 20" aria-label="Открыть описание картины 20">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-21.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-21.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-21.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-21.png" alt="Картина 21">
+                <picture class=" gallery-slide-picture" data-number="21">
+                  <source class=" gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-21.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-21.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-21.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-21.jpg" alt="Картина 21" aria-label="Открыть описание картины 21">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-22.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-22.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-22.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-22.png" alt="Картина 22">
+                <picture class=" gallery-slide-picture" data-number="22">
+                  <source class=" gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-22.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-22.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-22.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-22.jpg" alt="Картина 22" aria-label="Открыть описание картины 22">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-23.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-23.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-23.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-23.png" alt="Картина 23">
+                <picture class=" gallery-slide-picture" data-number="23">
+                  <source class=" gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-23.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-23.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-23.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-23.jpg" alt="Картина 23" aria-label="Открыть описание картины 23">
                 </picture>
               </button>
               <button class="swiper-slide gallery-slide">
-                <picture class="gallery-slide-picture">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-24.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-24.png">
-                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-24.png">
-                  <img class="gallery-slide-picture__img" src="../img/320/gallery/gallery_320-24.png" alt="Картина 24">
+                <picture class=" gallery-slide-picture" data-number="24">
+                  <source class=" gallery-slide-picture__img" media="(min-width: 1920px)" srcset="./img/1920/gallery/gallery_1920-24.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 1024px)" srcset="./img/1024/gallery/gallery_1024-24.png">
+                  <source class="gallery-slide-picture__img" media="(min-width: 320px)" srcset="./img/320/gallery/gallery_320-24.jpg">
+                  <img class="gallery-slide-picture__img" src="./img/320/gallery/gallery_320-24.jpg" alt="Картина 24" aria-label="Открыть описание картины 24">
                 </picture>
               </button>
             </div>
           </div>
           <div class="gallery-swiper-navigation">
-            <button class="swiper-button-prev swiper-gallery-button swiper-gallery-button-prev"></button>
+            <button class="swiper-button-prev swiper-gallery-button swiper-gallery-button-prev" role="button" aria-label="Предыдущий слайд"></button>
             <div class="swiper-pagination swiper-gallery-pagination"></div>
-            <button class="swiper-button-next swiper-gallery-button swiper-gallery-button-next"></button>
+            <button class="swiper-button-next swiper-gallery-button swiper-gallery-button-next" role="button" aria-label="Следующий слайд"></button>
           </div>
         </div>
         <div class="gallery-modal-list">
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-1.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-1.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-1.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-1.png" alt="Картина 1">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-1.png" alt="Картина 1">
+              </div>
               <div class="gallery-modal-content">
-                <h3 class="gallery-modal-heading">Имя художника</h3>
-                <h4 class="gallery-modal-name-painting">Название картины</h4>
-                <small class="gallery-modal-year-painting">XXYY-XXYY</small>
-                <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <h3 class="gallery-modal-heading">Казимир Малевич</h3>
+                <h4 class="gallery-modal-name-painting">“Женщина с граблями”</h4>
+                <small class="gallery-modal-year-painting">1931-1932</small>
+                <p class="gallery-modal-text">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -422,18 +419,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-2.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-2.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-2.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-2.png" alt="Картина 2">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-2.png" alt="Картина 2">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -441,18 +435,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-3.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-3.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-3.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-3.png" alt="Картина 3">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-3.png" alt="Картина 3">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -460,18 +451,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-4.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-4.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-4.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-4.png" alt="Картина 4">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-4.png" alt="Картина 4">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -479,18 +467,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-5.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-5.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-5.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-5.png" alt="Картина 5">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-5.png" alt="Картина 5">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -498,18 +483,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-6.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-6.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-6.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-6.png" alt="Картина 6">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-6.png" alt="Картина 6">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -517,18 +499,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-7.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-7.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-7.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-7.png" alt="Картина 7">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-7.png" alt="Картина 7">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -536,18 +515,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-8.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-8.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-8.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-8.png" alt="Картина 8">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-8.png" alt="Картина 8">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -555,18 +531,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-9.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-9.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-9.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-9.png" alt="Картина 9">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-9.png" alt="Картина 9">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -574,18 +547,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-10.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-10.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-10.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-10.png" alt="Картина 10">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-10.png" alt="Картина 10">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -593,18 +563,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-11.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-11.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-11.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-11.png" alt="Картина 11">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-11.png" alt="Картина 11">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -612,18 +579,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-12.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-12.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-12.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-12.png" alt="Картина 12">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-12.png" alt="Картина 12">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -631,18 +595,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-13.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-13.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-13.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-13.png" alt="Картина 13">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-13.png" alt="Картина 13">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -650,18 +611,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-14.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-14.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-14.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-14.png" alt="Картина 14">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-14.png" alt="Картина 14">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -669,18 +627,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-15.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-15.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-15.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-15.png" alt="Картина 15">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-15.png" alt="Картина 15">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -688,18 +643,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-16.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-16.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-16.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-16.png" alt="Картина 16">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-16.png" alt="Картина 16">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -707,18 +659,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-17.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-17.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-17.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-17.png" alt="Картина 17">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-17.png" alt="Картина 17">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -726,18 +675,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-18.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-18.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-18.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-18.png" alt="Картина 18">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-18.png" alt="Картина 18">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -745,18 +691,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-19.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-19.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-19.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-19.png" alt="Картина 19">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-19.png" alt="Картина 19">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -764,18 +707,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-20.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-20.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-20.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-20.png" alt="Картина 20">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-20.png" alt="Картина 20">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -783,18 +723,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-21.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-21.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-21.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-21.png" alt="Картина 21">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-21.png" alt="Картина 21">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -802,18 +739,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-22.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-22.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-22.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-22.png" alt="Картина 22">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-22.png" alt="Картина 22">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -821,18 +755,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-23.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-23.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-23.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-23.png" alt="Картина 23">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-23.png" alt="Картина 23">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -840,18 +771,15 @@
           </article>
           <article class="gallery-modal">
             <div class="gallery-modal-wrapper">
-              <picture class="gallery-modal-picture">
-                <source class="gallery-modal-picture__img" media="(min-width: 1920px)" srcset="../img/1920/gallery/gallery_1920-24.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 1024px)" srcset="../img/1024/gallery/gallery_1024-24.png">
-                <source class="gallery-modal-picture__img" media="(min-width: 320px)" srcset="../img/320/gallery/gallery_320-24.png">
-                <img class="gallery-modal-picture__img" src="../img/320/gallery/gallery_320-24.png" alt="Картина 24">
-              </picture>
+              <div class="gallery-modal-picture">
+                <img class="gallery-modal-picture__img" src="./img/320/gallery/gallery_320-24.png" alt="Картина 24">
+              </div>
               <div class="gallery-modal-content">
                 <h3 class="gallery-modal-heading">Имя художника</h3>
                 <h4 class="gallery-modal-name-painting">Название картины</h4>
                 <small class="gallery-modal-year-painting">XXYY-XXYY</small>
                 <p class="gallery-modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci voluptates excepturi nemo dolorum veniam vel perspiciatis dolor repellat, sunt corporis enim aut quia ratione recusandae quas consequatur repellendus ipsa?</p>
-                <button class="gallery-modal-close" type="button">
+                <button class="gallery-modal-close" type="button" aria-label="Закрыть описание картины">
                   <span class="gallery-modal-close__span"></span>
                 </button>
               </div>
@@ -867,7 +795,6 @@
         </p>
       </div>
     </div>
-    </div>
   </section>
   <!--catalog-->
   <section>
@@ -878,19 +805,19 @@
           <div class="catalog-tabs" id="category-tabs">
             <ul class="catalog-tabs__list">
               <li class="catalog-tabs__item">
-                <a class="catalog-tabs__href catalog-tabs__href-france" href="#france"></a>
+                <a class="catalog-tabs__href catalog-tabs__href-france" href="#france" aria-label="Просмотреть фрацузских художников"></a>
               </li>
               <li class="catalog-tabs__item">
-                <a class="catalog-tabs__href catalog-tabs__href-germany" href="#germany"></a>
+                <a class="catalog-tabs__href catalog-tabs__href-germany" href="#germany" aria-label="Просмотреть немецких художников"></a>
               </li>
               <li class="catalog-tabs__item">
-                <a class="catalog-tabs__href catalog-tabs__href-italy" href="#italy"></a>
+                <a class="catalog-tabs__href catalog-tabs__href-italy" href="#italy" aria-label="Просмотреть итальянских художников"></a>
               </li>
               <li class="catalog-tabs__item">
-                <a class="catalog-tabs__href catalog-tabs__href-russia" href="#russia"></a>
+                <a class="catalog-tabs__href catalog-tabs__href-russia" href="#russia" aria-label="Просмотреть русских художников"></a>
               </li>
               <li class="catalog-tabs__item">
-                <a class="catalog-tabs__href catalog-tabs__href-belgium" href="#belgium"></a>
+                <a class="catalog-tabs__href catalog-tabs__href-belgium" href="#belgium" aria-label="Просмотреть бельгийских художников"></a>
               </li>
             </ul>
             <p class="catalog-tabs__text">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины,
@@ -898,7 +825,7 @@
             <div class="catalog-tabs-content-wrapper">
               <div class="catalog-tabs-content" id="france">
                 <div class="catalog-tabs-accordion" id="accordion-france">
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Французские художники с 1400 по 1499 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1400 по 1499 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -911,7 +838,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Французские художники с 1500 по 1599 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1500 по 1599 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -934,7 +861,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Французские художники с 1500 по 1599 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1600 по 1699 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -957,7 +884,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Французские художники с 1700 по 1799 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1700 по 1799 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -980,7 +907,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Французские художники с 1800 по 1899 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1800 по 1899 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1003,7 +930,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Французские художники с 1900 по 1999 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1900 по 1999 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1026,7 +953,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Французские художники с 2000 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1053,7 +980,7 @@
               </div>
               <div class="catalog-tabs-content" id="germany">
                 <div class="catalog-tabs-accordion" id="accordion-germany">
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Немецкие художники с 1400 по 1499 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1400 по 1499 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1066,7 +993,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Немецкие художники с 1500 по 1599 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1500 по 1599 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1089,7 +1016,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Немецкие художники с 1600 по 1699 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1600 по 1699 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1112,7 +1039,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Немецкие художники с 1700 по 1799 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1700 по 1799 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1135,7 +1062,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Немецкие художники с 1800 по 1899 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1800 по 1899 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1158,7 +1085,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Немецкие художники с 1900 по 1999 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1900 по 1999 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1181,7 +1108,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Немецкие художники с 2000 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1207,7 +1134,7 @@
                 </div>
               </div>
               <div class="catalog-tabs-content" id="italy">
-                <div class="catalog-tabs-accordion" id="accordion-italy">
+                <div class="catalog-tabs-accordion" id="accordion-italy" role="button" aria-label="Итальянские художники с 1400 по 1499 года" tabindex="0">
                   <div class="catalog-tabs-accordion__header">
                     <p class="catalog-tabs-accordion__header-text">C 1400 по 1499 гг.</p>
                   </div>
@@ -1287,7 +1214,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Итальянские художники с 1500 по 1599 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1500 по 1599 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1310,7 +1237,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Итальянские художники с 1600 по 1699 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1600 по 1699 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1333,7 +1260,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Итальянские художники с 1700 по 1799 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1700 по 1799 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1356,7 +1283,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Итальянские художники с 1800 по 1899 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1800 по 1899 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1379,7 +1306,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Итальянские художники с 1900 по 1999 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1900 по 1999 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1402,7 +1329,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Итальянские художники с 2000 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1428,7 +1355,7 @@
                 </div>
               </div>
               <div class="catalog-tabs-content" id="russia">
-                <div class="catalog-tabs-accordion" id="accordion-russia">
+                <div class="catalog-tabs-accordion" id="accordion-russia" role="button" aria-label="Русские художники с 1400 по 1499 года" tabindex="0">
                   <div class="catalog-tabs-accordion__header">
                     <p class="catalog-tabs-accordion__header-text">C 1400 по 1499 гг.</p>
                   </div>
@@ -1442,7 +1369,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Русские художники с 1500 по 1599 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1500 по 1599 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1465,7 +1392,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Русские художники с 1600 по 1699 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1600 по 1699 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1488,7 +1415,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Русские художники с 1700 по 1799 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1700 по 1799 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1511,7 +1438,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Русские художники с 1800 по 1899 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1800 по 1899 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1534,7 +1461,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Русские художники с 1900 по 1999 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1900 по 1999 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1557,7 +1484,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Русские художники с 2000 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1583,7 +1510,7 @@
                 </div>
               </div>
               <div class="catalog-tabs-content" id="belgium">
-                <div class="catalog-tabs-accordion" id="accordion-belgium">
+                <div class="catalog-tabs-accordion" id="accordion-belgium" role="button" aria-label="Бельгийские художники с 1400 по 1499 года" tabindex="0">
                   <div class="catalog-tabs-accordion__header">
                     <p class="catalog-tabs-accordion__header-text">C 1400 по 1499 гг.</p>
                   </div>
@@ -1597,7 +1524,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Бельгийские художники с 1500 по 1599 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1500 по 1599 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1620,7 +1547,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Бельгийские художники с 1600 по 1699 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1600 по 1699 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1643,7 +1570,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Бельгийские художники с 1700 по 1799 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1700 по 1799 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1666,7 +1593,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Бельгийские художники с 1800 по 1899 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1800 по 1899 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1689,7 +1616,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Бельгийские художники с 1900 по 1999 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1900 по 1999 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1712,7 +1639,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header">
+                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Бельгийские художники с 2000 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1742,9 +1669,9 @@
           <div class="catalog-artists-wrapper">
             <article class="catalog-artists-box" id="noname">
               <picture class="catalog-artists-box-wrapper-img">
-                <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="../img/1024/catalog/x-artist_1024.png">
-                <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="../img/768/catalog/x-artist_768.png">
-                <img class="catalog-artists-box-wrapper-img__img" src="../img/320/catalog/x-artist_320.png" alt="Без художника">
+                <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="./img/1024/catalog/x-artist_1024.png">
+                <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="./img/768/catalog/x-artist_768.png">
+                <img class="catalog-artists-box-wrapper-img__img" src="./img/320/catalog/x-artist_320.png" alt="Без художника">
               </picture>
               <h3 class="catalog-artists-box__header">Что мы о нём знаем?</h3>
               <p class="catalog-artists-box__text">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
@@ -1754,9 +1681,9 @@
             <div class="catalog-artists" data-country="france">
               <article class="catalog-artists-box is-active" id="jean-fouquet">
                 <picture class="catalog-artists-box-wrapper-img">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="../img/1024/catalog/france_jean-fouquet_1024.png">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="../img/768/catalog/france_jean-fouquet_768.png">
-                  <img class="catalog-artists-box-wrapper-img__img" src="../img/320/catalog/france_jean-fouquet_320.png" alt="Жан Фуке">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="./img/1024/catalog/france_jean-fouquet_1024.png">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="./img/768/catalog/france_jean-fouquet_768.png">
+                  <img class="catalog-artists-box-wrapper-img__img" src="./img/320/catalog/france_jean-fouquet_320.png" alt="Жан Фуке">
                 </picture>
                 <h3 class="catalog-artists-box__header">Жан Фуке</h3>
                 <small class="catalog-artists-box__small">ок. 1420г — 1481г.</small>
@@ -1767,9 +1694,9 @@
               </article>
               <article class="catalog-artists-box" id="angerran-sharanton">
                 <picture class="catalog-artists-box-wrapper-img">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="../img/1024/catalog/france_angerran-sharanton_1024.jpg">
-                  <source class=" catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="../img/768/catalog/france_angerran-sharanton_768.jpg">
-                  <img class="catalog-artists-box-wrapper-img__img" src="../img/320/catalog/france_angerran-sharanton_320.jpg" alt="Ангерран Шаронтон">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="./img/1024/catalog/france_angerran-sharanton_1024.jpg">
+                  <source class=" catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="./img/768/catalog/france_angerran-sharanton_768.jpg">
+                  <img class="catalog-artists-box-wrapper-img__img" src="./img/320/catalog/france_angerran-sharanton_320.jpg" alt="Ангерран Шаронтон">
                 </picture>
                 <h3 class="catalog-artists-box__header">Ангерран Шаронтон</h3>
                 <small class="catalog-artists-box__small">ок. 1415г. — ок. 1466г.</small>
@@ -1784,9 +1711,9 @@
             <div class="catalog-artists" data-country="germany">
               <article class="catalog-artists-box is-active" id="gans-burgmay">
                 <picture class="catalog-artists-box-wrapper-img">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="../img/1024/catalog/germany_gans-burgmay_1024.jpg">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="../img/768/catalog/germany_gans-burgmay_768.jpg">
-                  <img class="catalog-artists-box-wrapper-img__img" src="../img/320/catalog/germany_gans-burgmay_320.jpg" alt="Ханс Бургкмайр">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="./img/1024/catalog/germany_gans-burgmay_1024.jpg">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="./img/768/catalog/germany_gans-burgmay_768.jpg">
+                  <img class="catalog-artists-box-wrapper-img__img" src="./img/320/catalog/germany_gans-burgmay_320.jpg" alt="Ханс Бургкмайр">
                 </picture>
                 <h3 class="catalog-artists-box__header">Ханс Бургкмайр</h3>
                 <small class="catalog-artists-box__small">1473г, Аугсбург — 1531г, там же</small>
@@ -1797,9 +1724,9 @@
               </article>
               <article class="catalog-artists-box" id="mishael-volgemut">
                 <picture class="catalog-artists-box-wrapper-img">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="../img/1024/catalog/germany_mishael-volgemut_1024.jpg">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="../img/768/catalog/germany_mishael-volgemut_768.jpg">
-                  <img class="catalog-artists-box-wrapper-img__img" src="../img/320/catalog/germany_mishael-volgemut_320.jpg" alt="Михаэль Вольгемут">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="./img/1024/catalog/germany_mishael-volgemut_1024.jpg">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="./img/768/catalog/germany_mishael-volgemut_768.jpg">
+                  <img class="catalog-artists-box-wrapper-img__img" src="./img/320/catalog/germany_mishael-volgemut_320.jpg" alt="Михаэль Вольгемут">
                 </picture>
                 <h3 class="catalog-artists-box__header">Михаэль Вольгемут</h3>
                 <small class="catalog-artists-box__small">1434г., Нюрнберг — 30 ноября 1519г., там же)</small>
@@ -1813,9 +1740,9 @@
             <div class="catalog-artists catalog-artists-active" data-country="italy">
               <article class="catalog-artists-box is-active" id="domeniko">
                 <picture class="catalog-artists-box-wrapper-img">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="../img/1024/catalog/italy_domeniko_1024.jpg">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="../img/768/catalog/italy_domeniko_768.jpg">
-                  <img class="catalog-artists-box-wrapper-img__img" src="../img/320/catalog/italy_domeniko_320.png" alt="Доменико Гирландайо">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="./img/1024/catalog/italy_domeniko_1024.jpg">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="./img/768/catalog/italy_domeniko_768.jpg">
+                  <img class="catalog-artists-box-wrapper-img__img" src="./img/320/catalog/italy_domeniko_320.png" alt="Доменико Гирландайо">
                 </picture>
                 <h3 class="catalog-artists-box__header">Доменико Гирландайо</h3>
                 <small class="catalog-artists-box__small">2 июня 1448 — 11 января 1494.</small>
@@ -1826,9 +1753,9 @@
               </article>
               <article class="catalog-artists-box" id="beneditto-di-bindo">
                 <picture class="catalog-artists-box-wrapper-img">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="../img/1024/catalog/italy_beneditto-di-bindo_1024.jpg">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="../img/768/catalog/italy_beneditto-di-bindo_768.jpg">
-                  <img class="catalog-artists-box-wrapper-img__img" src="../img/320/catalog/italy_beneditto-di-bindo_320.jpg" alt="Бенедетто ди Биндо">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="./img/1024/catalog/italy_beneditto-di-bindo_1024.jpg">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="./img/768/catalog/italy_beneditto-di-bindo_768.jpg">
+                  <img class="catalog-artists-box-wrapper-img__img" src="./img/320/catalog/italy_beneditto-di-bindo_320.jpg" alt="Бенедетто ди Биндо">
                 </picture>
                 <h3 class="catalog-artists-box__header">Бенедетто ди Биндо</h3>
                 <small class="catalog-artists-box__small">ок. 1380—85г. — 19 сентября 1417г.</small>
@@ -1839,9 +1766,9 @@
               </article>
               <article class="catalog-artists-box" id="amborjo-bergognone">
                 <picture class="catalog-artists-box-wrapper-img">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="../img/1024/catalog/italy_amborjo-bergognone_1024.jpg">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="../img/768/catalog/italy_amborjo-bergognone_768.jpg">
-                  <img class="catalog-artists-box-wrapper-img__img" src="../img/320/catalog/italy_amborjo-bergognone_320.jpg" alt="Амброджо Бергоньоне">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="./img/1024/catalog/italy_amborjo-bergognone_1024.jpg">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="./img/768/catalog/italy_amborjo-bergognone_768.jpg">
+                  <img class="catalog-artists-box-wrapper-img__img" src="./img/320/catalog/italy_amborjo-bergognone_320.jpg" alt="Амброджо Бергоньоне">
                 </picture>
                 <h3 class="catalog-artists-box__header">Амброджо Бергоньоне</h3>
                 <small class="catalog-artists-box__small">1453г. — 1523г.</small>
@@ -1854,9 +1781,9 @@
             <div class="catalog-artists" data-country="russia">
               <article class="catalog-artists-box is-active" id="andrey-rublev">
                 <picture class="catalog-artists-box-wrapper-img">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="../img/1024/catalog/russia_andrey-rublev_1024.jpg">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="../img/768/catalog/russia_andrey-rublev_768.jpg">
-                  <img class="catalog-artists-box-wrapper-img__img" src="../img/320/catalog/russia_andrey-rublev_320.jpg" alt="Андре́й Рублёв">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="./img/1024/catalog/russia_andrey-rublev_1024.jpg">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="./img/768/catalog/russia_andrey-rublev_768.jpg">
+                  <img class="catalog-artists-box-wrapper-img__img" src="./img/320/catalog/russia_andrey-rublev_320.jpg" alt="Андре́й Рублёв">
                 </picture>
                 <h3 class="catalog-artists-box__header">Андре́й Рублёв</h3>
                 <small class="catalog-artists-box__small">около 1360[5] — 17 октября 1428[6] или 29 января 1430[7][8], Москва.</small>
@@ -1869,9 +1796,9 @@
               </article>
               <article class="catalog-artists-box" id="dionisiy">
                 <picture class="catalog-artists-box-wrapper-img">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="../img/1024/catalog/russia_dionisiy_1024.jpg">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="../img/768/catalog/russia_dionisiy_768.jpg">
-                  <img class="catalog-artists-box-wrapper-img__img" src="../img/320/catalog/russia_dionisiy_320.jpg" alt="Диони́сий (иконописец)">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="./img/1024/catalog/russia_dionisiy_1024.jpg">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="./img/768/catalog/russia_dionisiy_768.jpg">
+                  <img class="catalog-artists-box-wrapper-img__img" src="./img/320/catalog/russia_dionisiy_320.jpg" alt="Диони́сий (иконописец)">
                 </picture>
                 <h3 class="catalog-artists-box__header">Диони́сий (иконописец)</h3>
                 <small class="catalog-artists-box__small">около 1440—1503/08 год</small>
@@ -1884,9 +1811,9 @@
             <div class="catalog-artists" data-country="belgium">
               <article class="catalog-artists-box is-active" id="piter-breigel">
                 <picture class="catalog-artists-box-wrapper-img">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="../img/1024/catalog/belgium_piter-breigel_1024.jpg">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="../img/768/catalog/belgium_piter-breigel_768.jpg">
-                  <img class="catalog-artists-box-wrapper-img__img" src="../img/320/catalog/belgium_piter-breigel_320.jpg" alt="Пи́тер Бре́йгель Ста́рший">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="./img/1024/catalog/belgium_piter-breigel_1024.jpg">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="./img/768/catalog/belgium_piter-breigel_768.jpg">
+                  <img class="catalog-artists-box-wrapper-img__img" src="./img/320/catalog/belgium_piter-breigel_320.jpg" alt="Пи́тер Бре́йгель Ста́рший">
                 </picture>
                 <h3 class="catalog-artists-box__header">Пи́тер Бре́йгель Ста́рший</h3>
                 <small class="catalog-artists-box__small">ок. 1525 — 9 сентября 1569</small>
@@ -1897,9 +1824,9 @@
               </article>
               <article class="catalog-artists-box" id="yan-van-eik">
                 <picture class="catalog-artists-box-wrapper-img">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="../img/1024/catalog/belgium_yan-van-eik_1024.jpg">
-                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="../img/768/catalog/belgium_yan-van-eik_768.jpg">
-                  <img class="catalog-artists-box-wrapper-img__img" src="../img/320/catalog/belgium_yan-van-eik_320.jpg" alt="Ян ван Эйк">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 1024px)" srcset="./img/1024/catalog/belgium_yan-van-eik_1024.jpg">
+                  <source class="catalog-artists-box-wrapper-img__img" media="(min-width: 576px)" srcset="./img/768/catalog/belgium_yan-van-eik_768.jpg">
+                  <img class="catalog-artists-box-wrapper-img__img" src="./img/320/catalog/belgium_yan-van-eik_320.jpg" alt="Ян ван Эйк">
                 </picture>
                 <h3 class="catalog-artists-box__header">Ян ван Эйк</h3>
                 <small class="catalog-artists-box__small">ок. 1385 или 1390г. — 1441г.</small>
@@ -1920,12 +1847,12 @@
         <h2 class="events-header section-header">События</h2>
         <div class="swiper-container swiper-events" id="swiper-events">
           <div class="swiper-wrapper swiper-wrapper-events">
-            <div class="swiper-slide events-slide">
+            <div class="swiper-slide events-slide" role="alertdialog" tabindex="0">
               <article class="events-slide__wrapper">
                 <div class="events-slide__content">
                   <div class="events-slide__img events-slide__img-1"></div>
                   <div class="events-slide__info">
-                    <small class="events-slide__small">Музей им. Щусева<span class="events-slide__small-span"></span>с 20 марта по 30 апреля</small>
+                    <small class="events-slide__small" aria-label="Место и время проведения события">Музей им. Щусева<span class="events-slide__small-span"></span>с 20 марта по 30 апреля</small>
                     <div class="events-slide__block">
                       <h3 class="events-slide__header">Книжная гравюра в живом восприятии</h3>
                       <div class="events-slide__text">
@@ -1937,12 +1864,12 @@
                 </div>
               </article>
             </div>
-            <div class="swiper-slide events-slide">
+            <div class="swiper-slide events-slide" role="alertdialog" tabindex="0">
               <article class="events-slide__wrapper">
                 <div class="events-slide__content">
                   <div class="events-slide__img events-slide__img-2"></div>
                   <div class="events-slide__info">
-                    <small class="events-slide__small">ММОМА<span class="events-slide__small-span"></span>24 марта 19:00</small>
+                    <small class="events-slide__small" aria-label="Место и время проведения события">ММОМА<span class="events-slide__small-span"></span>24 марта 19:00</small>
                     <div class="events-slide__block">
                       <h3 class="events-slide__header">
                         «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
@@ -1956,12 +1883,12 @@
                 </div>
               </article>
             </div>
-            <div class="swiper-slide events-slide">
+            <div class="swiper-slide events-slide" role="alertdialog" tabindex="0">
               <article class="events-slide__wrapper">
                 <div class="events-slide__content">
                   <div class="events-slide__img events-slide__img-3"></div>
                   <div class="events-slide__info">
-                    <small class="events-slide__small">Еврейский музей<span class="events-slide__small-span"></span>с 31 марта по 21 апреля</small>
+                    <small class="events-slide__small" aria-label="Место и время проведения события">Еврейский музей<span class="events-slide__small-span"></span>с 31 марта по 21 апреля</small>
                     <div class="events-slide__block">
                       <h3 class="events-slide__header">
                         Выставка «Формация 2020»
@@ -1975,12 +1902,12 @@
                 </div>
               </article>
             </div>
-            <div class="swiper-slide events-slide">
+            <div class="swiper-slide events-slide" role="alertdialog" tabindex="0">
               <article class="events-slide__wrapper">
                 <div class="events-slide__content">
                   <div class="events-slide__img events-slide__img-4"></div>
                   <div class="events-slide__info">
-                    <small class="events-slide__small">Третьяковка на Крымском валу<span class="events-slide__small-span"></span>с 30 марта по 30 апреля</small>
+                    <small class="events-slide__small" aria-label="Место и время проведения события">Третьяковка на Крымском валу<span class="events-slide__small-span"></span>с 30 марта по 30 апреля</small>
                     <div class="events-slide__block">
                       <h3 class="events-slide__header">
                         XXIV Международная биеннале молодого искусства
@@ -1994,12 +1921,12 @@
                 </div>
               </article>
             </div>
-            <div class="swiper-slide events-slide">
+            <div class="swiper-slide events-slide" role="alertdialog" tabindex="0">
               <article class="events-slide__wrapper">
                 <div class="events-slide__content">
                   <div class="events-slide__img events-slide__img-5"></div>
                   <div class="events-slide__info">
-                    <small class="events-slide__small">ММАМ<span class="events-slide__small-span"></span>с 8 апреля по 20 мая</small>
+                    <small class="events-slide__small" aria-label="Место и время проведения события">ММАМ<span class="events-slide__small-span"></span>с 8 апреля по 20 мая</small>
                     <div class="events-slide__block">
                       <h3 class="events-slide__header">
                         Джон Винзор. Фотографии из серии «Метафора серебра»
@@ -2013,12 +1940,12 @@
                 </div>
               </article>
             </div>
-            <div class="swiper-slide events-slide">
+            <div class="swiper-slide events-slide" role="alertdialog" tabindex="0">
               <article class="events-slide__wrapper">
                 <div class="events-slide__content">
                   <div class="events-slide__img events-slide__img-6"></div>
                   <div class="events-slide__info">
-                    <small class="events-slide__small">Русское поле<span class="events-slide__small-span"></span>с 1 июня по 7 июня</small>
+                    <small class="events-slide__small" aria-label="Место и время проведения события">Русское поле<span class="events-slide__small-span"></span>с 1 июня по 7 июня</small>
                     <div class="events-slide__block">
                       <h3 class="events-slide__header">
                         Современное искусство в сердцах людей
@@ -2046,7 +1973,7 @@
         <h2 class="publications-header section-header">Издания</h2>
         <div class="publication-wrapper">
           <div class="publications-select">
-            <h3 class="publications-select__header" data-checked="false">
+            <h3 class="publications-select__header" data-checked="false" role="button" aria-label="Выбрать" tabindex="0">
               Категории
             </h3>
             <ul class="publications-select__list-collapsed">
@@ -2150,20 +2077,20 @@
         </div>
         <div class="publication-book-swiper-box">
           <div class="publication-book-swiper-navigation">
-            <button class="swiper-button-next publication-book-swiper-button publication-book-swiper-button-prev" type="button"></button>
+            <button class="swiper-button-next publication-book-swiper-button publication-book-swiper-button-prev" type="button" role="button" aria-label="Предыдущий слайд"></button>
             <div class="swiper-pagination publication-book-swiper-pagination"></div>
-            <button class="swiper-button-next publication-book-swiper-button publication-book-swiper-button-next" type="button"></button>
+            <button class="swiper-button-next publication-book-swiper-button publication-book-swiper-button-next" type="button" role="button" aria-label="Следующий слайд"></button>
           </div>
           <div class="swiper-container publication-book-swiper" id="publication-book__swiper">
             <div class="swiper-wrapper publication-book-swiper-wrapper">
               <div class="swiper-slide publication-book-slide">
                 <article class="publication-book-slide-content">
                   <picture class="publication-book-slide-wrapper">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/1920/publications/publications_1920-1.jpg">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/1024/publications/publications_1024-1.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-1.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-1.png">
-                    <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-1.png" alt="Книга Искусство цвета">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/1920/publications/publications_1920-1.jpg">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/1024/publications/publications_1024-1.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/768/publications/publications_768-1.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="./img/320/publications/publications_320-1.png">
+                    <img class="publication-book-slide-wrapper__img" src="./img/320/publications/publications_320-1.png" alt="Книга Искусство цвета">
                   </picture>
                   <h3 class="publication-book-slide-content__header">Искусство цвета
                   </h3>
@@ -2177,11 +2104,11 @@
               <div class="swiper-slide publication-book-slide">
                 <article class="publication-book-slide-content">
                   <picture class="publication-book-slide-wrapper">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/1920/publications/publications_1920-2.jpg">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/1024/publications/publications_1024-2.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-2.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-2.png">
-                    <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-2.png" alt="Книга Типографика">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/1920/publications/publications_1920-2.jpg">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/1024/publications/publications_1024-2.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/768/publications/publications_768-2.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="./img/320/publications/publications_320-2.png">
+                    <img class="publication-book-slide-wrapper__img" src="./img/320/publications/publications_320-2.png" alt="Книга Типографика">
                   </picture>
                   <h3 class="publication-book-slide-content__header">Типографика</h3>
                   <p class="publication-book-slide-content__artist">Рудер, Эмиль
@@ -2194,11 +2121,11 @@
               <div class="swiper-slide publication-book-slide">
                 <article class="publication-book-slide-content">
                   <picture class="publication-book-slide-wrapper">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/1920/publications/publications_1920-3.jpg">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/1024/publications/publications_1024-3.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-3.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-3.png">
-                    <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-3.png" alt="Книга Книга про буквы">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/1920/publications/publications_1920-3.jpg">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/1024/publications/publications_1024-3.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/768/publications/publications_768-3.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="./img/320/publications/publications_320-3.png">
+                    <img class="publication-book-slide-wrapper__img" src="./img/320/publications/publications_320-3.png" alt="Книга Книга про буквы">
                   </picture>
                   <h3 class="publication-book-slide-content__header">Книга про буквы</h3>
                   <p class="publication-book-slide-content__artist">Гордон, Юрий
@@ -2211,11 +2138,11 @@
               <div class="swiper-slide publication-book-slide">
                 <article class="publication-book-slide-content">
                   <picture class="publication-book-slide-wrapper">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/1920/publications/publications_1920-4.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/1024/publications/publications_1024-4.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-4.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-4.png">
-                    <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-4.png" alt="Книга Николай Ильин">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/1920/publications/publications_1920-4.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/1024/publications/publications_1024-4.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/768/publications/publications_768-4.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="./img/320/publications/publications_320-4.png">
+                    <img class="publication-book-slide-wrapper__img" src="./img/320/publications/publications_320-4.png" alt="Книга Николай Ильин">
                   </picture>
                   <h3 class="publication-book-slide-content__header">Николай Ильин</h3>
                   <p class="publication-book-slide-content__artist">Кричевский, Владимир
@@ -2228,11 +2155,11 @@
               <div class="swiper-slide publication-book-slide">
                 <article class="publication-book-slide-content">
                   <picture class="publication-book-slide-wrapper">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/1920/publications/publications_1920-5.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/1024/publications/publications_1024-5.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-5.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-5.png">
-                    <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-5.png" alt="Книга Модульные сетки в графике">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/1920/publications/publications_1920-5.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/1024/publications/publications_1024-5.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/768/publications/publications_768-5.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="./img/320/publications/publications_320-5.png">
+                    <img class="publication-book-slide-wrapper__img" src="./img/320/publications/publications_320-5.png" alt="Книга Модульные сетки в графике">
                   </picture>
                   <h3 class="publication-book-slide-content__header">Модульные сетки в графике</h3>
                   <p class="publication-book-slide-content__artist">Мюллер-Брокманн, Йозеф</p>
@@ -2243,11 +2170,11 @@
               <div class="swiper-slide publication-book-slide">
                 <article class="publication-book-slide-content">
                   <picture class="publication-book-slide-wrapper">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/1920/publications/publications_1920-6.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/1024/publications/publications_1024-6.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-6.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-6.png">
-                    <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-6.png" alt="Книга Эволюция графических стилей">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/1920/publications/publications_1920-6.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/1024/publications/publications_1024-6.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/768/publications/publications_768-6.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="./img/320/publications/publications_320-6.png">
+                    <img class="publication-book-slide-wrapper__img" src="./img/320/publications/publications_320-6.png" alt="Книга Эволюция графических стилей">
                   </picture>
                   <h3 class="publication-book-slide-content__header">Эволюция графических стилей</h3>
                   <p class="publication-book-slide-content__artist">Хеллер, Чваст</p>
@@ -2258,11 +2185,11 @@
               <div class="swiper-slide publication-book-slide">
                 <article class="publication-book-slide-content">
                   <picture class="publication-book-slide-wrapper">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/1920/publications/publications_1920-7.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/1024/publications/publications_1024-7.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="../img/768/publications/publications_768-7.png">
-                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="../img/320/publications/publications_320-7.png">
-                    <img class="publication-book-slide-wrapper__img" src="../img/320/publications/publications_320-7.png" alt="Книга Искусство и визуальное восприятие">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/1920/publications/publications_1920-7.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/1024/publications/publications_1024-7.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 576px)" srcset="./img/768/publications/publications_768-7.png">
+                    <source class="publication-book-slide-wrapper__img" media="(min-width: 320px)" srcset="./img/320/publications/publications_320-7.png">
+                    <img class="publication-book-slide-wrapper__img" src="./img/320/publications/publications_320-7.png" alt="Книга Искусство и визуальное восприятие">
                   </picture>
                   <h3 class="publication-book-slide-content__header">Искусство и визуальное восприятие</h3>
                   <p class="publication-book-slide-content__artist">Арнхейм</p>
@@ -2285,10 +2212,10 @@
         <div class="project-content">
           Предварительные выводы: постоянное информационно- пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной
           неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно- пропагандистское
-          <span class="project-content__tultip" id="project-content__tultip-1"></span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей
+          <span class="project-content__tultip" id="project-content__tultip-1" tabindex="0" role="alert" aria-label="Подробнее"></span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей
           оппозиции могут быть рассмотрены
-          <span class="project-content__tultip" id="project-content__tultip-2"></span> исключительно в разрезе маркетинговых и финансовых
-          <span class="project-content__tultip" id="project-content__tultip-3"></span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою
+          <span class="project-content__tultip" id="project-content__tultip-2" tabindex="0" role="alert" aria-label="Подробнее"></span> исключительно в разрезе маркетинговых и финансовых
+          <span class="project-content__tultip" id="project-content__tultip-3" tabindex="0" role="alert" aria-label="Подробнее"></span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою
           очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее:
           <a class="project-content__more" href="#header">blanchard-art.ru/projects/about</a>
         </div>
@@ -2350,8 +2277,8 @@
           </div>
           <form class="contacts-form row" name="contacts-form" action="#" method="POST">
             <h3 class="contacts-form__header">Заказать обратный звонок</h3>
-            <label class="contacts-form__label" for="name"><input class="contacts-form__input" id="name" data-validate-field="name" type="text" placeholder="Имя*" required></label>
-            <label class="contacts-form__label" for="tel"><input class="contacts-form__input" id="tel" data-validate-field="tel" data-validate-rules="phone" type="tel" placeholder="Телефон*" required></label>
+            <label class="contacts-form__label" for="name"><input class="contacts-form__input" id="name" data-validate-field="name" type="text" placeholder="Имя*" required aria-label="Введите ваше имя"></label>
+            <label class="contacts-form__label" for="tel"><input class="contacts-form__input" id="tel" data-validate-field="tel" data-validate-rules="phone" type="tel" placeholder="Телефон*" required aria-label="Введите ваш телефон"></label>
             <button class="contacts-form__button" type="submit">Заказать</button>
           </form>
         </div>
@@ -2360,10 +2287,10 @@
           </h3>
           <ul class="contacts-social__list">
             <li class="contacts-social__item">
-              <a class="contacts-social__href contacts-social__href_whatsapp" href="https://www.whatsapp.com/" target="_blank" rel="noopener"></a>
+              <a class="contacts-social__href contacts-social__href_whatsapp" href="https://www.whatsapp.com/" target="_blank" rel="noopener" aria-label="Whatsapp"></a>
             </li>
             <li class="contacts-social__item">
-              <a class="contacts-social__href contacts-social__href_telegram" href="https://web.telegram.org/" target="_blank" rel="noopener"></a>
+              <a class="contacts-social__href contacts-social__href_telegram" href="https://web.telegram.org/" target="_blank" rel="noopener" aria-label="Telegram"></a>
             </li>
           </ul>
         </div>
@@ -2374,21 +2301,21 @@
     <div class="container-footer container">
       <ul class="footer-social-list">
         <li class="footer-social-item">
-          <a class="footer-social-item__href footer-social-item__href_vk" href="https://vk.com/" target="_blank" rel="noopener"></a>
+          <a class="footer-social-item__href footer-social-item__href_vk" href="https://vk.com/" target="_blank" rel="noopener" aria-label="Вконтакте"></a>
         </li>
         <li class="footer-social-item">
-          <a class="footer-social-item__href footer-social-item__href_instagram" href="https://www.instagram.com/" target="_blank" rel="noopener"></a>
+          <a class="footer-social-item__href footer-social-item__href_instagram" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"></a>
         </li>
         <li class="footer-social-item">
-          <a class="footer-social-item__href footer-social-item__href_facebook" href="https://www.facebook.com/" target="_blank" rel="noopener"></a>
+          <a class="footer-social-item__href footer-social-item__href_facebook" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="facebook"></a>
         </li>
       </ul>
       <div class="footer-logo">
         <a class="footer-logo-href" href="#">
           <picture class="footer-logo-wrapper">
-            <source class="footer-logo-wrapper__img" media="(min-width: 576px)" srcset="../img/768/footer/footer-logo_768.png">
-            <source class="footer-logo-wrapper__img" media="(min-width: 320px)" srcset="../img/320/footer/footer-logo_320.png">
-            <img class="footer-logo-wrapper__img" src="../img/320/footer/footer-logo_320.png" alt="Логотип Branchart-художественная галлерея">
+            <source class="footer-logo-wrapper__img" media="(min-width: 576px)" srcset="./img/768/footer/footer-logo_768.png">
+            <source class="footer-logo-wrapper__img" media="(min-width: 320px)" srcset="./img/320/footer/footer-logo_320.png">
+            <img class="footer-logo-wrapper__img" src="./img/320/footer/footer-logo_320.png" alt="Логотип Branchart-художественная галлерея">
           </picture>
         </a>
       </div>

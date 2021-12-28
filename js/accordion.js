@@ -1,6 +1,6 @@
 $(function () {
   $("#accordion-france").accordion({
-    active: false,
+    active: 0,
     collapsible: true,
     heightStyle: "content",
     icons: true,
@@ -14,7 +14,7 @@ $(function () {
 
 $(function () {
   $("#accordion-germany").accordion({
-    active: false,
+    active: 0,
     collapsible: true,
     heightStyle: "content",
     icons: true,
@@ -40,7 +40,7 @@ $(function () {
 
 $(function () {
   $("#accordion-russia").accordion({
-    active: false,
+    active: 0,
     collapsible: true,
     heightStyle: "content",
     icons: true,
@@ -53,7 +53,7 @@ $(function () {
 
 $(function () {
   $("#accordion-belgium").accordion({
-    active: false,
+    active: 0,
     collapsible: true,
     heightStyle: "content",
     icons: true,
