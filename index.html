@@ -14,14 +14,14 @@
   <link href="./css/swiper-bundle.min.css" rel="stylesheet">
   <link href="./css/choices.min.css" rel="stylesheet">
   <link href="./css/tippy-scale.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.min.css">
-  <link rel="stylesheet" href="./css/media_min_576.min.css">
-  <link rel="stylesheet" href="./css/media_min_768.min.css">
-  <link rel="stylesheet" href="./css/media_min_896.min.css">
-  <link rel="stylesheet" href="./css/media_min_1024.min.css">
-  <link rel="stylesheet" href="./css/media_min_1200.min.css">
-  <link rel="stylesheet" href="./css/media_min_1600.min.css">
-  <link rel="stylesheet" href="./css/media_min_1920.min.css">
+  <link href="./css/style.css" rel="stylesheet">
+  <link href="./css/media_min_576.css" rel="stylesheet">
+  <link href="./css/media_min_768.css" rel="stylesheet">
+  <link href="./css/media_min_896.css" rel="stylesheet">
+  <link href="./css/media_min_1024.css" rel="stylesheet">
+  <link href="./css/media_min_1200.css" rel="stylesheet">
+  <link href="./css/media_min_1600.css" rel="stylesheet">
+  <link href="./css/media_min_1920.css" rel="stylesheet">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=4f3f09c6-34ea-483f-abe4-f80917799db8&lang=ru_RU"></script>
 </head>
 
@@ -38,25 +38,25 @@
           <button class="navbar-close" aria-label="Закрыть меню"></button>
           <ul class="nav-list">
             <li class="nav-items">
-              <a class="hav-items-href" href="#">О нас</a>
+              <a class="hav-items-href" href="#about-us">О нас</a>
             </li>
             <li class="nav-items">
-              <a class="hav-items-href" href="#">Галерея</a>
+              <a class="hav-items-href" href="#gallery">Галерея</a>
             </li>
             <li class="nav-items">
-              <a class="hav-items-href" href="#">Каталог</a>
+              <a class="hav-items-href" href="#catalog">Каталог</a>
             </li>
             <li class="nav-items">
-              <a class="hav-items-href" href="#">События</a>
+              <a class="hav-items-href" href="#events">События</a>
             </li>
             <li class="nav-items">
-              <a class="hav-items-href" href="#">Издания</a>
+              <a class="hav-items-href" href="#publications">Издания</a>
             </li>
             <li class="nav-items">
-              <a class="hav-items-href" href="#">Проекты</a>
+              <a class="hav-items-href" href="#project">Проекты</a>
             </li>
             <li class="nav-items">
-              <a class="hav-items-href" href="#">Контакты</a>
+              <a class="hav-items-href" href="#contacts">Контакты</a>
             </li>
           </ul>
           <div class="login-wrapper">
@@ -73,65 +73,67 @@
           </a>
         </div>
         <div class="submenu">
-          <ul class="sibmenu-list">
-            <li class="submenu-list-items">
-              <button class="submenu-list-items__button" id="realism" type="button">
-                Реализм
-              </button>
-              <ul class="submenu-dropdown-list submenu-dropdown-list-realism">
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-tintoretto" href="#">Тинторетто</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-fridrih" href="#">Фридрих</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-leonardo" href="#">Леонардо</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-verrokko" href="#">Верроккьо</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-verrokko" href="#">Верроккьо</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-verrokko" href="#">Верроккьо</a></li>
-              </ul>
-            </li>
-            <li class="submenu-list-items">
-              <button class="submenu-list-items__button" id="impressionism" type="button">
-                Импрессионизм
-              </button>
-              <ul class="submenu-dropdown-list submenu-dropdown-list-impressionism">
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-mone" href="#">Моне</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-sisley" href="#">Сислей</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-mane" href="#">Мане</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-renuar" href="#">Ренуар</a></li>
-              </ul>
-            </li>
-            <li class="submenu-list-items">
-              <button class="submenu-list-items__button" id="postmodernism" type="button">
-                Постмодернизм
-              </button>
-              <ul class="submenu-dropdown-list submenu-dropdown-list-postmodernism">
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-van-gog" href="#">Ван Гог</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-sezann" href="#">Сезанн</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-gogen" href="#">Гоген</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-sera" href="#">Сёра</a></li>
-              </ul>
-            </li>
-            <li class="submenu-list-items">
-              <button class="submenu-list-items__button" id="avangard" type="button">
-                Авангард
-              </button>
-              <ul class="submenu-dropdown-list submenu-dropdown-list-avangard">
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-candinskiy" href="#">Кандинский</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-marinetty" href="#">Маринетти</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-malevich" href="#">Малевич</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-picasso" href="#">Пикассо</a></li>
-              </ul>
-            </li>
-            <li class="submenu-list-items">
-              <button class="submenu-list-items__button" id="futurism" type="button">
-                Футуризм
-              </button>
-              <ul class="submenu-dropdown-list submenu-dropdown-list-futurism">
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-karra" href="#">Карра</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-pratella" href="#">Прателла</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-severiny" href="#">Северини</a></li>
-                <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-balla" href="#">Балла</a></li>
-              </ul>
-            </li>
-          </ul>
+          <div class="submenu-wrapper row">
+            <ul class="sibmenu-list">
+              <li class="submenu-list-items">
+                <button class="submenu-list-items__button" id="realism" type="button">
+                  Реализм
+                </button>
+                <ul class="submenu-dropdown-list submenu-dropdown-list-realism">
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-tintoretto" href="#">Тинторетто</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-fridrih" href="#">Фридрих</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-leonardo" href="#">Леонардо</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-verrokko" href="#">Верроккьо</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-verrokko" href="#">Верроккьо</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-verrokko" href="#">Верроккьо</a></li>
+                </ul>
+              </li>
+              <li class="submenu-list-items">
+                <button class="submenu-list-items__button" id="impressionism" type="button">
+                  Импрессионизм
+                </button>
+                <ul class="submenu-dropdown-list submenu-dropdown-list-impressionism">
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-mone" href="#">Моне</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-sisley" href="#">Сислей</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-mane" href="#">Мане</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-renuar" href="#">Ренуар</a></li>
+                </ul>
+              </li>
+              <li class="submenu-list-items">
+                <button class="submenu-list-items__button" id="postmodernism" type="button">
+                  Постмодернизм
+                </button>
+                <ul class="submenu-dropdown-list submenu-dropdown-list-postmodernism">
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-van-gog" href="#">Ван Гог</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-sezann" href="#">Сезанн</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-gogen" href="#">Гоген</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-sera" href="#">Сёра</a></li>
+                </ul>
+              </li>
+              <li class="submenu-list-items">
+                <button class="submenu-list-items__button" id="avangard" type="button">
+                  Авангард
+                </button>
+                <ul class="submenu-dropdown-list submenu-dropdown-list-avangard">
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-candinskiy" href="#">Кандинский</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-marinetty" href="#">Маринетти</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-malevich" href="#">Малевич</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-picasso" href="#">Пикассо</a></li>
+                </ul>
+              </li>
+              <li class="submenu-list-items">
+                <button class="submenu-list-items__button" id="futurism" type="button">
+                  Футуризм
+                </button>
+                <ul class="submenu-dropdown-list submenu-dropdown-list-futurism">
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-karra" href="#">Карра</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-pratella" href="#">Прателла</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-severiny" href="#">Северини</a></li>
+                  <li class="submenu-dropdown-items"><a class="submenu-dropdown-items__href submenu-dropdown-items__href-balla" href="#">Балла</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="nav-search-wrapper">
           <form class="nav-search" name="nav-search" action="#">
@@ -170,7 +172,7 @@
   </section>
   <!--about_us-->
   <section>
-    <div class="container-about-us container">
+    <div class="container-about-us container" id="about-us">
       <div class="about-us row">
         <h2 class="about-us__header section-header">О нас</h2>
         <p class="about-us__text">
@@ -395,9 +397,9 @@
             </div>
           </div>
           <div class="gallery-swiper-navigation">
-            <button class="swiper-button-prev swiper-gallery-button swiper-gallery-button-prev" role="button" aria-label="Предыдущий слайд"></button>
+            <button class="swiper-button-prev swiper-gallery-button swiper-gallery-button-prev" aria-label="Предыдущий слайд"></button>
             <div class="swiper-pagination swiper-gallery-pagination"></div>
-            <button class="swiper-button-next swiper-gallery-button swiper-gallery-button-next" role="button" aria-label="Следующий слайд"></button>
+            <button class="swiper-button-next swiper-gallery-button swiper-gallery-button-next" aria-label="Следующий слайд"></button>
           </div>
         </div>
         <div class="gallery-modal-list">
@@ -798,10 +800,10 @@
   </section>
   <!--catalog-->
   <section>
-    <div class="container-catalog container">
+    <div class="container-catalog container" id="catalog">
       <div class="catalog row">
-        <h2 class="catalog-header section-header">Каталог</h2>
         <div class="catalog-content">
+          <h2 class="catalog-header section-header">Каталог</h2>
           <div class="catalog-tabs" id="category-tabs">
             <ul class="catalog-tabs__list">
               <li class="catalog-tabs__item">
@@ -1134,7 +1136,7 @@
                 </div>
               </div>
               <div class="catalog-tabs-content" id="italy">
-                <div class="catalog-tabs-accordion" id="accordion-italy" role="button" aria-label="Итальянские художники с 1400 по 1499 года" tabindex="0">
+                <div class="catalog-tabs-accordion" id="accordion-italy" aria-label="Итальянские художники с 1400 по 1499 года" tabindex="0">
                   <div class="catalog-tabs-accordion__header">
                     <p class="catalog-tabs-accordion__header-text">C 1400 по 1499 гг.</p>
                   </div>
@@ -1237,7 +1239,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Итальянские художники с 1600 по 1699 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Итальянские художники с 1600 по 1699 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1600 по 1699 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1260,7 +1262,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Итальянские художники с 1700 по 1799 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Итальянские художники с 1700 по 1799 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1700 по 1799 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1283,7 +1285,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Итальянские художники с 1800 по 1899 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Итальянские художники с 1800 по 1899 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1800 по 1899 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1306,7 +1308,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Итальянские художники с 1900 по 1999 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Итальянские художники с 1900 по 1999 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1900 по 1999 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1329,7 +1331,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Итальянские художники с 2000 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Итальянские художники с 2000 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1355,7 +1357,7 @@
                 </div>
               </div>
               <div class="catalog-tabs-content" id="russia">
-                <div class="catalog-tabs-accordion" id="accordion-russia" role="button" aria-label="Русские художники с 1400 по 1499 года" tabindex="0">
+                <div class="catalog-tabs-accordion" id="accordion-russia" aria-label="Русские художники с 1400 по 1499 года" tabindex="0">
                   <div class="catalog-tabs-accordion__header">
                     <p class="catalog-tabs-accordion__header-text">C 1400 по 1499 гг.</p>
                   </div>
@@ -1369,7 +1371,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Русские художники с 1500 по 1599 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Русские художники с 1500 по 1599 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1500 по 1599 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1392,7 +1394,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Русские художники с 1600 по 1699 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Русские художники с 1600 по 1699 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1600 по 1699 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1415,7 +1417,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Русские художники с 1700 по 1799 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Русские художники с 1700 по 1799 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1700 по 1799 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1438,7 +1440,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Русские художники с 1800 по 1899 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Русские художники с 1800 по 1899 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1800 по 1899 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1461,7 +1463,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Русские художники с 1900 по 1999 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Русские художники с 1900 по 1999 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1900 по 1999 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1484,7 +1486,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Русские художники с 2000 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Русские художники с 2000 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1510,7 +1512,7 @@
                 </div>
               </div>
               <div class="catalog-tabs-content" id="belgium">
-                <div class="catalog-tabs-accordion" id="accordion-belgium" role="button" aria-label="Бельгийские художники с 1400 по 1499 года" tabindex="0">
+                <div class="catalog-tabs-accordion" id="accordion-belgium" aria-label="Бельгийские художники с 1400 по 1499 года" tabindex="0">
                   <div class="catalog-tabs-accordion__header">
                     <p class="catalog-tabs-accordion__header-text">C 1400 по 1499 гг.</p>
                   </div>
@@ -1524,7 +1526,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Бельгийские художники с 1500 по 1599 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Бельгийские художники с 1500 по 1599 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1500 по 1599 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1547,7 +1549,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Бельгийские художники с 1600 по 1699 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Бельгийские художники с 1600 по 1699 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1600 по 1699 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1570,7 +1572,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Бельгийские художники с 1700 по 1799 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Бельгийские художники с 1700 по 1799 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1700 по 1799 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1593,7 +1595,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Бельгийские художники с 1800 по 1899 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Бельгийские художники с 1800 по 1899 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1800 по 1899 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1616,7 +1618,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Бельгийские художники с 1900 по 1999 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Бельгийские художники с 1900 по 1999 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 1900 по 1999 гг.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1639,7 +1641,7 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="catalog-tabs-accordion__header" role="button" aria-label="Бельгийские художники с 2000 года" tabindex="0">
+                  <div class="catalog-tabs-accordion__header" aria-label="Бельгийские художники с 2000 года" tabindex="0">
                     <p class="catalog-tabs-accordion__header-text">C 2000 г.</p>
                   </div>
                   <div class="catalog-accordion-content">
@@ -1842,7 +1844,7 @@
   </section>
   <!--events-->
   <section>
-    <div class="container-events container">
+    <div class="container-events container" id="events">
       <div class="events row">
         <h2 class="events-header section-header">События</h2>
         <div class="swiper-container swiper-events" id="swiper-events">
@@ -1968,12 +1970,12 @@
   </section>
   <!--publications-->
   <section>
-    <div class="container-publications container">
+    <div class="container-publications container" id="publications">
       <div class="publications">
         <h2 class="publications-header section-header">Издания</h2>
         <div class="publication-wrapper">
           <div class="publications-select">
-            <h3 class="publications-select__header" data-checked="false" role="button" aria-label="Выбрать" tabindex="0">
+            <h3 class="publications-select__header" data-checked="false" aria-label="Выбрать" tabindex="0">
               Категории
             </h3>
             <ul class="publications-select__list-collapsed">
@@ -2206,7 +2208,7 @@
   </section>
   <!--project-->
   <section>
-    <div class="container-project container">
+    <div class="container-project container" id="project">
       <div class="project row">
         <h2 class="project-header section-header">Проекты</h2>
         <div class="project-content">
@@ -2264,7 +2266,7 @@
   </section>
   <!--contacts-->
   <section>
-    <div class="container-contacts container">
+    <div class="container-contacts container" id="contacts">
       <div class="contacts">
         <h2 class="contacts__header section-header row">Контакты</h2>
         <div class="contacts-map-form-wrapper">
@@ -2275,10 +2277,10 @@
             </div>
             <div class="contacts-map__navigation" id="map"></div>
           </div>
-          <form class="contacts-form row" name="contacts-form" action="#" method="POST">
+          <form class="contacts-form row" name="contacts-form" action="mail.php" enctype="multipart/form-data" method="POST">
             <h3 class="contacts-form__header">Заказать обратный звонок</h3>
-            <label class="contacts-form__label" for="name"><input class="contacts-form__input" id="name" data-validate-field="name" type="text" placeholder="Имя*" required aria-label="Введите ваше имя"></label>
-            <label class="contacts-form__label" for="tel"><input class="contacts-form__input" id="tel" data-validate-field="tel" data-validate-rules="phone" type="tel" placeholder="Телефон*" required aria-label="Введите ваш телефон"></label>
+            <label class="contacts-form__label" for="name"><input class="contacts-form__input" id="name" name="user_name" data-validate-field="name" type="text" placeholder="Имя*" required aria-label="Введите ваше имя"></label>
+            <label class="contacts-form__label" for="tel"><input class="contacts-form__input" id="tel" name="user_phone" data-validate-field="tel" data-validate-rules="phone" type="tel" placeholder="Телефон*" required aria-label="Введите ваш телефон"></label>
             <button class="contacts-form__button" type="submit">Заказать</button>
           </form>
         </div>
@@ -2344,9 +2346,8 @@
   <script src="./js/map.js"></script>
   <script src="./js/inputmask.min.js"></script>
   <script src="./js/just-validate.min.js"></script>
-  <script src="./js/inputmask.js"></script>
+  <script src="./js/inputmask-validate.js"></script>
   <script src="./js/contacts.js"></script>
-  <script src="./js/form-validate.js"></script>
   <script src="./js/scroll.js"></script>
 </body>
 

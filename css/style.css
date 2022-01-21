@@ -1572,6 +1572,10 @@ body.hidden {
   color: var(--color-violet-active);
 }
 
+.ui-widget-content {
+  border: none;
+}
+
 .accordion-unknown {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2994,7 +2998,6 @@ body.hidden {
   visibility: visible;
   opacity: 1;
 }
-
 
 /*footer*/
 

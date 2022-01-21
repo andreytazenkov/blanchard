@@ -69,11 +69,21 @@ function movingCategoryTabs() {
   } else { $('.catalog-content').before($('.catalog-header')); };
 };
 
+function movingCatalogTabsContentWrapper() {
+  if (screen.width >= 896) {
+    $('.catalog-tabs-content-wrapper').before($('.catalog-artists-wrapper'));
+  } else {
+    $('.catalog-artists-wrapper').appendTo('.catalog-content');
+  }
+}
+
 $(window).resize(function () {
   movingCategoryTabs();
+  movingCatalogTabsContentWrapper();
 });
 
-movingCategoryTabs()
+movingCategoryTabs();
+movingCatalogTabsContentWrapper();
 
 $('.catalog-tabs-accordion__header').click(function () {
   $('.catalog-tabs-accordion__header-text').each(function () {

@@ -120,10 +120,8 @@
   }
 
   .catalog-artists-wrapper {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 42.67vw;
-    flex: 0 0 42.67vw;
     margin: 0 50px 0 0;
+    width: calc((100% - 50px)/2);
   }
 
   .catalog-artists-box__text {
@@ -131,10 +129,7 @@
   }
 
   .catalog-tabs-content-wrapper {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 42.67vw;
-    flex: 0 0 42.67vw;
-    margin: -3px 0 0 0;
+    width: calc((100% - 50px)/2);
   }
 
   .catalog-accordion-list {
@@ -143,10 +138,6 @@
     column-count: 2;
   }
 
-  /* catalog */
-  .container-catalog {
-    margin: 0 0 47px 0;
-  }
 
   /* events */
   .swiper-events {
@@ -309,7 +300,7 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 1 79.93vw;
     flex: 0 1 79.93vw;
-    height: 12.5vw;
+    height: 128px;
   }
 
   /* contacts */

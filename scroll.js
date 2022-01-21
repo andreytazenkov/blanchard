@@ -9,3 +9,8 @@ $("a").click(function () {
     return false;
   }
 });
+
+
+window.addEventListener('resize', function () {
+  console.log(window.innerWidth);
+})

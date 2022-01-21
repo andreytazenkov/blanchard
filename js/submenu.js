@@ -9,7 +9,7 @@ Array.prototype.forEach.call(
 
 function appendToNavSearchWrapper() {
   if (screen.width >= 1200) {
-    $('.nav-search-wrapper').appendTo('.submenu');
+    $('.nav-search-wrapper').appendTo('.submenu-wrapper');
   } else {
     $('.nav-search-close').before($('.nav-search-wrapper'));
   };

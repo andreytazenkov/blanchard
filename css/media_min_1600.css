@@ -8,6 +8,10 @@
     padding: 20px 8.33vw 18px 8.33vw;
   }
 
+  .submenu-wrapper {
+    width: 100%;
+  }
+
   /* hero */
   .hero-swiper-slide-1 {
     background-image: url(../img/1920/hero/hero__swiper-1_1920.png);
@@ -57,19 +61,6 @@
   }
 
   /* catalog */
-  .catalog-artists-wrapper {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 39.06vw;
-    flex: 0 0 39.06vw;
-    margin: 0 2.6vw 0 0;
-  }
-
-  .catalog-tabs-content-wrapper {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 41.66vw;
-    flex: 0 0 41.66vw;
-  }
-
   .catalog-accordion-list {
     -webkit-column-count: 3;
     -moz-column-count: 3;

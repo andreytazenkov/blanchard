@@ -180,6 +180,14 @@
     z-index: 10;
   }
 
+  .submenu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+  }
+
   .sibmenu-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -489,9 +497,6 @@
   }
 
   /* project */
-  .project-partners-swiper {
-    height: 150px;
-  }
 
   .project-partners-swiper__slide-img {
     width: 99%;
