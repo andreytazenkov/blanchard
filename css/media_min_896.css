@@ -171,6 +171,17 @@
     width: auto;
   }
 
+  .accordion-unknown-right {
+    -webkit-box-flex: 1;
+    -ms-flex: 0 0 43.2%;
+    flex: 0 0 43.2%;
+    height: 130px;
+  }
+
+  .accordion-unknown-left {
+    flex: 0 0 48.7%;
+  }
+
   /* publocation */
   .publications {
     display: -webkit-box;

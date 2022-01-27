@@ -22,17 +22,41 @@ $(window).resize(function () {
 });
 
 $('.submenu-list-items__button').click(function () {
-  $('.submenu-list-items__button').each(function () {
-    $(this).removeClass('is-active');
-  });
-  let submenuDropdownListHeight = parseInt($(this).siblings('.submenu-dropdown-list').css('height'));
-  $('.submenu-dropdown-list').each(function () {
-    $(this).slideUp(200);
-  });
-  if (submenuDropdownListHeight <= 90) {
-    $(this).toggleClass('is-active');
-    $(this).siblings('.submenu-dropdown-list').slideDown({
-      easing: 'linear',
-    }, 200);
-  };
+  if ($(this).siblings('.submenu-list-wrapper').hasClass('active')) {
+    $(this).siblings('.submenu-list-wrapper').removeClass('active').addClass('disactive');
+  } else {
+    $('.submenu-list-wrapper').each(function () {
+      $(this).removeClass('active');
+      $(this).removeClass('disactive');
+    });
+    $(this).siblings('.submenu-list-wrapper').addClass('active');
+  }
 });
+
+
+function submenuHeight() {
+  let heightEl;
+  let headerHeight = new ResizeObserver(entries => {
+    for (let entry of entries) {
+      let elemHeader = entry.target;
+      heightEl = getComputedStyle(elemHeader).height;
+    }
+
+  });
+
+  let submenuBottom = new ResizeObserver(entries => {
+    for (let entry of entries) {
+      let coeficent = parseInt(getComputedStyle(entry.target).height) / 100;
+      let valueBottom = (-parseInt(heightEl) * coeficent + 'px')
+      entry.target.style.bottom = valueBottom;
+    }
+  });
+
+  headerHeight.observe(document.querySelector("#header"));
+
+  submenuBottom.observe(document.querySelector(".submenu"));
+};
+
+submenuHeight();
+
+

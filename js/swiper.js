@@ -70,15 +70,7 @@ const gallarySwiper = new Swiper('.swiper-gallery', {
     },
     1600: {
       speed: 1500,
-      slidesPerGroup: 2,
-      slidesPerView: 3,
-      slidesPerColumn: 3,
-      autoHeight: false,
-      spaceBetween: 34,
-    },
-    1600: {
-      speed: 1500,
-      slidesPerGroup: 2,
+      // slidesPerGroup: 2,
       slidesPerView: 3,
       slidesPerColumn: 3,
       autoHeight: false,
@@ -89,6 +81,31 @@ const gallarySwiper = new Swiper('.swiper-gallery', {
     prevSlideMessage: 'Предыдущий слайд',
     nextSlideMessage: 'Следующий слайд',
   },
+  // keyboard: true,
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
+  slideVisibleClass: 'slide-visible',
+
+  on: {
+    init: function () {
+      this.slides.forEach(slide => {
+        if (!slide.classList.contains('slide-visible')) {
+          slide.tabIndex = '-1';
+        } else {
+          slide.tabIndex = '';
+        }
+      });
+    },
+    slideChange: function () {
+      this.slides.forEach(slide => {
+        if (!slide.classList.contains('slide-visible')) {
+          slide.tabIndex = '-1';
+        } else {
+          slide.tabIndex = '';
+        }
+      });
+    }
+  }
 });
 
 $('.swiper-gallery-button-prev').click(function (e) {
@@ -162,6 +179,31 @@ function initBookSwiper() {
         prevSlideMessage: 'Предыдущий слайд',
         nextSlideMessage: 'Следующий слайд',
       },
+      // keyboard: true,
+      // watchSlidesProgress: true,
+      // watchSlidesVisibility: true,
+      // slideVisibleClass: 'slide-visible',
+
+      // on: {
+      //   init: function () {
+      //     this.slides.forEach(slide => {
+      //       if (!slide.classList.contains('slide-visible')) {
+      //         slide.tabIndex = '-1';
+      //       } else {
+      //         slide.tabIndex = '';
+      //       }
+      //     });
+      //   },
+      //   slideChange: function () {
+      //     this.slides.forEach(slide => {
+      //       if (!slide.classList.contains('slide-visible')) {
+      //         slide.tabIndex = '-1';
+      //       } else {
+      //         slide.tabIndex = '';
+      //       }
+      //     });
+      //   }
+      // }
     });
   } else if ((screen.width < 576) && (bookSwiper != undefined)) {
     bookSwiper.destroy();

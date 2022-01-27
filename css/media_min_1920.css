@@ -20,6 +20,7 @@
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     margin: 0 279px 0 0;
+    max-width: 907px;
   }
 
   .nav-list {
@@ -63,6 +64,7 @@
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     width: auto;
+    max-width: 1020px;
   }
 
   .submenu-list-items {

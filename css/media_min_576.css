@@ -224,9 +224,17 @@
 
   .accordion-unknown-right {
     -webkit-box-flex: 1;
-    -ms-flex: 1 0 48%;
-    flex: 1 0 48%;
-    height: 165px;
+    -ms-flex: 0 0 44.8%;
+    flex: 0 0 44.8%;
+    height: 189px;
+  }
+
+  .accordion-unknown-left {
+    flex: 0 0 48.7%;
+  }
+
+  .catalog-artists-box__text {
+    max-width: 400px;
   }
 
   /* events */
@@ -335,6 +343,10 @@
     color: var(--color-white);
     border: 2px solid var(--color-violet);
     background-color: var(--color-violet);
+  }
+
+  .swiper-events-hide__button:focus-visible {
+    outline: none;
   }
 
   .swiper-events-hide__button:active {

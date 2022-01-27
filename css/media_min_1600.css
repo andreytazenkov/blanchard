@@ -4,12 +4,24 @@
   }
 
   /* header */
+  .navbar {
+    max-width: 53.19vw;
+  }
+
   .submenu {
     padding: 20px 8.33vw 18px 8.33vw;
   }
 
   .submenu-wrapper {
     width: 100%;
+  }
+
+  .sibmenu-list {
+    max-width: 53.94vw;
+  }
+
+  .submenu-dropdown-list {
+    top: 156%;
   }
 
   /* hero */
@@ -65,6 +77,23 @@
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
+  }
+
+  .accordion-unknown-right {
+    -webkit-box-flex: 1;
+    -ms-flex: 0 0 34.9%;
+    flex: 0 0 34.9%;
+    height: 189px;
+  }
+
+  .accordion-unknown-left {
+    -webkit-box-flex: 1;
+    -ms-flex: 0 0 37.4%;
+    flex: 0 0 37.4%;
+  }
+
+  .catalog-artists-box__text {
+    max-width: none;
   }
 
   /* events */
