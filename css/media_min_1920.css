@@ -19,7 +19,7 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    margin: 0 279px 0 0;
+    margin: 0 274px 0 0;
     max-width: 907px;
   }
 
@@ -187,6 +187,10 @@
   }
 
   /* catalog */
+  .catalog-header {
+    margin: 0px 40px 17px 0;
+  }
+
   .catalog-artists-wrapper {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 750px;
@@ -222,9 +226,18 @@
     column-count: 3;
   }
 
+  .ui-accordion .ui-accordion-header {
+    margin: 0;
+    padding: 36px 0 35px 0;
+  }
+
   /* events */
   .swiper-events {
     margin: 0;
+  }
+
+  .events-header {
+    margin: 0 0 34px 0;
   }
 
   .events-slide {
@@ -265,7 +278,7 @@
   }
 
   .events-slide__small {
-    margin: -2px -6px 8px 0;
+    margin: -2px -6px 10px 0;
   }
 
   .events-slide__content {
@@ -290,7 +303,7 @@
 
   .events-slide__href {
     position: absolute;
-    bottom: 44px;
+    bottom: 43px;
     left: 51px;
     margin: 0;
     padding-bottom: 2px;
@@ -300,7 +313,7 @@
   .container-publications {
     display: flex;
     justify-content: center;
-    padding: 81px 0 75px 0;
+    padding: 81px 0 74px 0;
     background-image: url(../img/1920/publications/publications-background_1920.jpg);
   }
 
@@ -318,10 +331,11 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 0 1180px;
     flex: 0 0 1180px;
+    padding-left: 25px
   }
 
   .publication-book-swiper {
-    width: 1149px;
+    width: 1154px;
   }
 
   .publication-book-slide-wrapper {
@@ -330,6 +344,10 @@
 
   .publication-book-slide {
     width: 350px;
+  }
+
+  .publication-book-slide-content__artist {
+    margin: 0 0 15px 0;
   }
 
   /* project */
@@ -347,15 +365,24 @@
 
   .project-partners-swiper {
     -webkit-box-flex: 0;
-    -ms-flex: 0 1 1450px;
-    flex: 0 1 1450px;
+    -ms-flex: 0 1 1452px;
+    flex: 0 1 1452px;
     height: 150px;
+    padding: 0 1px;
   }
 
   /* contacts */
   .container-contacts {
     margin: 0 auto;
     max-width: 1920px;
+  }
+
+  .contacts__header {
+    margin-bottom: 17px;
+  }
+
+  .contacts-map__adress {
+    margin: 0 0 28px 0;
   }
 
   .contacts-form {
@@ -387,7 +414,7 @@
 
   /* footer */
   .container-footer {
-    padding: 50px calc((100vw - 1600px)/2);
+    padding: 48px calc((100vw - 1600px)/2) 50px calc((100vw - 1600px)/2);
   }
 
   .footer-social-item {

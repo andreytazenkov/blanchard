@@ -20,6 +20,10 @@
     max-width: 53.94vw;
   }
 
+  .submenu-list-wrapper {
+    top: 157%;
+  }
+
   .submenu-dropdown-list {
     top: 156%;
   }
@@ -120,7 +124,7 @@
   }
 
   .publication-book-swiper {
-    width: 60.42vw;
+    width: 60.69vw;
   }
 
   .publication-book-swiper-box {

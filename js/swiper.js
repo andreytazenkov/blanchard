@@ -70,9 +70,9 @@ const gallarySwiper = new Swiper('.swiper-gallery', {
     },
     1600: {
       speed: 1500,
-      // slidesPerGroup: 2,
+      slidesPerGroup: 2,
       slidesPerView: 3,
-      slidesPerColumn: 3,
+      slidesPerColumn: 2,
       autoHeight: false,
       spaceBetween: 50,
     }
@@ -179,31 +179,31 @@ function initBookSwiper() {
         prevSlideMessage: 'Предыдущий слайд',
         nextSlideMessage: 'Следующий слайд',
       },
-      // keyboard: true,
-      // watchSlidesProgress: true,
-      // watchSlidesVisibility: true,
-      // slideVisibleClass: 'slide-visible',
+      keyboard: true,
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
+      slideVisibleClass: 'slide-visible',
 
-      // on: {
-      //   init: function () {
-      //     this.slides.forEach(slide => {
-      //       if (!slide.classList.contains('slide-visible')) {
-      //         slide.tabIndex = '-1';
-      //       } else {
-      //         slide.tabIndex = '';
-      //       }
-      //     });
-      //   },
-      //   slideChange: function () {
-      //     this.slides.forEach(slide => {
-      //       if (!slide.classList.contains('slide-visible')) {
-      //         slide.tabIndex = '-1';
-      //       } else {
-      //         slide.tabIndex = '';
-      //       }
-      //     });
-      //   }
-      // }
+      on: {
+        init: function () {
+          this.slides.forEach(slide => {
+            if (!slide.classList.contains('slide-visible')) {
+              slide.tabIndex = '-1';
+            } else {
+              slide.tabIndex = '';
+            }
+          });
+        },
+        slideChange: function () {
+          this.slides.forEach(slide => {
+            if (!slide.classList.contains('slide-visible')) {
+              slide.tabIndex = '-1';
+            } else {
+              slide.tabIndex = '';
+            }
+          });
+        }
+      }
     });
   } else if ((screen.width < 576) && (bookSwiper != undefined)) {
     bookSwiper.destroy();
@@ -242,6 +242,30 @@ const projectSwiper = new Swiper('.project-partners-swiper', {
     prevSlideMessage: 'Предыдущий слайд',
     nextSlideMessage: 'Следующий слайд',
   },
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
+  slideVisibleClass: 'slide-visible',
+
+  on: {
+    init: function () {
+      this.slides.forEach(slide => {
+        if (!slide.classList.contains('slide-visible')) {
+          slide.tabIndex = '-1';
+        } else {
+          slide.tabIndex = '';
+        }
+      });
+    },
+    slideChange: function () {
+      this.slides.forEach(slide => {
+        if (!slide.classList.contains('slide-visible')) {
+          slide.tabIndex = '-1';
+        } else {
+          slide.tabIndex = '';
+        }
+      });
+    }
+  }
 });
 
 

@@ -163,7 +163,7 @@
     display: -ms-flexbox;
     display: flex;
     margin: 0 2.63vw 2.63vw 0;
-    width: 28.32vw;
+    width: 28.3vw;
   }
 
   .events-slide:nth-child(3) {
@@ -203,18 +203,22 @@
     background-image: url(../img/1024/events/events_1024-5.png);
   }
 
+  .events-slide__header {
+    margin-bottom: 19px;
+  }
+
   .events-slide__text {
     padding: 0 8px 0 0;
+  }
+
+  .events-slide__href {
+    bottom: 52px;
   }
 
   /* publications */
   .container-publications {
     padding: 81px 50px 80px 50px;
     background-image: url(../img/1024/publications/publications-background_1024.png);
-  }
-
-  .publication-wrapper {
-    margin-right: 5px;
   }
 
   .publications-select {
@@ -244,8 +248,13 @@
   }
 
   .publication-book-swiper {
+    padding-left: 5px;
     max-width: 100%;
-    width: 61.42vw;
+    width: 61.82vw;
+  }
+
+  .publication-book-swiper-navigation {
+    margin: 0 0 28px 6px;
   }
 
   .publication-book-slide {

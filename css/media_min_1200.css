@@ -374,7 +374,88 @@
     margin: 0 0 20px 0;
   }
 
+  .submenu-dropdown-items-tintoretto {
+    background-image: url(../img/1920/nav/nav__real_1.png);
+  }
+
+  .submenu-dropdown-items-fridrih {
+    background-image: url(../img/1920/nav/nav__real_2.png);
+  }
+
+  .submenu-dropdown-items-leonardo {
+    background-image: url(../img/1920/nav/nav__real_3.png);
+  }
+
+  .submenu-dropdown-items-verrokko {
+    background-image: url(../img/1920/nav/nav__real_4.png);
+  }
+
+  .submenu-dropdown-items-mone {
+    background-image: url(../img/1920/nav/nav__imp_1.png);
+  }
+
+  .submenu-dropdown-items-sisley {
+    background-image: url(../img/1920/nav/nav__imp_2.png);
+  }
+
+  .submenu-dropdown-items-mane {
+    background-image: url(../img/1920/nav/nav__imp_3.png);
+  }
+
+  .submenu-dropdown-items-renuar {
+    background-image: url(../img/1920/nav/nav__imp_4.png);
+  }
+
+  .submenu-dropdown-items-van-gog {
+    background-image: url(../img/1920/nav/nav_post_1.png);
+  }
+
+  .submenu-dropdown-items-sezann {
+    background-image: url(../img/1920/nav/nav_post_2.png);
+  }
+
+  .submenu-dropdown-items-gogen {
+    background-image: url(../img/1920/nav/nav_post_3.png);
+  }
+
+  .submenu-dropdown-items-sera {
+    background-image: url(../img/1920/nav/nav_post_4.png);
+  }
+
+  .submenu-dropdown-items-candinskiy {
+    background-image: url(../img/1920/nav/nav__av_1.png);
+  }
+
+  .submenu-dropdown-items-marinetty {
+    background-image: url(../img/1920/nav/nav__av_2.png);
+  }
+
+  .submenu-dropdown-items-malevich {
+    background-image: url(../img/1920/nav/nav__av_3.png);
+  }
+
+  .submenu-dropdown-items-picasso {
+    background-image: url(../img/1920/nav/nav__av_4.png);
+  }
+
+  .submenu-dropdown-items-karra {
+    background-image: url(../img/1920/nav/nav__fut_1.png);
+  }
+
+  .submenu-dropdown-items-pratella {
+    background-image: url(../img/1920/nav/nav__fut_2.png);
+  }
+
+  .submenu-dropdown-items-severiny {
+    background-image: url(../img/1920/nav/nav__fut_3.png);
+  }
+
+  .submenu-dropdown-items-balla {
+    background-image: url(../img/1920/nav/nav__fut_4.png);
+  }
+
   .submenu-dropdown-items__href {
+    position: relative;
     display: block;
     padding: 10px 14px;
     width: 220px;
@@ -383,89 +464,46 @@
     font-size: 14px;
     line-height: 19px;
     color: var(--color-white);
+    outline: none;
+    transition: background 0.2s ease-in;
+  }
+
+  .submenu-dropdown-items {
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    cursor: pointer;
   }
 
-  .submenu-dropdown-items__href-tintoretto {
-    background-image: url(../img/1920/nav/nav__real_1.png);
+  .submenu-dropdown-items__href::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 216px;
+    height: 37px;
+    border: transparent;
+    transition: border 0.2s ease-in;
   }
 
-  .submenu-dropdown-items__href-fridrih {
-    background-image: url(../img/1920/nav/nav__real_2.png);
+  .submenu-dropdown-items__href:hover::before {
+    border: 2px solid var(--color-violet);
   }
 
-  .submenu-dropdown-items__href-leonardo {
-    background-image: url(../img/1920/nav/nav__real_3.png);
+  .submenu-dropdown-items__href:focus-visible {
+    outline: none;
   }
 
-  .submenu-dropdown-items__href-verrokko {
-    background-image: url(../img/1920/nav/nav__real_4.png);
+  .submenu-dropdown-items__href:focus-visible::before {
+    border: 2px solid var(--color-violet);
   }
 
-  .submenu-dropdown-items__href-mone {
-    background-image: url(../img/1920/nav/nav__imp_1.png);
+  .submenu-dropdown-items__href:active {
+    background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
   }
 
-  .submenu-dropdown-items__href-sisley {
-    background-image: url(../img/1920/nav/nav__imp_2.png);
-  }
-
-  .submenu-dropdown-items__href-mane {
-    background-image: url(../img/1920/nav/nav__imp_3.png);
-  }
-
-  .submenu-dropdown-items__href-renuar {
-    background-image: url(../img/1920/nav/nav__imp_4.png);
-  }
-
-  .submenu-dropdown-items__href-van-gog {
-    background-image: url(../img/1920/nav/nav_post_1.png);
-  }
-
-  .submenu-dropdown-items__href-sezann {
-    background-image: url(../img/1920/nav/nav_post_2.png);
-  }
-
-  .submenu-dropdown-items__href-gogen {
-    background-image: url(../img/1920/nav/nav_post_3.png);
-  }
-
-  .submenu-dropdown-items__href-sera {
-    background-image: url(../img/1920/nav/nav_post_4.png);
-  }
-
-  .submenu-dropdown-items__href-candinskiy {
-    background-image: url(../img/1920/nav/nav__av_1.png);
-  }
-
-  .submenu-dropdown-items__href-marinetty {
-    background-image: url(../img/1920/nav/nav__av_2.png);
-  }
-
-  .submenu-dropdown-items__href-malevich {
-    background-image: url(../img/1920/nav/nav__av_3.png);
-  }
-
-  .submenu-dropdown-items__href-picasso {
-    background-image: url(../img/1920/nav/nav__av_4.png);
-  }
-
-  .submenu-dropdown-items__href-karra {
-    background-image: url(../img/1920/nav/nav__fut_1.png);
-  }
-
-  .submenu-dropdown-items__href-pratella {
-    background-image: url(../img/1920/nav/nav__fut_2.png);
-  }
-
-  .submenu-dropdown-items__href-severiny {
-    background-image: url(../img/1920/nav/nav__fut_3.png);
-  }
-
-  .submenu-dropdown-items__href-balla {
-    background-image: url(../img/1920/nav/nav__fut_4.png);
+  .submenu-dropdown-items__href:active::before {
+    border: 2px solid var(--color-violet);
   }
 
   .nav-search-wrapper {
@@ -542,6 +580,7 @@
   /* publications */
   .publication-wrapper {
     margin-right: 5vw;
+    width: 23.14vw;
   }
 
   /* project */

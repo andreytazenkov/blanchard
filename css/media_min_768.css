@@ -230,43 +230,6 @@
     margin: 0 0 28px 0;
   }
 
-  .gallery-slide::before {
-    content: '';
-    position: absolute;
-    width: 82.75%;
-    height: 86.37%;
-    background-color: rgba(0, 0, 0, 0.5);
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
-    -o-transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
-    transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
-  }
-
-  .gallery-slide:active::before {
-    opacity: 0.9;
-    background-color: rgba(194, 131, 243, 0.4);
-  }
-
-  .gallery-slide::after {
-    content: '';
-    position: absolute;
-    width: 81px;
-    height: 79px;
-    background-image: url(../img/320/gallery/gallery-modal.svg);
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
-    -o-transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
-    transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
-  }
-
-  .gallery-slide:hover::before,
-  .gallery-slide:hover::after {
-    visibility: visible;
-    opacity: 1;
-  }
-
   .gallery-authorization {
     margin: 0;
   }
@@ -395,7 +358,7 @@
   }
 
   .ui-accordion .ui-accordion-header {
-    padding: 36.5px 0 34px 0;
+    padding: 36.5px 0 35.5px 0;
     font-size: 24px;
   }
 
@@ -442,11 +405,15 @@
   }
 
   .catalog-artists-box-wrapper-img__img {
-    margin: 0 0 21px 0;
+    margin: 0 0 19px 0;
   }
 
   .catalog-artists-box__header {
     margin: 0 0 9px 0;
+  }
+
+  .catalog-artists-box__text {
+    max-width: 100%;
   }
 
   /* events */
@@ -512,6 +479,10 @@
     line-height: 33px;
   }
 
+  .events-slide__small {
+    margin-bottom: 8px;
+  }
+
   .events-slide__text {
     margin: 0 0 20px 0;
   }
@@ -526,12 +497,16 @@
   /* publocation */
   .container-publications {
     margin: 0 0 80px 0;
-    padding: 84px 50px 71px 50px;
+    padding: 84px 50px 68px 50px;
     background-image: url(../img/768/publications/publications-background_768.png);
   }
 
+  .publications-header {
+    margin: 0 0 14px 0;
+  }
+
   .publications-select__header {
-    margin: 0 0 9px 0;
+    margin: 0 0 7px 0;
     height: auto;
   }
 
@@ -543,7 +518,7 @@
   }
 
   .publications-select__item {
-    margin: 0 0 10px 0;
+    margin: 0 0 9px 0;
     height: auto;
   }
 
@@ -592,6 +567,7 @@
   }
 
   .publication-book-slide-content__button {
+    margin-bottom: 3px;
     width: 120px;
     font-size: 16px;
     line-height: 22px;
