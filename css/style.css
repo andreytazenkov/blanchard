@@ -785,6 +785,10 @@ body.hidden {
   border: 3px solid var(--color-violet-hover);
 }
 
+.hero-content__button:focus-visible {
+  outline: none;
+}
+
 .hero-content__button:active {
   background-color: var(--color-violet-active);
   border: 3px solid var(--color-border-active);
@@ -1124,8 +1128,9 @@ body.hidden {
   background: var(--color-violet);
 }
 
-.swiper-gallery-button:focus {
+.swiper-gallery-button:focus-visible {
   border: 1px solid var(--color-black);
+  outline: none;
 }
 
 .swiper-gallery-button:active {
@@ -2353,9 +2358,10 @@ body.hidden {
   width: 72px;
   color: var(--color-white);
   border-radius: 0;
-  border: none;
-  background-color: var(--color-violet);
+  border: 1px solid transparent;
+  background-color: rgba(157, 92, 208, 0.5);
   outline: none;
+  transition: background-color 0.2s ease-in, border 0.2s ease-in;
 }
 
 .publication-price__small_2 {
@@ -2380,6 +2386,17 @@ body.hidden {
 
 .publication-price__input::placeholder {
   color: var(--color-white);
+}
+
+.publication-price__input:hover {
+  border: 1px solid var(--color-violet);
+  background-color: var(--color-violet);
+}
+
+.publication-price__input:focus-visible {
+  border: 1px solid var(--color-white);
+  background-color: var(--color-violet);
+  outline: none;
 }
 
 .publication-price__small_3 {
@@ -2523,11 +2540,11 @@ body.hidden {
 .publication-book-slide-content__button::before {
   content: "";
   position: absolute;
-  top: -5px;
-  left: -5px;
+  top: -6px;
+  left: -6px;
   width: 134px;
   height: 44px;
-  border: 1px solid var(--color-violet-href);
+  border: 2px solid var(--color-violet-href);
   border-radius: 100px;
   visibility: hidden;
   opacity: 0;
