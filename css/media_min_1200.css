@@ -523,7 +523,12 @@
   }
 
   .nav-search__button {
+    display: none;
+  }
+
+  .nav-search__submit-button {
     position: static;
+    display: block;
     margin: 0 2px 0 0;
     width: 23px;
     height: 22px;

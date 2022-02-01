@@ -1,9 +1,9 @@
 /*hero__swiper*/
 const swiper = new Swiper('.hero-swiper', {
   autoplay: {
-    delay: 3000
+    delay: 5000
   },
-  speed: 1800,
+  speed: 5000,
   loop: true,
   effect: 'fade',
   fadeEffect: {

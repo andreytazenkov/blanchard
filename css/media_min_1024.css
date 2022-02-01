@@ -20,7 +20,7 @@
     width: 29px;
   }
 
-  .nav-search.search-active .nav-search__button {
+  .nav-search.search-active .nav-search__submit-button {
     margin: 13px 9px 0 4px;
   }
 
@@ -112,6 +112,10 @@
 
   .ui-tabs .ui-tabs-nav li:last-child {
     margin: 13px 0 0 0;
+  }
+
+  .ui-accordion .ui-accordion-header {
+    padding: 36.5px 0 35.9px 0;
   }
 
   .catalog-tabs__text {
@@ -221,6 +225,12 @@
     background-image: url(../img/1024/publications/publications-background_1024.png);
   }
 
+  .publication-wrapper {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
+
   .publications-select {
     margin: 0 0 25px 0;
   }
@@ -230,9 +240,8 @@
   }
 
   .publications-select__list-collapsed {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(12, auto);
   }
 
   .publications-select__item {
@@ -252,6 +261,10 @@
     padding-bottom: 2px;
     max-width: 100%;
     width: 61.82vw;
+  }
+
+  .publication-book-swiper-wrapper {
+    padding-left: 0;
   }
 
   .publication-book-swiper-navigation {
@@ -315,7 +328,7 @@
 
   /* contacts */
   .contacts-form {
-    padding: 123px 9.86vw 0 4.88vw;
+    padding: 121px 9.86vw 0 4.88vw;
     width: 47.55vw;
   }
 }

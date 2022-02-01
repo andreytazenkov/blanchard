@@ -518,6 +518,22 @@ body.hidden {
   cursor: pointer;
 }
 
+.nav-search__submit-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 5vw;
+  height: 5vw;
+  background-image: url(../img/320/nav/search.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transform: translateX(-2px);
+  -ms-transform: translateX(-2px);
+  transform: translateX(-2px);
+  cursor: pointer;
+}
+
 .nav-search-close {
   display: none;
   position: absolute;
@@ -603,7 +619,12 @@ body.hidden {
 }
 
 .nav-search.search-active .nav-search__button {
+  display: none;
+}
+
+.nav-search.search-active .nav-search__submit-button {
   position: static;
+  display: block;
   margin: 0 0 0 -5px;
 }
 
@@ -672,9 +693,9 @@ body.hidden {
   height: 100%;
 }
 
-.hero-swiper-slide {
-  -webkit-animation: background-image 10s cubic-bezier(0.28, 0.44, 0.94, 0.89) infinite;
-  animation: background-image 10s cubic-bezier(0.28, 0.44, 0.94, 0.89) infinite;
+.hero-wrapper {
+  -webkit-animation: hero-swiper-mage 30s cubic-bezier(0.28, 0.44, 0.94, 0.89) infinite;
+  animation: hero-swiper-mage 30s cubic-bezier(0.28, 0.44, 0.94, 0.89) infinite;
 }
 
 .hero-swiper-slide-1 {
@@ -701,31 +722,31 @@ body.hidden {
   background-size: cover;
 }
 
-@-webkit-keyframes background-image {
+@-webkit-keyframes hero-swiper-mage {
   0% {
-    background-size: 100%;
+    transform: scale(1);
   }
 
   50% {
-    background-size: 105%;
+    transform: scale(1.1);
   }
 
   100% {
-    background-size: 100%;
+    transform: scale(1);
   }
 }
 
-@keyframes background-image {
+@keyframes hero-swiper-mage {
   0% {
-    background-size: 100%;
+    transform: scale(1);
   }
 
   50% {
-    background-size: 105%;
+    transform: scale(1.1);
   }
 
   100% {
-    background-size: 100%;
+    transform: scale(1);
   }
 }
 
@@ -1599,10 +1620,13 @@ body.hidden {
 
 .catalog-tabs-accordion__header[aria-selected="true"] span {
   border: 2px solid #9d5cd0;
+  background-color: var(--color-violet-focus);
 }
 
 .catalog-tabs-accordion__header span::before {
   content: "";
+  position: absolute;
+  top: 10px;
   width: 7px;
   height: 7px;
   border-right: 1px solid var(--color-body);
@@ -2164,6 +2188,10 @@ body.hidden {
 }
 
 .publications-select__list-collapsed {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(12, auto);
+  grid-auto-flow: column;
   margin: 0 0 18px 0;
 }
 
@@ -2448,6 +2476,10 @@ body.hidden {
   margin: 0 30px 50px 0;
   width: 44.82%;
   min-height: 254px;
+}
+
+.publication-book-slide:focus-visible {
+  outline: none;
 }
 
 .publication-book-slide:nth-child(2n) {

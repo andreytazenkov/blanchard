@@ -62,6 +62,17 @@ function publicationsSelectSpanCloseIsActive() {
   });
 };
 
+function addDisplayFlex() {
+  if (screen.width >= 576) {
+    $('.publications-select__item').css('display', 'flex');
+    console.log('flex');
+  } else {
+    // $('.publications-select__list-collapsed input:checkbox:not(:checked)')
+    //   .parent('.publications-select__item')
+    //   .css('display', 'none');
+  }
+}
+
 $(window).on('orientationchange', function () {
   if (screen.orientation.type === 'landscape-primary') {
     $('.publications-select__item').css('display', 'block').css('display', 'flex');
@@ -77,3 +88,7 @@ publicationsSelectHeaderIsActive();
 publicationsSelectinputIsActive();
 
 publicationsSelectSpanCloseIsActive();
+
+addDisplayFlex();
+
+$(window).resize(() => addDisplayFlex());

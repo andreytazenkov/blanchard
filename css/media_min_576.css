@@ -322,11 +322,13 @@
   .swiper-events-hide__button::before {
     content: "";
     position: absolute;
-    top: -8px;
-    left: -8px;
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: -9px;
     width: 198px;
     height: 69px;
-    border: 1px solid var(--color-violet-href);
+    border: 2px solid var(--color-violet-href);
     border-radius: 100px;
     visibility: hidden;
     -webkit-transition: visibility 0.2s ease-in, opacity 0.2s ease-in;
@@ -361,12 +363,14 @@
   }
 
   .publications-select__list-collapsed {
-    -webkit-column-count: 2;
+    /* -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
     height: -webkit-max-content;
     height: -moz-max-content;
-    height: max-content;
+    height: max-content; */
+    grid-template-columns: 37.81% auto;
+    grid-template-rows: repeat(6, auto);
   }
 
   .publications-select__header {

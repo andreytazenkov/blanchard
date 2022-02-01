@@ -77,7 +77,12 @@
     height: 29px;
   }
 
-  .nav-search.search-active .nav-search__button {
+  .nav-search__submit-button {
+    width: 30px;
+    height: 29px;
+  }
+
+  .nav-search.search-active .nav-search__submit-button {
     margin: 13px 4px 0 35px;
   }
 
@@ -284,7 +289,7 @@
 
   /* catalog */
   .container-catalog {
-    margin: 0 0 87px 0;
+    margin: 0 0 85px 0;
   }
 
   .catalog-header {
@@ -327,7 +332,7 @@
     display: flex;
     margin: 0 0 19px 0;
     font-size: 17.1px;
-    text-align: justify;
+    text-align: start;
   }
 
   .catalog-tabs__item {
@@ -388,8 +393,13 @@
   }
 
   .catalog-tabs-accordion__header span::before {
+    top: 19px;
     width: 12px;
     height: 12px;
+  }
+
+  .catalog-tabs-accordion__header[aria-selected="true"] span::before {
+    top: 18px;
   }
 
   .catalog-accordion-list {
@@ -422,7 +432,7 @@
   }
 
   .swiper-events {
-    margin: 0 0 15px 0;
+    margin: 0 0 17px 0;
   }
 
   .events-header {
@@ -489,7 +499,7 @@
 
   .events-slide__href {
     position: absolute;
-    bottom: 53px;
+    bottom: 50px;
     left: 35px;
     margin: 0;
   }
@@ -505,15 +515,21 @@
     margin: 0 0 14px 0;
   }
 
+  .publications-select {
+    margin: 0 0 23px 0;
+  }
+
   .publications-select__header {
     margin: 0 0 7px 0;
     height: auto;
   }
 
   .publications-select__list-collapsed {
-    -webkit-column-count: 3;
+    /* -webkit-column-count: 3;
     -moz-column-count: 3;
-    column-count: 3;
+    column-count: 3; */
+    grid-template-columns: 27.24% 45.5% 27.39%;
+    grid-template-rows: repeat(4, auto);
     margin: -2px 0 0 0;
   }
 
@@ -524,6 +540,14 @@
 
   .publications-price-header {
     margin: -3px 0 7px 0;
+  }
+
+  .publication-book-swiper {
+    max-width: 81vw;
+  }
+
+  .publication-book-swiper-wrapper {
+    padding-left: 4px;
   }
 
   .publication-book-swiper-navigation {

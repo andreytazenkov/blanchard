@@ -154,10 +154,11 @@
           </div>
         </div>
         <div class="nav-search-wrapper">
-          <form class="nav-search" name="nav-search" action="#">
-            <label class="nav-search__label" for="search"></label>
-            <button class="nav-search__button" type="submit" aria-label="Открыть поиск"></button>
-            <input class="nav-search__input" id="search" aria-label="Поиск по сайту" type="search" placeholder="Поиск по сайту">
+          <form class="nav-search" name="nav-search" data-search="nav-search" action="#">
+            <label class="nav-search__label" for="search" data-search="nav-search"></label>
+            <button class="nav-search__button" type="button" aria-label="Открыть поиск" data-search="nav-search"></button>
+            <button class="nav-search__submit-button" type="submit" aria-label="Искать" data-search="nav-search"></button>
+            <input class="nav-search__input" id="search" aria-label="Поиск по сайту" type="search" placeholder="Поиск по сайту" data-search="nav-search">
           </form>
         </div>
         <button class="nav-search-close" aria-label="Закрыть поиск">
